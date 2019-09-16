@@ -1,0 +1,174 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\coffee;
+use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
+
+class CoffeesController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        //return view('admin.listCoffee');
+        $coffees = coffee::all();
+        return view('admin.listCoffee',compact('coffees'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+        return view('admin.createCoffee');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function getAdd(){
+        return view('admin.createCoffee');
+    }
+
+    public function postAdd(Request $req)
+    {
+        //
+        $this->validate($req,
+            [
+                'name' => 'required',
+                'description' => 'required',
+                'price' => 'required' 
+            ],
+            [
+                'name.required' => 'Vui lòng nhập tên',
+                'description.required' => 'Vui lòng nhập nội dung',
+                'price.required' => 'Vui lòng nhập giá'
+            ]
+        );
+
+        echo $req;
+        
+        $coffee = new coffee;
+        $coffee->name = $req->name;
+        $coffee->description = $req->description;
+        $coffee->price = $req->price;
+        $coffee->is_active = $req->rdoState;
+
+        if($req->hasFile('fImage')):
+            $image = $req->file('fImage');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/img/'.$filename);
+            Image::make($image)->save($location);
+            $coffee->thumbnail = $filename;
+        endif;
+        
+        if($coffee->save())
+            return redirect()->route('coffee-list')->with('message','Thêm thành công');
+        return redirect()->route('coffee-list')->with('message','Thêm thất bại vui lòng thử lại sau');
+    }
+
+    public function getUpdate(Request $req){
+        $coffee = coffee::find($req->id);
+        return view('admin.editCoffee',compact('coffee'));
+    }
+
+    public function postUpdate(Request $req){
+        // $this->validate($req,
+        //     [
+        //         'txtName' => 'required',
+        //         'txtInfo' => 'required'
+        //     ],
+        //     [
+        //         'txtName.required' => 'Vui lòng nhập tên',
+        //         'txtInfo.required' => 'Vui lòng nhập nội dung'
+        //     ]
+        // );
+        
+        $coffee = coffee::find($req->id);
+        $coffee->name = $req->name;
+        $coffee->description = $req->description;
+        $coffee->price = $req->price;
+        $coffee->is_active = $req->rdoState;
+
+        if($req->hasFile('fImage')):
+            $image = $req->file('thumbnail');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/img/'.$filename);
+            Image::make($image)->save($location);
+            Storage::delete($coffee->thumbnail);
+            $coffee->thumbnail = $filename;
+        endif;
+        
+        if($coffee->save())
+            return redirect()->route('coffee-list')->with('message','Cập nhật thành công');
+        return redirect()->route('coffee-list')->with('message','Cập nhật thất bại vui lòng thử lại sau');
+    }
+
+    public function delete(Request $req){
+        $coffee = coffee::find($req->id);
+        if($coffee->delete())
+            return redirect()->route('coffee-list')->with('message','Xóa thành công thành công');
+        return redirect()->route('coffee-list')->with('message','Xóa thất bại vui lòng thử lại sau');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\coffee  $coffee
+     * @return \Illuminate\Http\Response
+     */
+    public function show(coffee $coffee)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\coffee  $coffee
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(coffee $coffee)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\coffee  $coffee
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, coffee $coffee)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\coffee  $coffee
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(coffee $coffee)
+    {
+        //
+        $coffee = coffee::find($req->id);
+        if($coffee->delete())
+            return redirect()->route('coffee-list')->with('message','Xóa thành công thành công');
+        return redirect()->route('coffee-list')->with('message','Xóa thất bại vui lòng thử lại sau');
+    }
+}
