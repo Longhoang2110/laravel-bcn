@@ -11,7 +11,7 @@
 |
 */
 Route::resource('coffee','CoffeesController');
-
+Route::get('/', 'PageController@home')->name('home');
 Route::get('/listCoffee', 'CoffeesController@Index')->name('listCoffee');
 Route::get('/addCoffee', 'CoffeesController@getAdd')->name('addCoffee');
 Route::get('/blog', 'PageController@blog')->name('blog');
