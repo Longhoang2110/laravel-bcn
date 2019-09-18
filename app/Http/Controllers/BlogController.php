@@ -49,7 +49,7 @@ class BlogController extends Controller
         //     [
         //         'txtName' => 'required',
         //         'txtInfo' => 'required',
-        //         'fImage' => 'required' 
+        //         'fImage' => 'required'
         //     ],
         //     [
         //         'txtName.required' => 'Vui lòng nhập tên',
@@ -59,7 +59,7 @@ class BlogController extends Controller
         // );
 
         //echo $req;
-        
+
         $blog = new blog;
         $blog->name = $req->name;
         $blog->description = $req->description;
@@ -73,7 +73,7 @@ class BlogController extends Controller
             Image::make($image)->save($location);
             $blog->thumbnail = $filename;
         endif;
-        
+
         if($blog->save())
             return redirect()->route('blog-list')->with('message','Thêm thành công');
         return redirect()->route('blog-list')->with('message','Thêm thất bại vui lòng thử lại sau');
@@ -95,7 +95,7 @@ class BlogController extends Controller
         //         'txtInfo.required' => 'Vui lòng nhập nội dung'
         //     ]
         // );
-        
+
         $blog = blog::find($req->id);
         $blog->name = $req->name;
         $blog->description = $req->description;
@@ -103,14 +103,14 @@ class BlogController extends Controller
         $blog->is_active = $req->rdoState;
 
         if($req->hasFile('fImage')):
-            $image = $req->file('thumbnail');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $file = $req->fImage;
+            $filename = $file->getClientOriginalName();
             $location = public_path('images/img/'.$filename);
-            Image::make($image)->save($location);
-            Storage::delete($blog->thumbnail);
+            Image::make($file)->save($location);
+            // Storage::delete($blog->thumbnail);
             $blog->thumbnail = $filename;
         endif;
-        
+
         if($blog->save())
             return redirect()->route('blog-list')->with('message','Cập nhật thành công');
         return redirect()->route('blog-list')->with('message','Cập nhật thất bại vui lòng thử lại sau');
