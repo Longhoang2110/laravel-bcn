@@ -85,8 +85,8 @@ class CoffeesController extends Controller
     }
 
     public function postUpdate(Request $req){
-        $file = $req->fImage;
-        echo $file->getClientOriginalName();
+        // $file = $req->fImage;
+        // echo $file->getClientOriginalName();
 
         // $file->move('upload', $file->getClientOriginalName());
         // $this->validate($req,
