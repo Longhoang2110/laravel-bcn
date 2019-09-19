@@ -49,7 +49,7 @@ class CoffeesController extends Controller
             [
                 'name' => 'required',
                 'description' => 'required',
-                'price' => 'required'
+                'price' => 'required' 
             ],
             [
                 'name.required' => 'Vui lòng nhập tên',
@@ -59,7 +59,7 @@ class CoffeesController extends Controller
         );
 
         echo $req;
-
+        
         $coffee = new coffee;
         $coffee->name = $req->name;
         $coffee->description = $req->description;
@@ -73,7 +73,7 @@ class CoffeesController extends Controller
             Image::make($image)->save($location);
             $coffee->thumbnail = $filename;
         endif;
-
+        
         if($coffee->save())
             return redirect()->route('coffee-list')->with('message','Thêm thành công');
         return redirect()->route('coffee-list')->with('message','Thêm thất bại vui lòng thử lại sau');
@@ -85,10 +85,6 @@ class CoffeesController extends Controller
     }
 
     public function postUpdate(Request $req){
-        // $file = $req->fImage;
-        // echo $file->getClientOriginalName();
-
-        // $file->move('upload', $file->getClientOriginalName());
         // $this->validate($req,
         //     [
         //         'txtName' => 'required',
@@ -99,22 +95,22 @@ class CoffeesController extends Controller
         //         'txtInfo.required' => 'Vui lòng nhập nội dung'
         //     ]
         // );
-
+        
         $coffee = coffee::find($req->id);
         $coffee->name = $req->name;
         $coffee->description = $req->description;
         $coffee->price = $req->price;
         $coffee->is_active = $req->rdoState;
-
+        $coffee->alt = $req->alt;
         if($req->hasFile('fImage')):
-            $file = $req->fImage;
-            $filename = $file->getClientOriginalName();
+            $image = $req->file('thumbnail');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/img/'.$filename);
-            Image::make($file)->save($location);
-            // Storage::delete($coffee->thumbnail);
+            Image::make($image)->save($location);
+            Storage::delete($coffee->thumbnail);
             $coffee->thumbnail = $filename;
         endif;
-
+        
         if($coffee->save())
             return redirect()->route('coffee-list')->with('message','Cập nhật thành công');
         return redirect()->route('coffee-list')->with('message','Cập nhật thất bại vui lòng thử lại sau');

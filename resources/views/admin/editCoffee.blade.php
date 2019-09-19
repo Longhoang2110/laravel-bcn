@@ -33,7 +33,7 @@
                     <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Hình hiện tại</label>
                             <div class="col-sm-10">
-                                <img src="images/img/{{$coffee->thumbnail}}" alt="" width="70" height="50">
+                                <img src="images/img/{{$coffee->thumbnail}}" alt="$coffee->alt" width="70" height="50">
                             </div>                            
                         </div>
                     <div class="form-group">
@@ -41,6 +41,12 @@
                         <div class="col-sm-10">
                             <input type="file" name="fImage">
                         </div>                       
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="alt" id="alt" class="form-control" value="{{$coffee->alt}}">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
@@ -52,6 +58,7 @@
                             </textarea>
                         </div>
                     </div>
+                    
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Giá</label>
                         <div class="col-sm-10">
