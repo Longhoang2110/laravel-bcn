@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\coffee;
 use App\blog;
+use App\display;
 class PageController extends Controller
 {
     //
@@ -47,13 +48,16 @@ class PageController extends Controller
             ]);
     }
 
+
     public function home() {
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
         $blogs = blog::all();
+        $displays = display::all();
         return view('home',[
             "blogs" => $blogs,
             "coffees" => $coffees,
+            "displays"=>$displays,
             //"discount_tour" => $discountTours
             ]);
         //return view('home');
@@ -75,5 +79,7 @@ class PageController extends Controller
     public function addImages(){
         return view('admin.addImages');
     }
-    
+
+    //adminifx//
+   
 }

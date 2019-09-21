@@ -6,34 +6,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="https://batchongnang.herokuapp.com/asset_custom/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="asset_custom/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/themify/themify-icons.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/elegant-font/html-css/style.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/util.css">
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/main.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/util.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -52,7 +52,7 @@
 				</div>
 
 				<span class="topbar-child1">
-					Chất lượng hàng đầu!
+					Chất lượng - Uy Tín  hàng đầu!
 				</span>
 
 				{{-- <div class="topbar-child2">
@@ -72,7 +72,7 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<a href="index.html" class="logo">
-					<img src="https://cdn0.iconfinder.com/data/icons/Pry_Black_png/128/Coffee_Black.png" style="max-height: 70px" alt="IMG-LOGO">
+					<img src="https://image.flaticon.com/icons/svg/47/47501.svg" style="max-height: 55px" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu -->
@@ -118,13 +118,13 @@
 				<!-- Header Icon -->
 				{{-- <div class="header-icons">
 					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="https://batchongnang.herokuapp.com/asset_custom/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="asset_custom/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="https://batchongnang.herokuapp.com/asset_custom/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="asset_custom/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -132,7 +132,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="https://batchongnang.herokuapp.com/asset_custom/images/item-cart-01.jpg" alt="IMG">
+										<img src="asset_custom/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -148,7 +148,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="https://batchongnang.herokuapp.com/asset_custom/images/item-cart-02.jpg" alt="IMG">
+										<img src="asset_custom/images/item-cart-02.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -164,7 +164,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="https://batchongnang.herokuapp.com/asset_custom/images/item-cart-03.jpg" alt="IMG">
+										<img src="asset_custom/images/item-cart-03.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -208,7 +208,7 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="index.html" class="logo-mobile">
-				<img src="https://batchongnang.herokuapp.com/asset_custom/images/icons/logo.png" alt="IMG-LOGO">
+				<img src="asset_custom/images/icons/logo.png" alt="IMG-LOGO">
 			</a>
 
 			<!-- Button show menu -->
@@ -216,13 +216,13 @@
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
 					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="https://batchongnang.herokuapp.com/asset_custom/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="asset_custom/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="https://batchongnang.herokuapp.com/asset_custom/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="asset_custom/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -230,7 +230,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="https://batchongnang.herokuapp.com/asset_custom/images/item-cart-01.jpg" alt="IMG">
+										<img src="asset_custom/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -246,7 +246,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="https://batchongnang.herokuapp.com/asset_custom/images/item-cart-02.jpg" alt="IMG">
+										<img src="asset_custom/images/item-cart-02.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -262,7 +262,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="https://batchongnang.herokuapp.com/asset_custom/images/item-cart-03.jpg" alt="IMG">
+										<img src="asset_custom/images/item-cart-03.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -521,23 +521,23 @@
 
 		<div class="t-center p-l-15 p-r-15">
 			<a href="#">
-				<img class="h-size2" src="https://batchongnang.herokuapp.com/asset_custom/images/icons/paypal.png" alt="IMG-PAYPAL">
+				<img class="h-size2" src="asset_custom/images/icons/paypal.png" alt="IMG-PAYPAL">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="https://batchongnang.herokuapp.com/asset_custom/images/icons/visa.png" alt="IMG-VISA">
+				<img class="h-size2" src="asset_custom/images/icons/visa.png" alt="IMG-VISA">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="https://batchongnang.herokuapp.com/asset_custom/images/icons/mastercard.png" alt="IMG-MASTERCARD">
+				<img class="h-size2" src="asset_custom/images/icons/mastercard.png" alt="IMG-MASTERCARD">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="https://batchongnang.herokuapp.com/asset_custom/images/icons/express.png" alt="IMG-EXPRESS">
+				<img class="h-size2" src="asset_custom/images/icons/express.png" alt="IMG-EXPRESS">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="https://batchongnang.herokuapp.com/asset_custom/images/icons/discover.png" alt="IMG-DISCOVER">
+				<img class="h-size2" src="asset_custom/images/icons/discover.png" alt="IMG-DISCOVER">
 			</a>
 
 			<div class="t-center s-text8 p-t-20">
@@ -561,14 +561,14 @@
 
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/animsition/js/animsition.min.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/select2/select2.min.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/select2/select2.min.js"></script>
 	<script type="text/javascript">
 		$(".selection-1").select2({
 			minimumResultsForSearch: 20,
@@ -576,14 +576,14 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.min.js"></script>
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/js/slick-custom.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="asset_custom/js/slick-custom.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="https://batchongnang.herokuapp.com/asset_custom/vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript" src="asset_custom/vendor/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript">
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -601,7 +601,7 @@
 	</script>
 
 <!--===============================================================================================-->
-	<script src="https://batchongnang.herokuapp.com/asset_custom/js/main.js"></script>
+	<script src="asset_custom/js/main.js"></script>
 
 </body>
 </html>

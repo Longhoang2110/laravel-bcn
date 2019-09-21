@@ -65,10 +65,11 @@ class CoffeesController extends Controller
         $coffee->description = $req->description;
         $coffee->price = $req->price;
         $coffee->is_active = $req->rdoState;
+        $coffee->alt = $req->alt;
 
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $filename=$image->getClientOriginalName();
             $location = public_path('images/img/'.$filename);
             Image::make($image)->save($location);
             $coffee->thumbnail = $filename;
@@ -103,11 +104,10 @@ class CoffeesController extends Controller
         $coffee->is_active = $req->rdoState;
         $coffee->alt = $req->alt;
         if($req->hasFile('fImage')):
-            $image = $req->file('thumbnail');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $image = $req->file('fImage');
+            $filename=$image->getClientOriginalName();
             $location = public_path('images/img/'.$filename);
             Image::make($image)->save($location);
-            Storage::delete($coffee->thumbnail);
             $coffee->thumbnail = $filename;
         endif;
         

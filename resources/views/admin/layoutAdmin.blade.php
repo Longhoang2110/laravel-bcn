@@ -281,6 +281,16 @@
               <li><a href="{{route('blog-list')}}">Danh sách blog</a></li>
               <li><a href="{{route('blog-add')}}">Thêm Blog</a></li>             
             </ul>
+          </li>     
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-tasks"></i>
+              <span>Admin Setup Trang Chủ</span>
+              </a>
+            <ul class="sub">
+              <li><a href="{{route('display-list')}}">chỉnh sửa trang Chủ</a></li>
+              <li><a href="{{route('display-add')}}">Thêm trang chủ</a></li>             
+            </ul>
           </li>         
         </ul>
         <!-- sidebar menu end-->

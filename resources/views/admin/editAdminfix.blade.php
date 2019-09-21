@@ -3,11 +3,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm loại cafe</h2>
+                <h2>Sửa {{$displays->name}}</h2>
             </div>
         </div>
     </div>
-
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -22,44 +21,41 @@
     <div class="row mt">
             <div class="col-lg-12">
               <div class="form-panel">
-                <form action="{{route('coffee-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
+                <form action="{{route('displays-update',$displays->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại cafe</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tiêu đề</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" placeholder="Tên ">
+                            <input type="text" name="name" class="form-control" value="{{$displays->name}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Hình đại diện</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Hình hiện tại</label>
+                            <div class="col-sm-10">
+                                <img src="images/img/{{$displays->thumbnail}}" alt="" width="70" height="50">
+                            </div>                            
+                        </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Hình ảnh</label>
                         <div class="col-sm-10">
                             <input type="file" name="fImage">
-                        </div>
+                        </div>                       
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
                         <div class="col-sm-10">
-                            <input type="text" name="alt" class="form-control" placeholder="Tên">
+                            {{-- <textarea class="ckeditor form-control" rows="3" id="txtInfo" name="txtInfo"></textarea> --}}
+                            <textarea class="form-control" id="txtdescription" style="height:150px" name="description">{{$displays->description}}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control ckeditor" style="height:150px" id="summary-ckeditor" name="description" placeholder="Nội dung"></textarea>
+                            <input type="hidden" id="hidInfo" name="hidInfo" value="{{$displays->content}}">
+                            {{-- <textarea class="ckeditor form-control" rows="3" id="txtInfo" name="txtInfo"></textarea> --}}
+                            <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
                         </div>
                     </div>
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea> 
-                        </div>
-                    </div> --}}
-                    <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Giá</label>
-                        <div class="col-sm-10">
-                            <input type="number" name="price" class="form-control" placeholder="Giá">   
-                        </div>
-                    </div>                    
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
@@ -73,7 +69,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary">Thêm</button>
+                            <button type="submit" class="btn btn-primary">Lưu</button>
                         </div>  
                     </div>                     
                 </form>
@@ -82,8 +78,14 @@
             </div>
             <!-- /col-lg-12 -->
           </div>
-          {{-- <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+          {{-- <div>
+                {!!$displays->description!!}
+          </div> --}}
+          <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
           <script>
-              CKEDITOR.replace( 'summary-ckeditor' );
-          </script> --}}
+            //CKEDITOR.replace( 'Des-ckeditor' );
+              CKEDITOR.replace( 'Content-ckeditor');
+              document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
+          </script>
+          
 @endsection

@@ -85,5 +85,19 @@ Route::group(['prefix' => 'buyproduct'],function(){
     Route::post('add','BuyerController@postAdd')->name('buyer-postadd');
 
     //Route::get('delete/{id}','BuyerController@delete')->name('coffee-delete');
+    
 });
 
+////////// adminfix\\\\\\\\\\\\\\\
+Route::group(['prefix' => 'Adminfix'],function(){
+    Route::get('/','AdminfixController@index')->name('display-list');
+    Route::get('displaydetail/{id}','PageController@displayDetail')->name('display-detail');
+
+    Route::get('update/{id}','AdminfixController@getUpdate')->name('display-update');
+    Route::post('update/{id}','AdminfixController@postUpdate')->name('displays-update');
+
+    Route::get('add','AdminfixController@getAdd')->name('display-add');
+    Route::post('add','AdminfixController@postAdd')->name('display-add');
+
+    Route::get('delete/{id}','BlogController@delete')->name('display-delete');
+});

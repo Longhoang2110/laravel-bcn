@@ -3,12 +3,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm loại cafe</h2>
+                <h2>Thêm trang chủ</h2>
             </div>
         </div>
     </div>
-
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -22,30 +20,30 @@
     <div class="row mt">
             <div class="col-lg-12">
               <div class="form-panel">
-                <form action="{{route('coffee-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
+                <form action="{{route('display-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại cafe</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên </label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" placeholder="Tên ">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Hình đại diện</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Hình ảnh</label>
                         <div class="col-sm-10">
-                            <input type="file" name="fImage">
+                            <input type="file" name="BlogImage">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
                         <div class="col-sm-10">
-                            <input type="text" name="alt" class="form-control" placeholder="Tên">
+                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="description" placeholder="Mô tả"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control ckeditor" style="height:150px" id="summary-ckeditor" name="description" placeholder="Nội dung"></textarea>
+                            <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
                         </div>
                     </div>
                     {{-- <div class="form-group">
@@ -53,13 +51,7 @@
                         <div class="col-sm-10">
                             <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea> 
                         </div>
-                    </div> --}}
-                    <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Giá</label>
-                        <div class="col-sm-10">
-                            <input type="number" name="price" class="form-control" placeholder="Giá">   
-                        </div>
-                    </div>                    
+                    </div> --}}              
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
@@ -82,8 +74,9 @@
             </div>
             <!-- /col-lg-12 -->
           </div>
-          {{-- <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+          <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
           <script>
-              CKEDITOR.replace( 'summary-ckeditor' );
-          </script> --}}
+            //CKEDITOR.replace( 'Des-ckeditor' );
+              CKEDITOR.replace( 'Content-ckeditor');
+          </script>
 @endsection

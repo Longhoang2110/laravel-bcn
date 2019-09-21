@@ -4,14 +4,15 @@
 <section class="slide1">
     <div class="wrap-slick1">
         <div class="slick1">
-            <div class="item-slick1 item1-slick1" style="background-image: url(http://backgrounddep.com/uploads/images/bo-suu-tap-20-hinh-nen-ly-cafe-dep-cho-tinh-yeu-ngot-ngao-va-lang-man-phan-1-1489313926-9.jpg);">
+                @foreach($displays as $item)
+            {{-- <div class="item-slick1 item1-slick1" style="background-image: url();">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
                         Chất lượng đỉnh cao
                     </span>
 
                     <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                        THE ROBUSTA
+                        BẠT MÁI CHO THƯƠNG HIỆU CÔNG PHI
                     </h2>
 
                     <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
@@ -21,16 +22,16 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="item-slick1 item2-slick1" style="background-image: url(http://3.bp.blogspot.com/-mo7AFT64bXM/VIQEa84V09I/AAAAAAAAN04/EWnjH3-7PJw/s1600/hinh-anh-ly-cafe-dep-3.jpg);">
+            {{-- <div class="item-slick1 item2-slick1" style="background-image: url(https://www.maichephatdat.com/sites/default/files/field/image/products/11041080_395632410619044_2705156409013219530_n-1.jpg);">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
                         Chất lượng đỉnh cao
                     </span>
 
                     <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-                        THE ROBUSTA
+                        BẠT MÁI CHO THƯƠNG HIỆU CÔNG PHI                        
                     </h2>
 
                     <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
@@ -40,16 +41,14 @@
                         </a>
                     </div>
                 </div>
-            </div>
-
-            <div class="item-slick1 item3-slick1" style="background-image: url(http://backgrounddep.com/uploads/images/bo-suu-tap-20-hinh-nen-ly-cafe-dep-cho-tinh-yeu-ngot-ngao-va-lang-man-phan-1-1489313926-9.jpg);">
+            </div> --}}
+            <div class="item-slick1 item3-slick1" style="background-image: url(images/img/{{$item->thumbnail}})">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-                        Chất lượng đỉnh cao
+                        {{$item->name}}
                     </span>
-
                     <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-                        THE ROBUSTA
+                            {{$item->description}}
                     </h2>
 
                     <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
@@ -60,6 +59,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
 
         </div>
     </div>
@@ -74,9 +74,9 @@
     </div>
     <div class="flex-w p-l-15 p-r-15">
         <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-            <h4 class="t-center"><img src="https://cdn3.iconfinder.com/data/icons/sympletts-free-sampler/128/coffee-cup-2-128.png" alt="IMG-PRODUCT"></span></h4>
+            <h4 class="t-center"><img src="https://cdn3.iconfinder.com/data/icons/business-finance-40/512/14-128.png" alt="IMG-PRODUCT"></span></h4>
             <h4 class="m-text12 t-center">
-                Hương Thơm Phong Phú
+                Lắp Đặt Tại Nhà
             </h4>
 
             <span class="s-text11 t-center">
@@ -87,9 +87,9 @@
         </div>
 
         <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
-            <h4 class="t-center"><img src="https://cdn2.iconfinder.com/data/icons/barista/256/barista-icons_coffee-bean-128.png" alt="IMG-PRODUCT"></span></h4>
+            <h4 class="t-center"><img src="https://cdn3.iconfinder.com/data/icons/status/100/check_shield-128.png" alt="IMG-PRODUCT"></span></h4>
             <h4 class="m-text12 t-center">
-                Chỉ Dùng Cafe Xuất Khẩu Loại 1
+                Bảo Hành Trọn Đời
             </h4>
 
             <span class="s-text11 t-center">
@@ -100,9 +100,9 @@
         </div>
 
         <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-            <h4 class="t-center"><img src="https://cdn2.iconfinder.com/data/icons/entrepreneur-solid-high-risk-high-return/512/Self_improvement-128.png" alt="IMG-PRODUCT"></span></h4>
+            <h4 class="t-center"><img src="https://cdn2.iconfinder.com/data/icons/miscellaneous-7/100/Speed-128.png" alt="IMG-PRODUCT"></span></h4>
             <h4 class="m-text12 t-center">
-                Kiến Thức & Đam Mê
+                Nhanh Chóng - Tiện Lợi
             </h4>
 
             <span class="s-text11 t-center">
@@ -130,7 +130,7 @@
                         <!-- Block2 -->
                         <div class="block2">
                             <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                            <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px" alt="IMG-PRODUCT">
+                            <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px" alt="{{$item->alt}}">
 
                                 <div class="block2-overlay trans-0-4">
                                     <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -170,7 +170,7 @@
     <div class="container">
         <div class="sec-title p-b-52">
             <h3 class="m-text5 t-center">
-                Kiến thức cà phê
+                Những Lựa Chọn Cho Bạn
             </h3>
         </div>
 
@@ -214,8 +214,7 @@
     <div class="flex-w">
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="asset_custom/images/gallery-03.jpg" alt="IMG-INSTAGRAM">
-
+            <img src="asset_custom/images/gallery-07.jpg" alt="IMG-INSTAGRAM">
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
                     <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
