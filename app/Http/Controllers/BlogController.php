@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\blog;
+use App\category;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -39,7 +40,12 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function getAdd(){
-        return view('admin.createBlog');
+        $category =category::where([
+            ['type', '=','0' ]
+        ])->get();    
+        return view('admin.createBlog',[
+            "category" =>$category,
+        ]);
     }
 
     public function postAdd(Request $req)
@@ -65,6 +71,8 @@ class BlogController extends Controller
         $blog->description = $req->description;
         $blog->content = $req->content;
         $blog->is_active = $req->rdoState;
+        $blog->type = $req->type;
+
 
         if($req->hasFile('BlogImage')):
             $image = $req->file('BlogImage');
@@ -81,7 +89,14 @@ class BlogController extends Controller
 
     public function getUpdate(Request $req){
         $blog = blog::find($req->id);
-        return view('admin.editBlog',compact('blog'));
+        $category =category::where([
+            ['type', '=','0' ]
+        ])->get();
+        return view('admin.editBlog',[
+            "category" =>$category,
+            "blog" =>$blog,
+        ]);
+        // return view('admin.editBlog',compact('blog'));
     }
 
     public function postUpdate(Request $req){
@@ -101,6 +116,8 @@ class BlogController extends Controller
         $blog->description = $req->description;
         $blog->content = $req->content;
         $blog->is_active = $req->rdoState;
+        $blog->type = $req->type;
+
 
         if($req->hasFile('fImage')):
             $file = $req->fImage;

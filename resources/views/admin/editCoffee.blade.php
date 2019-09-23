@@ -25,7 +25,7 @@
                 <form action="{{route('coffee-update',$coffee->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại cafe</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên sản phẩm</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" value="{{$coffee->name}}">
                         </div>
@@ -33,7 +33,7 @@
                     <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Hình hiện tại</label>
                             <div class="col-sm-10">
-                                <img src="images/img/{{$coffee->thumbnail}}" alt="$coffee->alt" width="70" height="50">
+                                <img src="images/img/{{$coffee->thumbnail}}" alt="" width="70" height="50">
                             </div>                            
                         </div>
                     <div class="form-group">
@@ -42,6 +42,20 @@
                             <input type="file" name="fImage">
                         </div>                       
                     </div>
+                    <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
+                            <div class="col-sm-10">
+                                <select name="type">
+                            @foreach($category as $item)
+
+                                    <option value="{{$item->id}}">
+                                    {{$item->name}}
+                                    </option>
+                            @endforeach
+
+                                </select>
+                            </div>
+                        </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
                         <div class="col-sm-10">

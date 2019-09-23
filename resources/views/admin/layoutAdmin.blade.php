@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Quản lý cafe</title>
+  <title>Quản lý mái che</title>
 
   <!-- Favicons -->
   <link href="asset_custom/admin_custom/img/favicon.png" rel="icon">
@@ -44,7 +44,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="index.html" class="logo"><b>Cafe<span>Hải</span></b></a>
+      <a href="index.html" class="logo"><b><span>MÁI CHE</span></b></a>
       <!--logo end-->
       {{-- <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
@@ -246,8 +246,8 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="https://scontent.fdad3-3.fna.fbcdn.net/v/t1.0-9/39967433_1681309105311346_50989521025630208_n.jpg?_nc_cat=0&oh=e7eeca254e394b2b4e4b8ef1d6ce0da5&oe=5C281A19" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Hải Trần</h5>
+          <p class="centered"><a href="profile.html"><img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.0-9/60073922_908710306138016_8554993409549402112_n.jpg?_nc_cat=103&_nc_oc=AQnf_ESBJZReNxEZjy9OP5bCdaf5YhveAvUcqiqa0QC6RxjtaCt6n2zY_LP4som5z0g&_nc_ht=scontent.fsgn5-7.fna&oh=acb2bc287939263898e2c755f4d01c49&oe=5E07BBF6" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Hữu Công</h5>
           <li class="mt">
             <a href="{{route('admin')}}">
               <i class="fa fa-dashboard"></i>
@@ -257,7 +257,7 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-book"></i>
-              <span>Quản lý Cafe</span>
+              <span>Quản lý sản phẩm</span>
               </a>
             <ul class="sub">
               <li><a href="{{route('coffee-list')}}">Danh sách sản phẩm</a></li>
@@ -275,21 +275,31 @@
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-tasks"></i>
-              <span>Quản lý blog</span>
+              <span>Quản lý bài viết</span>
               </a>
             <ul class="sub">
-              <li><a href="{{route('blog-list')}}">Danh sách blog</a></li>
-              <li><a href="{{route('blog-add')}}">Thêm Blog</a></li>             
+              <li><a href="{{route('blog-list')}}">Danh sách bài viết</a></li>
+              <li><a href="{{route('blog-add')}}">Thêm bài viết</a></li>             
             </ul>
           </li>     
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-tasks"></i>
-              <span>Admin Setup Trang Chủ</span>
+              <span>Quản lý banner</span>
               </a>
             <ul class="sub">
-              <li><a href="{{route('display-list')}}">chỉnh sửa trang Chủ</a></li>
-              <li><a href="{{route('display-add')}}">Thêm trang chủ</a></li>             
+              <li><a href="{{route('display-list')}}">Danh sách banner</a></li>
+              <li><a href="{{route('display-add')}}">Thêm banner</a></li>             
+            </ul>
+          </li>   
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-tasks"></i>
+              <span>Quản lý category</span>
+              </a>
+            <ul class="sub">
+              <li><a href="{{route('category-list')}}">Danh sách category</a></li>
+              <li><a href="{{route('category-add')}}">Thêm category</a></li>             
             </ul>
           </li>         
         </ul>

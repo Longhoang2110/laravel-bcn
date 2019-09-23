@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm loại cafe</h2>
+                <h2>Thêm sản phẩm</h2>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <form action="{{route('coffee-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại cafe</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên sản phẩm</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" placeholder="Tên ">
                         </div>
@@ -42,6 +42,21 @@
                             <input type="text" name="alt" class="form-control" placeholder="Tên">
                         </div>
                     </div>
+                    <div class="form-group">
+
+                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
+                            <div class="col-sm-10">
+                                <select name="type">
+                            @foreach($category as $item)
+
+                                    <option value="{{$item->id}}">
+                                    {{$item->name}}
+                                    </option>
+                            @endforeach
+
+                                </select>
+                            </div>
+                        </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">

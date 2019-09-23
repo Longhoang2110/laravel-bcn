@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\coffee;
 use App\blog;
 use App\display;
+use App\category;
 class PageController extends Controller
 {
     //
@@ -29,10 +30,14 @@ class PageController extends Controller
     public function blog() {
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
+        $category =category::where([
+            ['type', '=','0' ]
+        ])->get();
         $blogs = blog::all();
         return view('blog',[
             "blogs" => $blogs,
             "coffees" => $coffees,
+            "category" =>$category,
             //"discount_tour" => $discountTours
             ]);
     }
@@ -65,7 +70,15 @@ class PageController extends Controller
 
     public function product(){
         $coffees = coffee::all();
-        return view('product',compact('coffees'));
+        $category =category::where([
+            ['type', '=','1' ]
+        ])->get();
+        return view('product',[
+            "category" =>$category,
+            "coffees" =>$coffees,
+        ]);
+        // return view('product',compact('coffees'));
+
     }
 
     public function introduce(){
@@ -80,6 +93,25 @@ class PageController extends Controller
         return view('admin.addImages');
     }
 
-    //adminifx//
+    public function categoryblog(Request $req){
+        // echo $req->id;
+        $category =category::where([
+            ['type', '=','0' ]
+        ])->get();
+        $coffees = coffee::all();
+
+        $blog =blog::where([
+            ['type', '=',$req->id ]
+        ])->get();        
+        return view('blog',[
+            "category" =>$category,
+            "blogs" =>$blog,
+            "coffees" => $coffees,
+            // "coffee" => $coffee,
+
+
+        ]);
+
+    } 
    
 }

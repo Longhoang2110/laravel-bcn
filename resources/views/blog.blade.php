@@ -2,9 +2,9 @@
 @section('content')
 
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(http://2.bp.blogspot.com/-3K5uwPmn0vI/UkVMjed_51I/AAAAAAAADoA/Wmbe1NgrOAE/s1600/230_coffee_facebook_cover.jpg);">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(https://lh4.ggpht.com/-Wsblj5Js6LQ/VMSVmD2sWwI/AAAAAAAAA28/e8wsnSsDNwM/s1600/mai-hien.png);">
     <h2 class="l-text2 t-center">
-        Kiến thức cà phê
+        Kiến thức sản phẩm
     </h2>
 </section>
 
@@ -80,36 +80,17 @@
                     </div>
 
                     <!-- Categories -->
-                    <h4 class="m-text23 p-t-56 p-b-34">
-                        Danh mục
-                    </h4>
+                    <h4 class="m-text14 p-b-7">
+                            Danh mục bài viết
+                        </h4>
 
-                    <ul>
-                        <li class="p-t-6 p-b-8 bo6">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Cách pha cafe
-                            </a>
+                        <ul @foreach($category as $item)
+                        <li class="p-t-4">
+                             <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                    {{$item->name}}
                         </li>
-
-                        <li class="p-t-6 p-b-8 bo7">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Thông tin cafe
-                            </a>
-                        </li>
-
-                        <li class="p-t-6 p-b-8 bo7">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Các loại cafe
-                            </a>
-                        </li>
-
-                        <li class="p-t-6 p-b-8 bo7">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Đánh giá cafe
-                            </a>
-                        </li>
-
-                    </ul>
+                        @endforeach                   
+                        </ul>
 
                     <!-- Featured Products -->
                     <h4 class="m-text23 p-t-65 p-b-34">

@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm blog</h2>
+                <h2>Thêm trang chủ</h2>
             </div>
         </div>
     </div>
@@ -20,47 +20,48 @@
     <div class="row mt">
             <div class="col-lg-12">
               <div class="form-panel">
-                <form action="{{route('blog-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
+                <form action="{{route('category-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên Blog</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên </label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" placeholder="Tên ">
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Code </label>
+                        <div class="col-sm-10">
+                            <input type="text" name="code" class="form-control" placeholder="Code ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Type </label>
+                        <div class="col-sm-10">
+                            <select name="type">
+                                <option value="0">Bài viết</option>
+                                <option value="1">Sản phẩm</option>
+                            </select>
+                            {{-- <input type="text" name="pype" class="form-control" placeholder="Type "> --}}
+                        </div>
+                    </div>
+                    {{-- <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Hình ảnh</label>
                         <div class="col-sm-10">
                             <input type="file" name="BlogImage">
                         </div>
-                    </div>
-                    <div class="form-group">
-
-                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
-                            <div class="col-sm-10">
-                                <select name="type">
-                            @foreach($category as $item)
-
-                                    <option value="{{$item->id}}">
-                                    {{$item->name}}
-                                    </option>
-                            @endforeach
-
-                                </select>
-                            </div>
-                        </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
+                    </div> --}}
+                    {{-- <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">CODE</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="description" placeholder="Mô tả"></textarea>
+                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="code" placeholder="Mô tả"></textarea>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
+                    </div> --}}
+                    {{-- <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label"></label>
                         <div class="col-sm-10">
                             <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">

@@ -170,7 +170,7 @@
     <div class="container">
         <div class="sec-title p-b-52">
             <h3 class="m-text5 t-center">
-                Những Lựa Chọn Cho Bạn
+                Thông tin hữu ích cho bạn
             </h3>
         </div>
 
@@ -180,7 +180,7 @@
                     <!-- Block3 -->
                     <div class="block3">
                         <a href="{{route('blog-detail',$item->id)}}" class="block3-img dis-block hov-img-zoom">
-                            <img src="images/img/{{$item->thumbnail}}" style="width:720px;height:539px" alt="IMG-BLOG">
+                            <img src="images/img/{{$item->thumbnail}}" style="width:720px;height:300px" alt="IMG-BLOG">
                         </a>
 
                         <div class="block3-txt p-t-14">

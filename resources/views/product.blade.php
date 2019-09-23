@@ -7,33 +7,16 @@
                     <div class="leftbar p-r-20 p-r-0-sm">
                         <!--  -->
                         <h4 class="m-text14 p-b-7">
-                            Danh mục cafe
+                            Danh mục sản phẩm
                         </h4>
 
                         <ul class="p-b-54">
+                                @foreach($category as $item)
                             <li class="p-t-4">
-                                <a href="#" class="s-text13 active1">
-                                    Cafe bột robusta
-                                </a>
+                                 <a href="{{route('category-coffee',$item->id)}}" class="m-text11">
+                                        {{$item->name}}
                             </li>
-
-                            <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Cafe bột abrica
-                                </a>
-                            </li>
-
-                            <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Cafe hạt robusta
-                                </a>
-                            </li>
-
-                            <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Cafe hạt abrica
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
 
                         <!--  -->

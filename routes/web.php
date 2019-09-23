@@ -49,6 +49,8 @@ Route::group(['prefix' => 'Admincoffee'],function(){
 Route::group(['prefix' => 'Adminblog'],function(){
     Route::get('/','BlogController@index')->name('blog-list');
     Route::get('blogdetail/{id}','PageController@blogDetail')->name('blog-detail');
+    Route::get('categoryblog/{id}','PageController@categoryblog')->name('category-blog');
+
 
     Route::get('update/{id}','BlogController@getUpdate')->name('blog-update');
     Route::post('update/{id}','BlogController@postUpdate')->name('blog-update');
@@ -65,6 +67,8 @@ Route::group(['prefix' => 'coffee'],function(){
     Route::get('/','CoffeesController@index')->name('coffee-list');
 
     Route::get('coffeedetail/{id}','PageController@coffeeDetail')->name('coffee-detail');
+    Route::get('categorycoffee/{id}','CoffeesController@categorycoffee')->name('category-coffee');
+
     Route::get('update/{id}','CoffeesController@getUpdate')->name('coffee-update');
     Route::post('update/{id}','CoffeesController@postUpdate')->name('coffee-update');
 
@@ -88,7 +92,7 @@ Route::group(['prefix' => 'buyproduct'],function(){
     
 });
 
-////////// adminfix\\\\\\\\\\\\\\\
+////////// display\\\\\\\\\\\\\\\
 Route::group(['prefix' => 'Adminfix'],function(){
     Route::get('/','AdminfixController@index')->name('display-list');
     Route::get('displaydetail/{id}','PageController@displayDetail')->name('display-detail');
@@ -99,5 +103,18 @@ Route::group(['prefix' => 'Adminfix'],function(){
     Route::get('add','AdminfixController@getAdd')->name('display-add');
     Route::post('add','AdminfixController@postAdd')->name('display-add');
 
-    Route::get('delete/{id}','BlogController@delete')->name('display-delete');
+    Route::get('delete/{id}','AdminfixController@delete')->name('display-delete');
+});
+////////// category\\\\\\\\\\\\\\\
+Route::group(['prefix' => 'Category'],function(){
+    Route::get('/','CategoryController@index')->name('category-list');
+    Route::get('categorydetail/{id}','PageController@categoryDetail')->name('category-detail');
+
+    Route::get('update/{id}','CategoryController@getUpdate')->name('category-update');
+    Route::post('update/{id}','CategoryController@postUpdate')->name('category-update');
+
+    Route::get('add','CategoryController@getAdd')->name('category-add');
+    Route::post('add','CategoryController@postAdd')->name('category-add');
+
+    // Route::get('delete/{id}','CategoryController@delete')->name('category-delete');
 });
