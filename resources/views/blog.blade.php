@@ -58,7 +58,7 @@
                                 </a>
                             </div>
                         </div>
-                    @endforeach                
+                    @endforeach
                 </div>
 
                 <!-- Pagination -->
@@ -70,26 +70,18 @@
 
             <div class="col-md-4 col-lg-3 p-b-75">
                 <div class="rightbar">
-                    <!-- Search -->
-                    <div class="pos-relative bo11 of-hidden">
-                        <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Tìm kiếm">
-
-                        <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
-                            <i class="fs-13 fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </div>
-
                     <!-- Categories -->
                     <h4 class="m-text14 p-b-7">
                             Danh mục bài viết
                         </h4>
 
-                        <ul @foreach($category as $item)
-                        <li class="p-t-4">
-                             <a href="{{route('category-blog',$item->id)}}" class="m-text11">
-                                    {{$item->name}}
-                        </li>
-                        @endforeach                   
+                        <ul>
+                            @foreach($category as $item)
+                                <li class="p-t-4">
+                                    <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                            {{$item->name}}
+                                </li>
+                            @endforeach
                         </ul>
 
                     <!-- Featured Products -->
@@ -204,7 +196,7 @@
                         </li>
                     </ul>
 
-                    
+
                     <h4 class="m-text23 p-t-50 p-b-25">
                         Tags
                     </h4>

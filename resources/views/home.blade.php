@@ -31,7 +31,7 @@
                     </span>
 
                     <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-                        BẠT MÁI CHO THƯƠNG HIỆU CÔNG PHI                        
+                        BẠT MÁI CHO THƯƠNG HIỆU CÔNG PHI
                     </h2>
 
                     <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
@@ -74,39 +74,39 @@
     </div>
     <div class="flex-w p-l-15 p-r-15">
         <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-            <h4 class="t-center"><img src="https://cdn3.iconfinder.com/data/icons/business-finance-40/512/14-128.png" alt="IMG-PRODUCT"></span></h4>
+            <h4 class="t-center"><img src="https://image.flaticon.com/icons/svg/1884/1884278.svg" style="width: 128px;" alt="IMG-PRODUCT"></span></h4>
             <h4 class="m-text12 t-center">
                 Lắp Đặt Tại Nhà
             </h4>
 
             <span class="s-text11 t-center">
-                    Ngay từ những ngày đầu, chúng tôi đã tập trung vào sự phong phú trong mùi vị. 
+                    Ngay từ những ngày đầu, chúng tôi đã tập trung vào sự phong phú trong mùi vị.
                     Hương thơm của 5 loại cafe khác nhau cùng hoà quyện làm cho mùi vị cafe espresso của chúng tôi thật đặc biệt.
                     Khác hẳn so với những dòng cafe thông thường bạn mua ngoài thị trường.
             </span>
         </div>
 
         <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
-            <h4 class="t-center"><img src="https://cdn3.iconfinder.com/data/icons/status/100/check_shield-128.png" alt="IMG-PRODUCT"></span></h4>
+            <h4 class="t-center"><img src="https://image.flaticon.com/icons/svg/1909/1909239.svg" style="width: 128px;" alt="IMG-PRODUCT"></span></h4>
             <h4 class="m-text12 t-center">
                 Bảo Hành Trọn Đời
             </h4>
 
             <span class="s-text11 t-center">
-                    Dựa trên kích cỡ – độ ẩm – màu sắc – tỷ lệ sâu vỡ mốc – tạp chất mà người ta chia cafe thành cafe xuất khẩu loại 1, 2, 3, 4, 5. 
+                    Dựa trên kích cỡ – độ ẩm – màu sắc – tỷ lệ sâu vỡ mốc – tạp chất mà người ta chia cafe thành cafe xuất khẩu loại 1, 2, 3, 4, 5.
                     Trong đó loại 1 là loại tốt nhất. Và chúng tôi chỉ dùng cafe nhân chất lượng loại 1.
                     Không những vậy, chúng tôi còn nhặt tay một lần nữa để loại bỏ tạp chất – sâu vỡ mốc tới mức tối đa.
             </span>
         </div>
 
         <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-            <h4 class="t-center"><img src="https://cdn2.iconfinder.com/data/icons/miscellaneous-7/100/Speed-128.png" alt="IMG-PRODUCT"></span></h4>
+            <h4 class="t-center"><img src="https://image.flaticon.com/icons/svg/1241/1241596.svg" style="width: 128px;" alt="IMG-PRODUCT"></span></h4>
             <h4 class="m-text12 t-center">
                 Nhanh Chóng - Tiện Lợi
             </h4>
 
             <span class="s-text11 t-center">
-                    Chúng tôi rang cafe dựa trên kiến thức quốc tế – đặc biệt là của Ý – và những nghiên cứu không ngừng về các loại hạt cafe chúng tôi đang sử dụng. Chúng tôi học hỏi và nghiên cứu mỗi ngày. 
+                    Chúng tôi rang cafe dựa trên kiến thức quốc tế – đặc biệt là của Ý – và những nghiên cứu không ngừng về các loại hạt cafe chúng tôi đang sử dụng. Chúng tôi học hỏi và nghiên cứu mỗi ngày.
                     Đó không chỉ đơn thuần là công việc. Mà là đam mê. Là cuộc sống. Không chỉ cafe nhân ngon nhất mà còn phải có trình độ rang tốt nhất.
             </span>
         </div>

@@ -33,7 +33,7 @@ class CoffeesController extends Controller
         //
         return view('admin.createCoffee',[
             "category" =>$category,
-            
+
         ]);
     }
 
@@ -50,7 +50,7 @@ class CoffeesController extends Controller
 
         return view('admin.createCoffee',[
             "category" =>$category,
-        
+
         ]);
     }
 
@@ -61,7 +61,7 @@ class CoffeesController extends Controller
             [
                 'name' => 'required',
                 'description' => 'required',
-                'price' => 'required' 
+                'price' => 'required'
             ],
             [
                 'name.required' => 'Vui lòng nhập tên',
@@ -71,7 +71,7 @@ class CoffeesController extends Controller
         );
 
         echo $req;
-        
+
         $coffee = new coffee;
         $coffee->name = $req->name;
         $coffee->description = $req->description;
@@ -87,7 +87,7 @@ class CoffeesController extends Controller
             Image::make($image)->save($location);
             $coffee->thumbnail = $filename;
         endif;
-        
+
         if($coffee->save())
             return redirect()->route('coffee-list')->with('message','Thêm thành công');
         return redirect()->route('coffee-list')->with('message','Thêm thất bại vui lòng thử lại sau');
@@ -102,10 +102,10 @@ class CoffeesController extends Controller
             "category" =>$category,
             "coffee" =>$coffee,
         ]);
-        
+
         }
         // return view('admin.editCoffee',compact('coffee'));
-        
+
 
     public function postUpdate(Request $req){
         // $this->validate($req,
@@ -118,7 +118,7 @@ class CoffeesController extends Controller
         //         'txtInfo.required' => 'Vui lòng nhập nội dung'
         //     ]
         // );
-        
+
         $coffee = coffee::find($req->id);
         $coffee->name = $req->name;
         $coffee->description = $req->description;
@@ -133,7 +133,7 @@ class CoffeesController extends Controller
             Image::make($image)->save($location);
             $coffee->thumbnail = $filename;
         endif;
-        
+
         if($coffee->save())
             return redirect()->route('coffee-list')->with('message','Cập nhật thành công');
         return redirect()->route('coffee-list')->with('message','Cập nhật thất bại vui lòng thử lại sau');
@@ -189,7 +189,7 @@ class CoffeesController extends Controller
     public function destroy(coffee $coffee)
     {
         //
-        $coffee = coffee::find($req->id);
+        $coffee = coffee::find($coffee->id);
         if($coffee->delete())
             return redirect()->route('coffee-list')->with('message','Xóa thành công thành công');
         return redirect()->route('coffee-list')->with('message','Xóa thất bại vui lòng thử lại sau');
@@ -201,11 +201,11 @@ class CoffeesController extends Controller
         ])->get();
         $coffees =coffee::where([
             ['type', '=',$req->id ]
-        ])->get();        
+        ])->get();
         return view('product',[
             "category" =>$category,
             "coffees" =>$coffees,
         ]);
 
-    }   
+    }
 }
