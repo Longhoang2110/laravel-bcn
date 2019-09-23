@@ -4,7 +4,7 @@
     <div class="col-md-12">
       <div class="content-panel">
         <table class="table table-striped table-advance table-hover">
-          <h4><i class="fa fa-angle-right"></i> Danh sách sản phẩm cafe </h4>
+          <h4><i class="fa fa-angle-right"></i> Danh sách sản phẩm  </h4>
           <hr>
           @if(Session::has('message'))
                 <h5 class="alert alert-success">{{Session::get('message')}}</h5>
@@ -12,7 +12,7 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-bullhorn"></i> Loại cafe</th>
+              <th><i class="fa fa-bullhorn"></i> Loại sản phẩm</th>
               <th class="hidden-phone"><i class="fa fa-question-circle"></i> Mô tả</th>
               <th><i class="fa fa-bookmark"></i> Giá</th>
               <th><i class=" fa fa-edit"></i> Trạng thái</th>

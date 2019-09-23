@@ -71,7 +71,7 @@
 
 			<div class="wrap_header">
 				<!-- Logo -->
-				<a href="index.html" class="logo">
+				<a href="{!! route('home') !!}" class="logo">
 					<img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.0-9/71050667_2381092098800049_1524538846904057856_n.jpg?_nc_cat=106&_nc_oc=AQkcZWwWOSkCQAGdQ66shznw_4BfRA3MvAdspi7E1ZtgLvGBj1stOu3LiiYxp0ehg0c&_nc_ht=scontent.fsgn2-3.fna&oh=fba438c505ab5cf66cf0c059508dccce&oe=5E31FFA8" style="max-height: 55px" alt="IMG-LOGO">
 				</a>
 
