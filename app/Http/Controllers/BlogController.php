@@ -135,9 +135,10 @@ class BlogController extends Controller
 
     public function delete(Request $req){
         $blog = blog::find($req->id);
-        if($blog->delete())
-            return redirect()->route('blog-list')->with('message','Xóa thành công thành công');
-        return redirect()->route('blog-list')->with('message','Xóa thất bại vui lòng thử lại sau');
+        // if($blog->delete())
+        //     return redirect()->route('blog-list')->with('message','Xóa thành công thành công');
+        // return redirect()->route('blog-list')->with('message','Xóa thất bại vui lòng thử lại sau');
+        echo $blog;
     }
 
     /**
