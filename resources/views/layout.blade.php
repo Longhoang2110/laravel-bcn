@@ -6,34 +6,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="https://batchongnang.herokuapp.com/asset_custom/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="asset_custom/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/fonts/themify/themify-icons.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/fonts/elegant-font/html-css/style.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/util.css">
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/main.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/css/util.css">
+	<link rel="stylesheet" type="text/css" href="http://batchongnang.herokuapp.com/asset_custom/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -383,51 +383,52 @@
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					GET IN TOUCH
+					CÔNG TY MÁI HIÊN DI ĐỘNG HỮU CÔNG
 				</h4>
 
 				<div>
 					<p class="s-text7 w-size27">
 						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
 					</p>
-
-					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+					<div id="map" style="width:200px;height:200px;">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
+						1d3723.8977453149246!2d105.83245751424809!3d21.036777085994046!
+						2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+						1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgSOG7kyBDaMOtIE1pbmg!
+						5e0!3m2!1svi!2sus!4v1501056274257" width="350" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
+
+					
 				</div>
 			</div>
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Categories
+					THÔNG TIN
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Men
+							Hệ thông phân phối
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Women
+							Sản phẩm
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Dresses
+							Bài viết
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Sunglasses
+							Lắp đặt
 						</a>
 					</li>
 				</ul>
@@ -435,31 +436,31 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Links
+					 KHÁCH HÀNG
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Search
+							Lắp đặt
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							About Us
+							Sửa chữa
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Contact Us
+							Bảo hành
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Returns
+							Dịch vụ khác
 						</a>
 					</li>
 				</ul>
@@ -467,31 +468,25 @@
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
-					Help
+					HỖ TRỢ
 				</h4>
 
 				<ul>
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Track Order
+							Tư vấn lắp đặt
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Returns
+							Tư vấn sửa chữa
 						</a>
 					</li>
 
 					<li class="p-b-9">
 						<a href="#" class="s-text7">
-							Shipping
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							FAQs
+							Khuyến mãi
 						</a>
 					</li>
 				</ul>
@@ -499,9 +494,15 @@
 
 			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					Newsletter
+					LIÊN HỆ 
 				</h4>
-
+				<div class="flex-m p-t-30">
+					<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+				</div>
 				<form>
 					<div class="effect1 w-size9">
 						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
@@ -511,11 +512,52 @@
 					<div class="w-size2 p-t-20">
 						<!-- Button -->
 						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							Subscribe
+							FANPAGE
 						</button>
+					</div>
+					<div class="hotline-phone-ring-wrap">
+						<div class="hotline-phone-ring">
+							<div class="hotline-phone-ring-circle"></div>
+							<div class="hotline-phone-ring-circle-fill"></div>
+							<div class="hotline-phone-ring-img-circle">
+							<a href="tel:0987654321" class="pps-btn-img">
+								<img src="https://nguyenhung.net/wp-content/uploads/2019/05/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+							</a>
+							</div>
+						</div>
+						<div class="hotline-bar">
+							<a href="tel:0962283727">
+								<span class="text-hotline">0962283727</span>
+							</a>
+						</div>
+					</div>
+					<!-- Load Facebook SDK for JavaScript -->
+					<div id="fb-root"></div>
+					<script>
+					  window.fbAsyncInit = function() {
+						FB.init({
+						  appId            : '1386617178176018',
+						  xfbml            : true,
+						  version          : 'v4.0'
+						});
+					  };
+			  
+					  (function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+			  
+					<!-- Your customer chat code -->
+					<div class="fb-customerchat"
+					  attribution=setup_tool
+					  page_id="111917390208718">
 					</div>
 
 				</form>
+				
 			</div>
 		</div>
 

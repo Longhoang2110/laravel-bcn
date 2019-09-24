@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(https://cdn57.androidauthority.net/wp-content/uploads/2015/11/00-best-backgrounds-and-wallpaper-apps-for-android.jpg);">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(https://cdn57.androidauthority.net/wp-content/uploads/2015/11/00-best-backgrounds-and-wallpaper-apps-for-android.jpg );">
     <h2 class="l-text2 t-center">
         Kiến thức sản phẩm
     </h2>
