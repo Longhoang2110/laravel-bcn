@@ -4,7 +4,7 @@
     <div class="col-md-12">
       <div class="content-panel">
         <table class="table table-striped table-advance table-hover">
-          <h4><i class="fa fa-angle-right"></i> Danh sách blog </h4>
+          <h4><i class="fa fa-angle-right"></i> Danh sách bài viết </h4>
           <hr>
           @if(Session::has('message'))
                 <h5 class="alert alert-success">{{Session::get('message')}}</h5>
@@ -12,11 +12,11 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-bullhorn"></i> Tên blog</th>
+              <th style="width: 200px;"><i class="fa fa-bullhorn"></i> Tên bài viết</th>
               <th class="hidden-phone"><i class="fa fa-question-circle"></i> Mô tả</th>
-              <th><i class="fa fa-bookmark"></i> Lượt xem</th>
-              <th><i class=" fa fa-edit"></i> Trạng thái</th>
-              <th></th>
+              <th style="width: 100px;"><i class="fa fa-bookmark"></i> Lượt xem</th>
+              <th style="width: 100px;"><i class=" fa fa-edit"></i> Trạng thái</th>
+              <th style="width: 150px;"><i class="fa fa-tasks"></i>Chức năng</th>
             </tr>
           </thead>
           <tbody>
@@ -42,5 +42,5 @@
     </div>
     <!-- /col-md-12 -->
   </div>
- 
+
 @endsection

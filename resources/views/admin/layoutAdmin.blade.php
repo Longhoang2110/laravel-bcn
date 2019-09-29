@@ -253,10 +253,10 @@
               <i class="fa fa-dashboard"></i>
               <span>Thông tin đặt hàng</span>
               </a>
-          </li>         
+          </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-book"></i>
+              <i class="fa fa-product-hunt"></i>
               <span>Quản lý sản phẩm</span>
               </a>
             <ul class="sub">
@@ -274,54 +274,54 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
+              <i class="fa fa-book"></i>
               <span>Quản lý bài viết</span>
               </a>
             <ul class="sub">
               <li><a href="{{route('blog-list')}}">Danh sách bài viết</a></li>
-              <li><a href="{{route('blog-add')}}">Thêm bài viết</a></li>             
+              <li><a href="{{route('blog-add')}}">Thêm bài viết</a></li>
             </ul>
-          </li>     
+          </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
+              <i class="fa fa-picture-o"></i>
               <span>Quản lý banner</span>
               </a>
             <ul class="sub">
               <li><a href="{{route('display-list')}}">Danh sách banner</a></li>
-              <li><a href="{{route('display-add')}}">Thêm banner</a></li>             
-            </ul>
-          </li>   
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
-              <span>Quản lý category</span>
-              </a>
-            <ul class="sub">
-              <li><a href="{{route('category-list')}}">Danh sách category</a></li>
-              <li><a href="{{route('category-add')}}">Thêm category</a></li>             
+              <li><a href="{{route('display-add')}}">Thêm banner</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
-              <span>Quản lý content</span>
+              <i class="fa fa-list"></i>
+              <span>Quản lý danh mục</span>
               </a>
             <ul class="sub">
-              <li><a href="{{route('content-list')}}">Danh sách content</a></li>
+              <li><a href="{{route('category-list')}}">Danh sách danh mục</a></li>
+              <li><a href="{{route('category-add')}}">Thêm danh mục</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
+              <i class="fa fa-text-width"></i>
+              <span>Quản lý trang</span>
+              </a>
+            <ul class="sub">
+              <li><a href="{{route('content-list')}}">Danh sách trang</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-map-marker"></i>
               <span>Quản lý Địa chỉ</span>
               </a>
             <ul class="sub">
               <li><a href="{{route('address-list')}}">Danh sách Địa chỉ</a></li>
-              <li><a href="{{route('address-add')}}">Thêm Địa chỉ</a></li>             
+              <li><a href="{{route('address-add')}}">Thêm Địa chỉ</a></li>
 
             </ul>
-          </li>            
+          </li>
         </ul>
         <!-- sidebar menu end-->
       </div>

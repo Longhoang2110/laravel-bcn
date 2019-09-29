@@ -42,7 +42,7 @@ class BlogController extends Controller
     public function getAdd(){
         $category =category::where([
             ['type', '=','0' ]
-        ])->get();    
+        ])->get();
         return view('admin.createBlog',[
             "category" =>$category,
         ]);
@@ -74,8 +74,8 @@ class BlogController extends Controller
         $blog->type = $req->type;
 
 
-        if($req->hasFile('BlogImage')):
-            $image = $req->file('BlogImage');
+        if($req->hasFile('fImage')):
+            $image = $req->file('fImage');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/img/'.$filename);
             Image::make($image)->save($location);

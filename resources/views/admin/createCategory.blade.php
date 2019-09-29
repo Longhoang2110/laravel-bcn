@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Type </label>
+                        <label class="col-sm-2 col-sm-2 control-label">Loại bài viết </label>
                         <div class="col-sm-10">
                             <select name="type">
                                 <option value="0">Bài viết</option>
@@ -67,9 +67,9 @@
                     {{-- <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea> 
+                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea>
                         </div>
-                    </div> --}}              
+                    </div> --}}
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
@@ -84,8 +84,8 @@
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Thêm</button>
-                        </div>  
-                    </div>                     
+                        </div>
+                    </div>
                 </form>
               </div>
               <!-- /form-panel -->

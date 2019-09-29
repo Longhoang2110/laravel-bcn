@@ -34,16 +34,16 @@
                             <label class="col-sm-2 col-sm-2 control-label">Hình hiện tại</label>
                             <div class="col-sm-10">
                                 <img src="images/img/{{$coffee->thumbnail}}" alt="" width="70" height="50">
-                            </div>                            
+                            </div>
                         </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Hình đại diện</label>
                         <div class="col-sm-10">
                             <input type="file" name="fImage">
-                        </div>                       
+                        </div>
                     </div>
                     <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
                             <div class="col-sm-10">
                                 <select name="type">
                             @foreach($category as $item)
@@ -72,11 +72,11 @@
                             </textarea>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Giá</label>
                         <div class="col-sm-10">
-                            <input type="number" name="price" class="form-control" value="{{$coffee->price}}">   
+                            <input type="number" name="price" class="form-control" value="{{$coffee->price}}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -93,8 +93,8 @@
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Lưu</button>
-                        </div>  
-                    </div>                     
+                        </div>
+                    </div>
                 </form>
               </div>
               <!-- /form-panel -->

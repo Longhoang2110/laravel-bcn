@@ -38,11 +38,11 @@
                 {{$coffee->price}} vnd
             </span>
 
-            {{-- <p class="s-text8 p-t-10">
-                Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
-            </p> --}}
+            <!-- <p class="s-text8 p-t-10">
+                {{$coffee->description}}
+            </p> -->
 
-            
+
             <div class="p-t-33 p-b-60">
                 {{-- <div class="flex-m flex-w p-b-10">
                     <div class="s-text15 w-size15 t-center">
@@ -105,7 +105,7 @@
                 <span class="s-text8">Categories: Mug, Design</span>
             </div>  --}}
 
-            
+
             <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
                 <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
                     Mô tả

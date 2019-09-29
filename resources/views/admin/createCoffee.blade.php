@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Hình đại diện</label>
                         <div class="col-sm-10">
-                            <input type="file" name="fImage">
+                            <input type="file" name="BlogImage">
                         </div>
                     </div>
                     <div class="form-group">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
                             <div class="col-sm-10">
                                 <select name="type">
                             @foreach($category as $item)
@@ -66,15 +66,15 @@
                     {{-- <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea> 
+                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea>
                         </div>
                     </div> --}}
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Giá</label>
                         <div class="col-sm-10">
-                            <input type="number" name="price" class="form-control" placeholder="Giá">   
+                            <input type="number" name="price" class="form-control" placeholder="Giá">
                         </div>
-                    </div>                    
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
@@ -89,8 +89,8 @@
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Thêm</button>
-                        </div>  
-                    </div>                     
+                        </div>
+                    </div>
                 </form>
               </div>
               <!-- /form-panel -->

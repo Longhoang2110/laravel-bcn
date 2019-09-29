@@ -12,11 +12,11 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-bullhorn"></i> Loại sản phẩm</th>
+              <th style="width: 200px;"><i class="fa fa-bullhorn"></i> Loại sản phẩm</th>
               <th class="hidden-phone"><i class="fa fa-question-circle"></i> Mô tả</th>
-              <th><i class="fa fa-bookmark"></i> Giá</th>
-              <th><i class=" fa fa-edit"></i> Trạng thái</th>
-              <th></th>
+              <th style="width: 200px;"><i class="fa fa-bookmark"></i> Giá</th>
+              <th style="width: 100px;"><i class=" fa fa-edit"></i> Trạng thái</th>
+              <th style="width: 150px;"><i class="fa fa-tasks"></i>Chức năng</th>
             </tr>
           </thead>
           <tbody>
@@ -42,5 +42,5 @@
     </div>
     <!-- /col-md-12 -->
   </div>
- 
+
 @endsection

@@ -67,7 +67,7 @@
             <div class="col-md-4 col-lg-3 p-b-75">
                 <div class="rightbar">
                     <!-- Categories -->
-                    <h4 class="m-text14 p-b-7">
+                    <h4 class="m-text14">
                             Danh mục bài viết
                         </h4>
 

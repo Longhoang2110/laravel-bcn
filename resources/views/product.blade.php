@@ -5,22 +5,34 @@
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
-                        <h4 class="m-text14 p-b-7">
-                            Danh mục sản phẩm
+                        <h4 class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
+                            <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>
 
                         <ul class="p-b-54">
-                                @foreach($category as $item)
-                            <li class="p-t-4">
-                                 <a href="{{route('category-coffee',$item->id)}}" class="m-text11">
-                                        {{$item->name}}
+                            <li class="p-t-4 p-b-8 bo7">
+                                <div style="padding:5px">
+                                    <a href="{{route('category-coffee',0)}}" class="m-text11">
+                                            Tất cả sản phẩm
+                                    </a>
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                </div>
+                            </li>
+                            @foreach($category as $item)
+                            <li class="p-t-4 p-b-8 bo7">
+                                <div style="padding:5px">
+                                    <a href="{{route('category-coffee',$item->id)}}" class="m-text11">
+                                            {{$item->name}}
+                                    </a>
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                </div>
                             </li>
                             @endforeach
                         </ul>
-                        <h4 class="m-text14 p-b-32">
+                        <h4 class="m-text14 d-none d-sm-block" style="background-color: #ed9f48;text-align: center;line-height: 3;">
 							Sản phẩm mới nhất
                         </h4>
-                        <ul class="p-b-54">
+                        <ul class="p-b-54 d-none d-sm-block">
                         @foreach($coffees as $item)
                             <li class="flex-w p-b-20">
                                 <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
