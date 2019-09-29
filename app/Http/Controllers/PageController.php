@@ -22,9 +22,13 @@ class PageController extends Controller
     public function coffeeDetail(Request $req){
         $coffee = coffee::find($req->id);
         $coffees = coffee::all();
+        $address = address::all();
+
         return view('coffee_detail',[
             "coffee" => $coffee,
             "coffees" => $coffees,
+            "address" =>$address,
+
             //"discount_tour" => $discountTours
             ]);
     }
