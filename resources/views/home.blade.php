@@ -5,43 +5,6 @@
     <div class="wrap-slick1">
         <div class="slick1">
                 @foreach($displays as $item)
-            {{-- <div class="item-slick1 item1-slick1" style="background-image: url();">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-                        Chất lượng đỉnh cao
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                        BẠT MÁI CHO THƯƠNG HIỆU CÔNG PHI
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
-                        <!-- Button -->
-                        <a href="{!!route('product')!!}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Mua ngay!
-                        </a>
-                    </div>
-                </div>
-            </div> --}}
-
-            {{-- <div class="item-slick1 item2-slick1" style="background-image: url(https://www.maichephatdat.com/sites/default/files/field/image/products/11041080_395632410619044_2705156409013219530_n-1.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
-                        Chất lượng đỉnh cao
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-                        BẠT MÁI CHO THƯƠNG HIỆU CÔNG PHI
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
-                        <!-- Button -->
-                        <a href="{!!route('product')!!}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Mua ngay!
-                        </a>
-                    </div>
-                </div>
-            </div> --}}
             <div class="item-slick1 item3-slick1" style="background-image: url(images/img/{{$item->thumbnail}})">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">

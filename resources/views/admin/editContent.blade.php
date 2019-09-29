@@ -3,10 +3,11 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm blog</h2>
+                <h2>Sửa {{$content->name}}</h2>
             </div>
         </div>
     </div>
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -20,47 +21,17 @@
     <div class="row mt">
             <div class="col-lg-12">
               <div class="form-panel">
-                <form action="{{route('blog-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
+                <form action="{{route('content-update',$content->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên Blog</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" placeholder="Tên ">
                         </div>
-                    </div>
-                    <div class="form-group">
-
-                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
-                            <div class="col-sm-10">
-                                <select name="type">
-                            @foreach($category as $item)
-
-                                    <option value="{{$item->id}}">
-                                    {{$item->name}}
-                                    </option>
-                            @endforeach
-
-                                </select>
-                            </div>
-                        </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="description" placeholder="Mô tả"></textarea>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
+                            <input type="hidden" id="hidInfo" name="hidInfo" value="{{$content->content}}">
                             <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
                         </div>
                     </div>
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea> 
-                        </div>
-                    </div> --}}              
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
@@ -74,18 +45,18 @@
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary">Thêm</button>
+                            <button type="submit" class="btn btn-primary">Lưu</button>
                         </div>  
                     </div>                     
                 </form>
               </div>
-              <!-- /form-panel -->
             </div>
-            <!-- /col-lg-12 -->
           </div>
           <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
           <script>
             //CKEDITOR.replace( 'Des-ckeditor' );
               CKEDITOR.replace( 'Content-ckeditor');
+              document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
           </script>
+          
 @endsection

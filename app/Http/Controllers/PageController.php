@@ -7,6 +7,8 @@ use App\coffee;
 use App\blog;
 use App\display;
 use App\category;
+use App\content;
+use App\address;
 class PageController extends Controller
 {
     //
@@ -30,6 +32,8 @@ class PageController extends Controller
     public function blog() {
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
+        $address = address::all();
+
         $category =category::where([
             ['type', '=','0' ]
         ])->get();
@@ -38,6 +42,8 @@ class PageController extends Controller
             "blogs" => $blogs,
             "coffees" => $coffees,
             "category" =>$category,
+            "address" =>$address,
+
             //"discount_tour" => $discountTours
             ]);
     }
@@ -45,10 +51,19 @@ class PageController extends Controller
     public function blogDetail(Request $req) {
         $blog = blog::find($req->id);
         $coffees = coffee::all();
+        $address = address::all();
+        $category =category::where([
+            ['type', '=','0' ]
+        ])->get();
+
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         return view('blog_detail',[
             "blog" => $blog,
             "coffees" => $coffees,
+            "address" =>$address,
+            "category" =>$category,
+
+
             //"discount_tour" => $discountTours
             ]);
     }
@@ -59,10 +74,14 @@ class PageController extends Controller
         $coffees = coffee::all();
         $blogs = blog::all();
         $displays = display::all();
+        $address = address::all();
+
         return view('home',[
             "blogs" => $blogs,
             "coffees" => $coffees,
             "displays"=>$displays,
+            "address" =>$address,
+
             //"discount_tour" => $discountTours
             ]);
         //return view('home');
@@ -70,12 +89,16 @@ class PageController extends Controller
 
     public function product(){
         $coffees = coffee::all();
+        $address = address::all();
+
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
         return view('product',[
             "category" =>$category,
             "coffees" =>$coffees,
+            "address" =>$address,
+
         ]);
         // return view('product',compact('coffees'));
 
@@ -99,6 +122,8 @@ class PageController extends Controller
             ['type', '=','0' ]
         ])->get();
         $coffees = coffee::all();
+        $address = address::all();
+
 
         $blog =blog::where([
             ['type', '=',$req->id ]
@@ -107,11 +132,26 @@ class PageController extends Controller
             "category" =>$category,
             "blogs" =>$blog,
             "coffees" => $coffees,
+            "address" => $address,
+
             // "coffee" => $coffee,
 
 
         ]);
 
     } 
-   
+    public function content(Request $req){
+        $content = content::where([
+            ['type','=',$req->type]
+        ])->get();
+        $address = address::all();
+
+        // echo $content;
+        return view('introduce',[
+            "page" =>$content,
+            "address" =>$address,
+        ]);
+
+
+    }  
 }

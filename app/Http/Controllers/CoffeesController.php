@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\coffee;
 use App\category;
+use App\address;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -199,12 +200,16 @@ class CoffeesController extends Controller
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
+        $address = address::all();
+
         $coffees =coffee::where([
             ['type', '=',$req->id ]
         ])->get();
         return view('product',[
             "category" =>$category,
             "coffees" =>$coffees,
+            "address" =>$address,
+
         ]);
 
     }

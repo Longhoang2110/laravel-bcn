@@ -19,10 +19,6 @@
                         <div class="item-blog p-b-80">
                             <a href="{{route('blog-detail',$item->id)}}" class="item-blog-img pos-relative dis-block hov-img-zoom">
                                 <img src="images/img/{{$item->thumbnail}}" alt="IMG-BLOG">
-
-                                <span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
-                                    28 Dec, 2018
-                                </span>
                             </a>
 
                             <div class="item-blog-txt p-t-33">
@@ -39,7 +35,7 @@
                                     </span>
 
                                     <span>
-                                        Cooking, Food
+                                        installation
                                         <span class="m-l-3 m-r-6">|</span>
                                     </span>
 

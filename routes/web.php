@@ -19,11 +19,14 @@ Route::get('/blogDetail', 'PageController@blogDetail')->name('blogDetail');
 Route::get('/home', 'PageController@home')->name('home');
 Route::get('/product', 'PageController@product')->name('product');
 Route::get('/admin', 'AdminController@index')->name('admin');
-Route::get('/introduce', 'PageController@introduce')->name('introduce');
+// Route::get('/introduce', 'PageController@introduce')->name('introduce');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/addimages', 'PageController@addImages')->name('addimages');
 Route::get('/images','FormController@create')->name('getaddimage');
 Route::post('/images','FormController@store')->name('postaddimage');
+///////////test/////////
+Route::get('/content/{type}', 'PageController@content')->name('content');
+
 
 
 
@@ -116,5 +119,28 @@ Route::group(['prefix' => 'Category'],function(){
     Route::get('add','CategoryController@getAdd')->name('category-add');
     Route::post('add','CategoryController@postAdd')->name('category-add');
 
-    // Route::get('delete/{id}','CategoryController@delete')->name('category-delete');
 });
+//////////content////////////////
+Route::group(['prefix' => 'content'],function(){
+    Route::get('/','ContentController@index')->name('content-list');
+
+    // Route::get('add','ContentController@getAdd')->name('content-add');
+    // Route::post('add','PostController@postAdd')->name('post-add');
+
+    Route::get('update/{id}','ContentController@getUpdate')->name('content-update');
+    Route::post('update/{id}','ContentController@postUpdate')->name('content-update');
+
+    // Route::get('delete/{id}','PostController@delete')->name('post-delete');
+
+});
+Route::group(['prefix' => 'address'],function(){
+Route::get('/','AddressController@index')->name('address-list');
+Route::get('add','AddressController@getAdd')->name('address-add');
+Route::post('add','AddressController@postAdd')->name('address-add');
+Route::get('update/{id}','AddressController@getUpdate')->name('address-update');
+Route::post('update/{id}','AddressController@postUpdate')->name('address-update');
+Route::get('delete/{id}','AddressController@delete')->name('address-delete');
+
+});
+
+

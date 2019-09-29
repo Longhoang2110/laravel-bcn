@@ -24,7 +24,7 @@
                 <form action="{{route('blog-update',$blog->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại cafe</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" value="{{$blog->name}}">
                         </div>

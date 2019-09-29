@@ -163,12 +163,12 @@ class AdminfixController extends Controller
      * @param  \App\blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(blog $blog)
-    {
-        //
-        $blog = blog::find($req->id);
-        if($blog->delete())
-            return redirect()->route('blog-list')->with('message','Xóa thành công');
-        return redirect()->route('blog-list')->with('message','Xóa thất bại vui lòng thử lại sau');
-    }
+    // public function destroy(blog $blog)
+    // {
+    //     //
+    //     $display = display::find($req->id);
+    //     if($display->delete())
+    //         return redirect()->route('blog-list')->with('message','Xóa thành công');
+    //     return redirect()->route('blog-list')->with('message','Xóa thất bại vui lòng thử lại sau');
+    // }
 }

@@ -123,33 +123,17 @@
 
                     <!-- Categories -->
                     <h4 class="m-text23 p-t-56 p-b-34">
-                            Danh mục
+                            Danh mục bài viết
                     </h4>
 
                     <ul>
+                            @foreach($category as $item)
                         <li class="p-t-6 p-b-8 bo6">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Cách pha cafe
+                            <a href="{{route('category-blog',$item->id)}}" class="s-text13 p-t-5 p-b-5">
+                                    {{$item->name}}                                
                             </a>
                         </li>
-
-                        <li class="p-t-6 p-b-8 bo7">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Thông tin cafe
-                            </a>
-                        </li>
-
-                        <li class="p-t-6 p-b-8 bo7">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Các loại cafe
-                            </a>
-                        </li>
-
-                        <li class="p-t-6 p-b-8 bo7">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                Đánh giá cafe
-                            </a>
-                        </li>
+                            @endforeach
 
                     </ul>
 

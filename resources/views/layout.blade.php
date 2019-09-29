@@ -89,7 +89,7 @@
 							</li>
 
 							<li>
-								<a href="{!! route('introduce') !!}">Giới thiệu</a>
+								<a href="{{route('content','1')}}">Giới thiệu</a>
 							</li>
 
 							<li>
@@ -387,47 +387,28 @@
 				</h4>
 
 				<div>
+						@foreach($address as $item)
 					<p class="s-text7 w-size27">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
-					<div id="map" style="width:200px;height:200px;">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
-						1d3723.8977453149246!2d105.83245751424809!3d21.036777085994046!
-						2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
-						1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgSOG7kyBDaMOtIE1pbmg!
-						5e0!3m2!1svi!2sus!4v1501056274257" width="350" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
+						{{$item->address}}
+					</p>					
+						@endforeach
 
-					
 				</div>
 			</div>
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
+				<a href="{{route('content','1')}}" class="s-text12 p-b-30">
 					THÔNG TIN
-				</h4>
+				</a>
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="{{route('content','2')}}" class="s-text7">
 							Hệ thông phân phối
 						</a>
 					</li>
-
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Sản phẩm
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Bài viết
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="{{route('content','3')}}" class="s-text7">
 							Lắp đặt
 						</a>
 					</li>
@@ -435,57 +416,38 @@
 			</div>
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
+				<a href="{{route('content','1')}}" class="s-text12 p-b-30">
 					 KHÁCH HÀNG
-				</h4>
+				</a>
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Lắp đặt
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
+							<a href="{{route('content','4')}}" class="s-text7">
 							Sửa chữa
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+							<a href="{{route('content','5')}}" class="s-text7">
 							Bảo hành
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Dịch vụ khác
 						</a>
 					</li>
 				</ul>
 			</div>
 
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
+				<a  href="{{route('content','1')}}" class="s-text12 p-b-30">
 					HỖ TRỢ
-				</h4>
+				</a>
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Tư vấn lắp đặt
+						<a href="{{route('content','1')}}" class="s-text7">
+							Tư vấn 
 						</a>
 					</li>
-
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Tư vấn sửa chữa
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="{{route('content','1')}}" class="s-text7">
 							Khuyến mãi
 						</a>
 					</li>
@@ -493,9 +455,19 @@
 			</div>
 
 			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
+				<a href="{{route('content','1')}}" class="s-text12 p-b-30">
 					LIÊN HỆ 
-				</h4>
+				</a>
+					<li class="p-b-9">
+						<a href="{{route('content','1')}}" class="s-text7">
+							Liên hệ
+						</a>
+					</li>
+					<li class="p-b-9">
+						<a href="{{route('content','1')}}" class="s-text7">
+							Dịch vụ khác
+						</a>
+					</li>
 				<div class="flex-m p-t-30">
 					<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
 					<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
@@ -526,8 +498,8 @@
 							</div>
 						</div>
 						<div class="hotline-bar">
-							<a href="tel:0962283727">
-								<span class="text-hotline">0962283727</span>
+							<a href="tel:0943515789">
+								<span class="text-hotline">0943515789</span>
 							</a>
 						</div>
 					</div>
