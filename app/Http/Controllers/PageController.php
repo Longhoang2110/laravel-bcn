@@ -93,8 +93,8 @@ class PageController extends Controller
 
     public function product(){
         $coffees = coffee::all();
+        $blog = blog::all();
         $address = address::all();
-
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -102,18 +102,28 @@ class PageController extends Controller
             "category" =>$category,
             "coffees" =>$coffees,
             "address" =>$address,
-
+            "blog" =>$blog,
+            "nameCate" => "Tất cả sản phẩm" 
         ]);
         // return view('product',compact('coffees'));
 
     }
 
     public function introduce(){
-        return view('introduce');
+        $address = address::all();
+
+        return view('introduce',[
+            "address" => $address,
+        ]);
     }
 
     public function contact(){
-        return view('contact');
+        $address = address::all();
+
+        return view('contact',[
+            "address" => $address,
+
+        ]);
     }
 
     public function addImages(){

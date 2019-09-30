@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\blog;
 use App\coffee;
 use App\category;
 use App\address;
@@ -196,12 +196,12 @@ class CoffeesController extends Controller
         return redirect()->route('coffee-list')->with('message','Xóa thất bại vui lòng thử lại sau');
     }
     public function categorycoffee(Request $req){
-        // echo $req->id;
+        $nameCate = $req->name;
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
         $address = address::all();
-
+        $blog = blog::all();
         $coffees =coffee::where([
             ['type', '=',$req->id ]
         ])->get();
@@ -209,6 +209,11 @@ class CoffeesController extends Controller
             "category" =>$category,
             "coffees" =>$coffees,
             "address" =>$address,
+            "blog" =>$blog,
+            "nameCate" => $nameCate
+
+
+            
 
         ]);
 

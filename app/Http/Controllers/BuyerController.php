@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\address;
 use App\buyer;
 use App\blog;
 use App\coffees;
@@ -22,13 +22,17 @@ class BuyerController extends Controller
     }
 
     public function notification(){
-        return view('notification');
+        $address = address::all();
+
+        return view('notification',[
+            "address" =>$address,            
+        ]);
     }
 
     public function getAdd(Request $req){
-        
+        $address = address::all();        
         $coffeeid = $req->id;
-        return view('buy_product',compact('coffeeid'));
+        return view('buy_product',compact('coffeeid','address'));
     }
 
     public function postAdd(Request $req)

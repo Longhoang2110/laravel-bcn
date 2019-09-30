@@ -3,7 +3,7 @@
     <!-- Title Page -->
 	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(http://2.bp.blogspot.com/-3K5uwPmn0vI/UkVMjed_51I/AAAAAAAADoA/Wmbe1NgrOAE/s1600/230_coffee_facebook_cover.jpg);">
 		<h2 class="l-text2 t-center">
-			Contact
+			Liên Hệ Với Chúng Tôi
 		</h2>
 	</section>
 
@@ -20,27 +20,27 @@
 				<div class="col-md-6 p-b-30">
 					<form class="leave-comment">
 						<h4 class="m-text26 p-b-36 p-t-15">
-							Send us your message
+							Thông tin khách hàng
 						</h4>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Full Name">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Họ và tên">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Phone Number">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Số điện thoại">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email" placeholder="Email Address">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email" placeholder="Email ">
 						</div>
 
-						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message" placeholder="Message"></textarea>
+						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message" placeholder="Ghi chú"></textarea>
 
 						<div class="w-size25">
 							<!-- Button -->
 							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
-								Send
+								Gửi
 							</button>
 						</div>
 					</form>

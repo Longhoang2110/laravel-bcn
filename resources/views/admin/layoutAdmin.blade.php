@@ -255,6 +255,16 @@
               </a>
           </li>
           <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa fa-list"></i>
+                <span>Quản lý danh mục</span>
+                </a>
+              <ul class="sub">
+                <li><a href="{{route('category-list')}}">Danh sách danh mục</a></li>
+                <li><a href="{{route('category-add')}}">Thêm danh mục</a></li>
+              </ul>
+            </li>
+          <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-product-hunt"></i>
               <span>Quản lý sản phẩm</span>
@@ -290,16 +300,6 @@
             <ul class="sub">
               <li><a href="{{route('display-list')}}">Danh sách banner</a></li>
               <li><a href="{{route('display-add')}}">Thêm banner</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-list"></i>
-              <span>Quản lý danh mục</span>
-              </a>
-            <ul class="sub">
-              <li><a href="{{route('category-list')}}">Danh sách danh mục</a></li>
-              <li><a href="{{route('category-add')}}">Thêm danh mục</a></li>
             </ul>
           </li>
           <li class="sub-menu">

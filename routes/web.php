@@ -70,7 +70,7 @@ Route::group(['prefix' => 'coffee'],function(){
     Route::get('/','CoffeesController@index')->name('coffee-list');
 
     Route::get('coffeedetail/{id}','PageController@coffeeDetail')->name('coffee-detail');
-    Route::get('categorycoffee/{id}','CoffeesController@categorycoffee')->name('category-coffee');
+    Route::get('categorycoffee/categoryname/{name}/id/{id}','CoffeesController@categorycoffee')->name('category-coffee');
 
     Route::get('update/{id}','CoffeesController@getUpdate')->name('coffee-update');
     Route::post('update/{id}','CoffeesController@postUpdate')->name('coffee-update');
