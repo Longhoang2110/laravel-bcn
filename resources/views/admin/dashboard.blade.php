@@ -10,7 +10,7 @@
           <thead>
             <tr>
               <th><i class="fa fa-bullhorn"></i> Tên khách hàng</th>
-              {{-- <th><i class="fa fa-bookmark"></i> Sản phẩm</th> --}}
+              <th><i class="fa fa-bookmark"></i> Sản phẩm</th>
               <th class="hidden-phone"><i class="fa fa-question-circle"></i>Số điện thoại</th>
               <th><i class="fa fa-bookmark"></i> Email</th>
               <th><i class=" fa fa-edit"></i> Địa chỉ</th>
@@ -23,6 +23,7 @@
                 <td>
                     {{$item->name}}
                 </td>
+                <td>{{$item->coffeename}}</td>
                 <td>{{$item->phone}}</td>
                 <td>{{$item->email}}</td>
                 <td>{{$item->address}}</td>

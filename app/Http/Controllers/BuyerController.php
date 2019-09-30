@@ -52,7 +52,7 @@ class BuyerController extends Controller
         // );
 
         //echo $req;
-        echo "Aaaa";
+        // echo "Aaaa";
         $buyer = new buyer;
         $buyer->coffee_id = $req->coffeeid;
         $buyer->name = $req->name;
