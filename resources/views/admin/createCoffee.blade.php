@@ -11,7 +11,7 @@
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Thêm thất bại!!</strong> Vui lòng nhập đầy đủ thông tin.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Hình đại diện</label>
                         <div class="col-sm-10">
-                            <input type="file" name="BlogImage">
+                            <input type="file" name="fImage">
                         </div>
                     </div>
                     <div class="form-group">

@@ -109,16 +109,16 @@ class CoffeesController extends Controller
 
 
     public function postUpdate(Request $req){
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung'
-        //     ]
-        // );
+        $this->validate($req,
+            [
+                'name' => 'required',
+                'description' => 'required'
+            ],
+            [
+                'name.required' => 'Vui lòng nhập tên',
+                'description.required' => 'Vui lòng nhập nội dung'
+            ]
+        );
 
         $coffee = coffee::find($req->id);
         $coffee->name = $req->name;
