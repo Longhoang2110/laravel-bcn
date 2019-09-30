@@ -29,7 +29,7 @@
                             </li>
                             @endforeach
                         </ul>
-                        <h4 class="m-text14 d-none d-sm-block" style="background-color: #ed9f48;text-align: center;line-height: 3;">
+                        <h4 class="m-text14 d-none d-sm-block" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 15px;">
                             <i class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <ul class="p-b-54 d-none d-sm-block">
@@ -59,9 +59,9 @@
                     <div class="text-center p-b-65">
                         <span class="m-text14">{{$nameCate}}</span>
                     </div>
-                    <div class="row">                       
+                    <div class="row">
                         @foreach($coffees as $item)
-                        
+
                             <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
                                 <!-- Block2 -->
                                 <div class="block2">
