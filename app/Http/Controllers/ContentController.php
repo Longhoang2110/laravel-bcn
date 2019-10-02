@@ -96,16 +96,14 @@ class ContentController extends Controller
     }
 
     public function postUpdate(Request $req){
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung'
-        //     ]
-        // );
+        $this->validate($req,
+            [
+                'name' => 'required',
+            ],
+            [
+                'name.required' => 'Vui lòng nhập tên',
+            ]
+        );
 
         $content = content::find($req->id);
         $content->name = $req->name;

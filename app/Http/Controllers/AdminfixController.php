@@ -44,21 +44,25 @@ class AdminfixController extends Controller
 
     public function postAdd(Request $req)
     {
-        //
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required',
-        //         'fImage' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung',
-        //         'fImage.required' => 'Vui lòng chọn hình ảnh'
-        //     ]
-        // );
+        
+        $this->validate($req,
+            [
+                'name' => 'required',
+                'description' => 'required',
+                'fImage' => 'required',
+                'fImage' => 'required',
+                'content' => 'required',
 
-        //echo $req;
+                
+            ],
+            [
+                'name.required' => 'Vui lòng nhập tên',
+                'description.required' => 'Vui lòng nhập nội dung',
+                'fImage.required' => 'Vui lòng chọn hình ảnh',
+                'content.required' => 'Vui lòng thêm mô tả'
+                
+            ]
+        );
 
         $display = new display;
         $display->name = $req->name;
@@ -85,16 +89,24 @@ class AdminfixController extends Controller
     }
 
     public function postUpdate(Request $req){
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung'
-        //     ]
-        // );
+        $this->validate($req,
+        [
+            'name' => 'required',
+            'description' => 'required',
+            'fImage' => 'required',
+            'fImage' => 'required',
+            'content' => 'required',
+
+            
+        ],
+        [
+            'name.required' => 'Vui lòng nhập tên',
+            'description.required' => 'Vui lòng nhập nội dung',
+            'fImage.required' => 'Vui lòng chọn hình ảnh',
+            'content.required' => 'Vui lòng thêm mô tả'
+            
+        ]
+    );
 
         $display = display::find($req->id);
         $display->name = $req->name;
@@ -107,7 +119,6 @@ class AdminfixController extends Controller
             $filename = $file->getClientOriginalName();
             $location = public_path('images/img/'.$filename);
             Image::make($file)->save($location);
-            // Storage::delete($blog->thumbnail);
             $display->thumbnail = $filename;
         endif;
 

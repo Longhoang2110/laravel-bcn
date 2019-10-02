@@ -3,13 +3,13 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm trang chủ</h2>
+                <h2>Thêm danh mục</h2>
             </div>
         </div>
     </div>
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Thêm thất bại</strong> vui lòng nhập đầy đủ thông tin.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>

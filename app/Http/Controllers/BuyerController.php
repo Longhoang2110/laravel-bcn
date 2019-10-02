@@ -37,27 +37,25 @@ class BuyerController extends Controller
 
     public function postAdd(Request $req)
     {
-        //
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required',
-        //         'fImage' => 'required' 
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung',
-        //         'fImage.required' => 'Vui lòng chọn hình ảnh'
-        //     ]
-        // );
-
-        //echo $req;
-        // echo "Aaaa";
+        
+        $this->validate($req,
+            [
+                'name' => 'required',
+                'address' => 'required',
+                'phone' => 'required' ,
+                'email' => 'required' ,
+            ],
+            [
+                'name.required' => 'Vui lòng nhập tên',
+                'address.required' => 'Vui lòng nhập địa chỉ',
+                'phone.required' => 'Vui lòng nhập SĐT',
+                'email.required' => 'Vui lòng nhập email', 
+            ]
+        );
         $buyer = new buyer;
         $buyer->coffee_id = $req->coffeeid;
         $buyer->name = $req->name;
         $buyer->address = $req->address;
-        //$buyer->amout = $req->amout;
         $buyer->phone = $req->phone;
         $buyer->email = $req->email;
         //$buyer->save();
@@ -72,17 +70,20 @@ class BuyerController extends Controller
     }
 
     public function postUpdate(Request $req){
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung'
-        //     ]
-        // );
-        
+        $this->validate($req,
+        [
+            'name' => 'required',
+            'address' => 'required',
+            'phone' => 'required' ,
+            'email' => 'required' ,
+        ],
+        [
+            'name.required' => 'Vui lòng nhập tên',
+            'address.required' => 'Vui lòng nhập địa chỉ',
+            'phone.required' => 'Vui lòng nhập SĐT',
+            'email.required' => 'Vui lòng nhập email',
+        ]
+    );
         $buyer = buyer::find($req->id);
         $buyer->coffee_id = $req->coffeeid;
         $buyer->name = $req->name;

@@ -18,7 +18,7 @@
 				</div>
 
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment">
+                <form class="leave-comment" action="{{route('buyer-postadd')}}" method="POST" enctype="multipart/form-data">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Thông tin khách hàng
 						</h4>

@@ -7,11 +7,9 @@
             </div>
         </div>
     </div>
-
-
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Thêm thất bại</strong> Vui lòng nhập đầy đủ thông tin<br><br>           
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -27,7 +25,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Địa chỉ</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" placeholder="Tên ">
+                            <input type="text" name="address" class="form-control" placeholder="Tên ">
                         </div>
                     </div>
                     <div class="form-group">

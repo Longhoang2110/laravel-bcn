@@ -10,6 +10,7 @@
                     <h4 class="m-text26 p-b-36 p-t-15">
                         Thông tin mua hàng
                     </h4>
+                    
                 <input style="visibility: hidden;" name="coffeeid" value="{{$coffeeid}}">
                     <div class="bo4 of-hidden size15 m-b-20">
                         <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Họ tên">

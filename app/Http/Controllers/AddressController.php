@@ -48,21 +48,16 @@ class AddressController extends Controller
 
     public function postAdd(Request $req)
     {
-    //     //
-    //     // $this->validate($req,
-    //     //     [
-    //     //         'txtName' => 'required',
-    //     //         'txtInfo' => 'required',
-    //     //         'fImage' => 'required'
-    //     //     ],
-    //     //     [
-    //     //         'txtName.required' => 'Vui lòng nhập tên',
-    //     //         'txtInfo.required' => 'Vui lòng nhập nội dung',
-    //     //         'fImage.required' => 'Vui lòng chọn hình ảnh'
-    //     //     ]
-    //     // );
-
-    //     //echo $req;
+        
+        $this->validate($req,
+            [
+                'address' => 'required',
+            ],
+            [
+                'address.required' => 'Vui lòng nhập địa chỉ',
+                
+            ]
+        );
 
         $address = new address;
         $address->address = $req->name;
@@ -89,16 +84,14 @@ class AddressController extends Controller
     }
 
     public function postUpdate(Request $req){
-    //     // $this->validate($req,
-    //     //     [
-    //     //         'txtName' => 'required',
-    //     //         'txtInfo' => 'required'
-    //     //     ],
-    //     //     [
-    //     //         'txtName.required' => 'Vui lòng nhập tên',
-    //     //         'txtInfo.required' => 'Vui lòng nhập nội dung'
-    //     //     ]
-    //     // );
+        $this->validate($req,
+            [
+                'address' => 'required',
+            ],
+            [
+                'address.required' => 'Vui lòng nhập địa chỉ',
+            ]
+        );
 
         $address = address::find($req->id);
         $address->address = $req->address;

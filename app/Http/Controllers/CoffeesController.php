@@ -59,17 +59,22 @@ class CoffeesController extends Controller
     {
         //
         $this->validate($req,
-            [
-                'name' => 'required',
-                'description' => 'required',
-                'price' => 'required'
-            ],
-            [
-                'name.required' => 'Vui lòng nhập tên',
-                'description.required' => 'Vui lòng nhập nội dung',
-                'price.required' => 'Vui lòng nhập giá'
-            ]
-        );
+        [
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'fImage' => 'required',
+            'alt' => 'required',
+        ],
+        [
+            'name.required' => 'Vui lòng nhập tên',
+            'description.required' => 'Vui lòng nhập nội dung',
+            'price.required' => 'Vui lòng nhập giá',
+            'fImage.required' => 'Vui lòng nhập ảnh',
+            'alt.required' => 'Vui lòng nhập tên  ảnh',
+        ]
+    );
+
 
         echo $req;
 
@@ -110,15 +115,21 @@ class CoffeesController extends Controller
 
     public function postUpdate(Request $req){
         $this->validate($req,
-            [
-                'name' => 'required',
-                'description' => 'required'
-            ],
-            [
-                'name.required' => 'Vui lòng nhập tên',
-                'description.required' => 'Vui lòng nhập nội dung'
-            ]
-        );
+        [
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'fImage' => 'required',
+            'alt' => 'required',
+        ],
+        [
+            'name.required' => 'Vui lòng nhập tên',
+            'description.required' => 'Vui lòng nhập nội dung',
+            'price.required' => 'Vui lòng nhập giá',
+            'fImage.required' => 'Vui lòng nhập ảnh',
+            'alt.required' => 'Vui lòng nhập tên  ảnh',
+        ]
+    );
 
         $coffee = coffee::find($req->id);
         $coffee->name = $req->name;

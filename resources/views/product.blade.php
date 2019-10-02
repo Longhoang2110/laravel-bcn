@@ -3,18 +3,27 @@
     <section class="bgwhite p-t-55 p-b-65">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+            
+                <div id="nav"class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
-                        <h4 class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
+                        <h4 id="hinder" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
                             <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>
-
-                        <ul class="p-b-54">
+                        
+                        <script>
+                            $(document).ready(function(){
+                                $("#hinder").click(function(){
+                                    $("#an").toggle(500);
+                                })
+                            })
+                        </script>
+                        <ul id="an" class="p-b-54">
                             <li class="p-t-4 p-b-8 bo7">
                                 <div style="padding:5px">
                                     <a href="{{route('product')}}" class="m-text11">
                                             Tất cả sản phẩm
                                     </a>
+                                    
                                     <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                                 </div>
                             </li>
@@ -29,10 +38,17 @@
                             </li>
                             @endforeach
                         </ul>
-                        <h4 class="m-text14 d-none d-sm-block" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 15px;">
-                            <i class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
+                        <h4 id="hinder2" type="button"class="m-text14 d-none d-sm-block" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 15px;">
+                            <i  class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
-                        <ul class="p-b-54 d-none d-sm-block">
+                        <script>
+                            $(document).ready(function(){
+                                $("#hinder2").click(function(){
+                                    $("#an2").toggle(500);
+                                })
+                            })
+                        </script>
+                        <ul id="an2"class="p-b-54 d-none d-sm-block">
                         @foreach($blog as $item)
                             <li class="flex-w p-b-20">
                                 <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
@@ -43,10 +59,6 @@
                                     <a href="{{route('blog-detail',$item->id)}}" class="s-text20">
                                         {{$item->name}}
                                     </a>
-
-                                    {{-- <span class="dis-block s-text17 p-t-6">
-                                        {{$item->price}} vnd
-                                    </span> --}}
                                 </div>
                             </li>
                         @endforeach
@@ -97,11 +109,7 @@
                         @endforeach
                     </div>
 
-                    <!-- Pagination -->
-                    {{-- <div class="pagination flex-m flex-w p-t-26">
-                        <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-                        <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-                    </div> --}}
+                   
                 </div>
             </div>
         </div>

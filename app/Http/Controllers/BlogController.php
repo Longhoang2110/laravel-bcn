@@ -50,21 +50,21 @@ class BlogController extends Controller
 
     public function postAdd(Request $req)
     {
-        //
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required',
-        //         'fImage' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung',
-        //         'fImage.required' => 'Vui lòng chọn hình ảnh'
-        //     ]
-        // );
-
-        //echo $req;
+        
+        $this->validate($req,
+        [
+            'name' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+            'fImage' => 'required',
+        ],
+        [
+            'name.required' => 'Vui lòng nhập tên',
+            'description.required' => 'Vui lòng nhập nội dung',
+            'content.required' => 'Vui lòng nhập nội dung',
+            'fImage.required' => 'Vui lòng nhập ảnh',
+        ]
+    );
 
         $blog = new blog;
         $blog->name = $req->name;
@@ -100,16 +100,26 @@ class BlogController extends Controller
     }
 
     public function postUpdate(Request $req){
-        // $this->validate($req,
-        //     [
-        //         'txtName' => 'required',
-        //         'txtInfo' => 'required'
-        //     ],
-        //     [
-        //         'txtName.required' => 'Vui lòng nhập tên',
-        //         'txtInfo.required' => 'Vui lòng nhập nội dung'
-        //     ]
-        // );
+        $this->validate($req,
+            [
+                'name' => 'required',
+                'description' => 'required',
+                'content' => 'required',
+                'fImage' => 'required',
+
+                
+
+            ],
+            [
+                'name.required' => 'Vui lòng nhập tên',
+                'description.required' => 'Vui lòng nhập nội dung',
+                'content.required' => 'Vui lòng nhập nội dung',
+                'fImage.required' => 'Vui lòng nhập ảnh',
+
+                
+
+            ]
+        );
 
         $blog = blog::find($req->id);
         $blog->name = $req->name;
@@ -124,7 +134,6 @@ class BlogController extends Controller
             $filename = $file->getClientOriginalName();
             $location = public_path('images/img/'.$filename);
             Image::make($file)->save($location);
-            // Storage::delete($blog->thumbnail);
             $blog->thumbnail = $filename;
         endif;
 
