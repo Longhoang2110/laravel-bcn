@@ -8,8 +8,7 @@
                     <div class="leftbar p-r-20 p-r-0-sm">
                         <h4 id="hinder" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
                             <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
-                        </h4>
-                        
+                        </h4>       
                         <script>
                             $(document).ready(function(){
                                 $("#hinder").click(function(){
@@ -38,7 +37,7 @@
                             </li>
                             @endforeach
                         </ul>
-                        <h4 id="hinder2" type="button"class="m-text14 d-none d-sm-block" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 15px;">
+                        <h4 id="hinder2" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 15px;">
                             <i  class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <script>
@@ -48,7 +47,7 @@
                                 })
                             })
                         </script>
-                        <ul id="an2"class="p-b-54 d-none d-sm-block">
+                        <ul id="an2"class="p-b-54">
                         @foreach($blog as $item)
                             <li class="flex-w p-b-20">
                                 <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">

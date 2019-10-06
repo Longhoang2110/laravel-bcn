@@ -76,8 +76,6 @@ class CoffeesController extends Controller
     );
 
 
-        echo $req;
-
         $coffee = new coffee;
         $coffee->name = $req->name;
         $coffee->description = $req->description;

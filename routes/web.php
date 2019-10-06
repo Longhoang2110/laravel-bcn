@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/admin/login', 'AdminController@getlogin')->name('getadmin');
+Route::post('/admin/login', 'AdminController@postlogin')->name('postadmin');
+
+
+
 Route::resource('coffee','CoffeesController');
 Route::get('/', 'PageController@home')->name('home');
 Route::get('/listCoffee', 'CoffeesController@Index')->name('listCoffee');
@@ -18,7 +23,7 @@ Route::get('/blog', 'PageController@blog')->name('blog');
 Route::get('/blogDetail', 'PageController@blogDetail')->name('blogDetail');
 Route::get('/home', 'PageController@home')->name('home');
 Route::get('/product', 'PageController@product')->name('product');
-Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin', 'AdminController@getlogin')->name('admin');
 // Route::get('/introduce', 'PageController@introduce')->name('introduce');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/addimages', 'PageController@addImages')->name('addimages');
