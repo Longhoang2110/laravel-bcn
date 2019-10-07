@@ -4,7 +4,7 @@
 <section class="container slide1">
     <div class="row">
         <div class="col-md-3" style="padding-top:10px;">
-            <h4 id="hinder" type="button"class="m-text12" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
+            <h4 id="hinder" type="button"class="m-text11" style="background-color: #2a8dd2;text-align: center;line-height: 3;margin-bottom: 15px;">
                 <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
             </h4>       
             <script>
@@ -14,6 +14,7 @@
                     })
                 })
             </script>
+            <div class="left">
             <ul id="an" class="p-b-54">
                 <li class="p-t-4 p-b-8 bo7">
                     <div style="padding:5px">
@@ -24,7 +25,7 @@
                         <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                     </div>
                 </li>
-                @foreach($category as $item)
+                @foreach($category_product as $item)
                 <li class="p-t-4 p-b-8 bo7">
                     <div style="padding:5px">
                         <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
@@ -35,6 +36,7 @@
                 </li>
                 @endforeach
             </ul>
+        </div>
         </div>
         <div class="col-md-9">
             <div class="wrap-slick1">

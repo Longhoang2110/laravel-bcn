@@ -6,7 +6,7 @@
             
                 <div id="nav"class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
-                        <h4 id="hinder" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
+                        <h4 id="hinder" type="button"class="m-text11" style="background-color: #2a8dd2;text-align: center;line-height: 3;margin-bottom: 15px;">
                             <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>       
                         <script>
@@ -16,6 +16,7 @@
                                 })
                             })
                         </script>
+                    <div class="left">
                         <ul id="an" class="p-b-54">
                             <li class="p-t-4 p-b-8 bo7">
                                 <div style="padding:5px">
@@ -26,7 +27,7 @@
                                     <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                                 </div>
                             </li>
-                            @foreach($category as $item)
+                            @foreach($category_product as $item)
                             <li class="p-t-4 p-b-8 bo7">
                                 <div style="padding:5px">
                                     <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
@@ -37,7 +38,8 @@
                             </li>
                             @endforeach
                         </ul>
-                        <h4 id="hinder2" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;margin-bottom: 15px;">
+                    </div>
+                        <h4 id="hinder2" type="button"class="m-text11" style="background-color: #2a8dd2;text-align: center;line-height: 3;margin-bottom: 15px;">
                             <i  class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <script>
@@ -47,7 +49,7 @@
                                 })
                             })
                         </script>
-                        <ul id="an2"class="p-b-54">
+                        <ul id="an2"class="p-b-54" style="background-color: #fff ; !important">
                         @foreach($blog as $item)
                             <li class="flex-w p-b-20">
                                 <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">

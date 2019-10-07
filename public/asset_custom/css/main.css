@@ -144,14 +144,17 @@ p {
     font-family: Montserrat-Regular;
     font-size: 15px;
     line-height: 1.7;
-    color: #888888;
+    color: #fff;
     margin: 0px;
 }
-
-ul,
 li {
     margin: 0px;
     list-style-type: none;
+}
+.left ul li{
+    margin: 0px;
+    list-style-type: none;
+    background-color: #2a8dd2;
 }
 
 
@@ -255,7 +258,7 @@ iframe {
     -o-animation: ball-scale infinite linear .75s;
     animation: ball-scale infinite linear .75s;
     border-radius: 100%;
-    background-color: #e65540;
+    background-color: #2a8dd2;
 }
 
 @-webkit-keyframes ball-scale {
@@ -777,6 +780,7 @@ li.sale-noti>a {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
+
 }
 
 .main_menu>li>.sub_menu {
@@ -795,6 +799,8 @@ li.sale-noti>a {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
+    text-align: center;
+    background-color: #2a8dd2;
 }
 
 .sub_menu li,
@@ -802,7 +808,7 @@ li.sale-noti>a {
     padding: 10px;
     font-family: Montserrat-Regular;
     font-size: 13px;
-    color: #2a8dd2;
+    color: #fff;
 }
 
 .sub_menu>li:hover>a {
@@ -2524,3 +2530,4 @@ input.num-product::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+

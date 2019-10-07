@@ -6,34 +6,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="https://batchongnang.herokuapp.com/asset_custom/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="asset_custom/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/themify/themify-icons.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/elegant-font/html-css/style.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href=asset_custom/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/util.css">
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/main.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/util.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/main.css">
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
@@ -79,18 +79,28 @@
 							<li>
 								<a href="{!!route('product')!!}">Sản phẩm</a>
 								<ul class="sub_menu">
-									<li><a href="index.html">Homepage V1</a></li>
-									<li><a href="home-02.html">Homepage V2</a></li>
-									<li><a href="home-03.html">Homepage V3</a></li>
+										@foreach($category_product as $item)
+										<li class="p-t-4 p-b-8 bo7">
+												<a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
+														{{$item->name}}
+												</a>
+												{{-- <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> --}}
+										</li>
+										@endforeach
 								</ul>
 							</li>
 
 							<li>
 								<a href="{!! route('blog') !!}">Bài viết</a>
 								<ul class="sub_menu">
-									<li><a href="index.html">Homepage V1</a></li>
-									<li><a href="home-02.html">Homepage V2</a></li>
-									<li><a href="home-03.html">Homepage V3</a></li>
+										@foreach($category_blog as $item)
+										<li class="p-t-4 p-b-8 bo7">
+											<a href="{{route('category-blog',$item->id)}}" class="m-text11">
+													{{$item->name}}
+											</a>
+
+										</li>
+									@endforeach
 								</ul>
 							</li>
 

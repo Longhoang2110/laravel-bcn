@@ -37,16 +37,21 @@ class PageController extends Controller
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
         $address = address::all();
-
-        $category =category::where([
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
+        $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
         $blogs = blog::all();
         return view('blog',[
             "blogs" => $blogs,
             "coffees" => $coffees,
-            "category" =>$category,
+            // "category" =>$category,
             "address" =>$address,
+            "category_blog" =>$category_blog,
+            "category_product" =>$category_product,
+
 
             //"discount_tour" => $discountTours
             ]);
@@ -59,13 +64,17 @@ class PageController extends Controller
         $category =category::where([
             ['type', '=','0' ]
         ])->get();
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
 
-        //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         return view('blog_detail',[
             "blog" => $blog,
             "coffees" => $coffees,
             "address" =>$address,
             "category" =>$category,
+            "category_product" =>$category_product,
+
 
 
             //"discount_tour" => $discountTours
@@ -74,39 +83,46 @@ class PageController extends Controller
 
 
     public function home() {
-        //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
         $blogs = blog::all();
         $displays = display::all();
         $address = address::all();
-        $category =category::where([
+        $category_product =category::where([
             ['type', '=','1' ]
+        ])->get();
+        $category_blog =category::where([
+            ['type', '=','0' ]
         ])->get();
         return view('home',[
             "blogs" => $blogs,
             "coffees" => $coffees,
             "displays"=>$displays,
             "address" =>$address,
-            "category" =>$category,
+            "category_product" =>$category_product,
+            "category_blog" =>$category_blog,
 
 
-            //"discount_tour" => $discountTours
+
             ]);
-        //return view('home');
     }
 
     public function product(){
         $coffees = coffee::all();
         $blog = blog::all();
         $address = address::all();
-        $category =category::where([
+        $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
         return view('product',[
-            "category" =>$category,
+            "category_product" =>$category_product,
             "coffees" =>$coffees,
             "address" =>$address,
             "blog" =>$blog,
+            "category_blog" =>$category_blog,
+
             "nameCate" => "Tất cả sản phẩm" 
         ]);
         // return view('product',compact('coffees'));
@@ -115,17 +131,34 @@ class PageController extends Controller
 
     public function introduce(){
         $address = address::all();
-
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
         return view('introduce',[
             "address" => $address,
+            "category_product" =>$category_product,
+            "category_blog" =>$category_blog,
+
         ]);
     }
 
     public function contact(){
         $address = address::all();
-
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
         return view('contact',[
             "address" => $address,
+            "category_product" =>$category_product,
+            "category_blog" =>$category_blog,
+
+
 
         ]);
     }
@@ -135,9 +168,11 @@ class PageController extends Controller
     }
 
     public function categoryblog(Request $req){
-        // echo $req->id;
-        $category =category::where([
+        $category_blog =category::where([
             ['type', '=','0' ]
+        ])->get();
+        $category_product =category::where([
+            ['type', '=','1' ]
         ])->get();
         $coffees = coffee::all();
         $address = address::all();
@@ -147,10 +182,13 @@ class PageController extends Controller
             ['type', '=',$req->id ]
         ])->get();        
         return view('blog',[
-            "category" =>$category,
+            "category_blog" =>$category_blog,
             "blogs" =>$blog,
             "coffees" => $coffees,
             "address" => $address,
+            "category_product" =>$category_product,
+
+
 
             // "coffee" => $coffee,
 
@@ -162,12 +200,22 @@ class PageController extends Controller
         $content = content::where([
             ['type','=',$req->type]
         ])->get();
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
         $address = address::all();
 
         // echo $content;
         return view('introduce',[
             "page" =>$content,
             "address" =>$address,
+            "category_product" =>$category_product,
+            "category_blog" =>$category_blog,
+
+
         ]);
 
 

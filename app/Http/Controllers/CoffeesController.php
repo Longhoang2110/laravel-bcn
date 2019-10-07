@@ -206,8 +206,11 @@ class CoffeesController extends Controller
     }
     public function categorycoffee(Request $req){
         $nameCate = $req->name;
-        $category =category::where([
+        $category_product =category::where([
             ['type', '=','1' ]
+        ])->get();
+        $category_blog =category::where([
+            ['type', '=','0' ]
         ])->get();
         $address = address::all();
         $blog = blog::all();
@@ -215,11 +218,13 @@ class CoffeesController extends Controller
             ['type', '=',$req->id ]
         ])->get();
         return view('product',[
-            "category" =>$category,
+            "category_product" =>$category_product,
             "coffees" =>$coffees,
             "address" =>$address,
             "blog" =>$blog,
-            "nameCate" => $nameCate
+            "nameCate" => $nameCate,
+            "category_blog" =>$category_blog,
+
 
 
             

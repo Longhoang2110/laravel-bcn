@@ -5,6 +5,7 @@ use App\address;
 use App\buyer;
 use App\blog;
 use App\coffees;
+use App\category;
 use Illuminate\Http\Request;
 
 class BuyerController extends Controller
@@ -23,16 +24,32 @@ class BuyerController extends Controller
 
     public function notification(){
         $address = address::all();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
 
         return view('notification',[
-            "address" =>$address,            
+            "address" =>$address,
+            "category_blog" =>$category_blog,
+            "category_product" =>$category_product,
+
+
         ]);
     }
 
     public function getAdd(Request $req){
         $address = address::all();        
         $coffeeid = $req->id;
-        return view('buy_product',compact('coffeeid','address'));
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
+        return view('buy_product',compact('coffeeid','address','category_blog','category_product'));
     }
 
     public function postAdd(Request $req)

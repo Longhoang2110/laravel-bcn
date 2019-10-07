@@ -15,7 +15,6 @@
             <div class="col-md-8 col-lg-9 p-b-75">
                 <div class="p-r-50 p-r-0-lg">
                     @foreach($blogs as $item)
-                        <!-- item blog -->
                         <div class="item-blog p-b-80">
                             <a href="{{route('blog-detail',$item->id)}}" class="item-blog-img pos-relative dis-block hov-img-zoom">
                                 <img src="images/img/{{$item->thumbnail}}" alt="IMG-BLOG">
@@ -60,8 +59,8 @@
 
             <div class="col-md-4 col-lg-3 p-b-75">
             <div class="rightbar">
-                    <div>
-                    <h4 id="hinder" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
+                <div>
+                    <h4 id="hinder" type="button"class="m-text11" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
                         <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
                     </h4>
                     <script>
@@ -71,18 +70,23 @@
                             })
                         })
                     </script>
+                    <div class="left">
                         <ul id= "an">
-                            @foreach($category as $item)
-                                <li class="p-t-4">
+                            @foreach($category_blog as $item)
+                                <li class="p-t-4 p-b-8 bo7">
+                                <div style="padding:5px">
                                     <a href="{{route('category-blog',$item->id)}}" class="m-text11">
                                             {{$item->name}}
+                                    </a>
+                                    </div>
                                 </li>
                             @endforeach
                         </ul>
                     </div>
+                </div>
                     <div>
-                    <h4 id="hinder2" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
-                        <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
+                    <h4 id="hinder2" type="button"class="m-text11" style="background-color: #2a8dd2;text-align: center;line-height:3;">
+                        <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                     </h4>
                     <script>
                         $(document).ready(function(){
