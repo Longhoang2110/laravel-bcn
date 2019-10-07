@@ -6,34 +6,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="asset_custom/images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="batchongnang.herokuapp.com/asset_custom/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/fonts/font-awesome-4.7.0/css/font-awesome.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/fonts/themify/themify-icons.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/fonts/elegant-font/html-css/style.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href=asset_custom/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href=batchongnang.herokuapp.com/asset_custom/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="asset_custom/css/util.css">
-	<link rel="stylesheet" type="text/css" href="asset_custom/css/main.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/css/util.css">
+	<link rel="stylesheet" type="text/css" href="batchongnang.herokuapp.com/asset_custom/css/main.css">
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
