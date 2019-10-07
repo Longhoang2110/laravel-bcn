@@ -79,12 +79,16 @@ class PageController extends Controller
         $blogs = blog::all();
         $displays = display::all();
         $address = address::all();
-
+        $category =category::where([
+            ['type', '=','1' ]
+        ])->get();
         return view('home',[
             "blogs" => $blogs,
             "coffees" => $coffees,
             "displays"=>$displays,
             "address" =>$address,
+            "category" =>$category,
+
 
             //"discount_tour" => $discountTours
             ]);

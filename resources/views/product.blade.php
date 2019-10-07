@@ -6,7 +6,7 @@
             
                 <div id="nav"class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
-                        <h4 id="hinder" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
+                        <h4 id="hinder" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
                             <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>       
                         <script>
@@ -37,7 +37,7 @@
                             </li>
                             @endforeach
                         </ul>
-                        <h4 id="hinder2" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 15px;">
+                        <h4 id="hinder2" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;margin-bottom: 15px;">
                             <i  class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <script>

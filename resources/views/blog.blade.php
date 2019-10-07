@@ -61,7 +61,7 @@
             <div class="col-md-4 col-lg-3 p-b-75">
             <div class="rightbar">
                     <div>
-                    <h4 id="hinder" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
+                    <h4 id="hinder" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
                         <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
                     </h4>
                     <script>
@@ -81,7 +81,7 @@
                         </ul>
                     </div>
                     <div>
-                    <h4 id="hinder2" type="button"class="m-text14" style="background-color: #ed9f48;text-align: center;line-height: 3;">
+                    <h4 id="hinder2" type="button"class="m-text14" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
                         <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
                     </h4>
                     <script>

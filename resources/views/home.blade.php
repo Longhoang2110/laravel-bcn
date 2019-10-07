@@ -4,71 +4,36 @@
 <section class="container slide1">
     <div class="row">
         <div class="col-md-3" style="padding-top:10px;">
-            <h4 class="m-text14 p-b-7" style="background-color: #2a8dd2;text-align: center;line-height: 3;color: white;border-bottom: 1px solid white;">
-                Danh mục
-            </h4>
-
-            <ul class="p-b-54">
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13 active1" style="color: white">
-                        All
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+            <h4 id="hinder" type="button"class="m-text12" style="background-color: #2a8dd2;text-align: center;line-height: 3;">
+                <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
+            </h4>       
+            <script>
+                $(document).ready(function(){
+                    $("#hinder").click(function(){
+                        $("#an").toggle(500);
+                    })
+                })
+            </script>
+            <ul id="an" class="p-b-54">
+                <li class="p-t-4 p-b-8 bo7">
+                    <div style="padding:5px">
+                        <a href="{{route('product')}}" class="m-text11">
+                                Tất cả sản phẩm
+                        </a>
+                        
+                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </div>
                 </li>
-
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Women
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                @foreach($category as $item)
+                <li class="p-t-4 p-b-8 bo7">
+                    <div style="padding:5px">
+                        <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
+                                {{$item->name}}
+                        </a>
+                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </div>
                 </li>
-
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Men
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
-
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Kids
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
-
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Accesories
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Men
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
-
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Kids
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
-
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Accesories
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
-                <li class="p-t-4" style="padding: 5px;background-color: #2a8dd2;color: white;border-bottom: 1px solid white;">
-                    <a href="#" class="s-text13" style="color: white">
-                        Tất cả sản phẩm
-                    </a>
-                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                </li>
+                @endforeach
             </ul>
         </div>
         <div class="col-md-9">
