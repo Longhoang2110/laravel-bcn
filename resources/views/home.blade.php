@@ -3,17 +3,17 @@
 <!-- Slide1 -->
 <section class="container slide1">
     <div class="row">
-        <div class="col-md-3" style="padding-top:10px;">
-            <h4 id="hinder" type="button"class="m-text11" style="background-color: #2a8dd2;text-align: center;line-height: 3;margin-bottom: 15px;">
+        <div class="col-md-3">
+            <h4 id="hinder" class="m-text11" style="background-color: #e65540;text-align: center;line-height: 3;margin-bottom: 10px;margin-top: 10px;">
                 <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
             </h4>       
-            <script>
+            {{-- <script>
                 $(document).ready(function(){
                     $("#hinder").click(function(){
                         $("#an").toggle(500);
                     })
                 })
-            </script>
+            </script> --}}
             <div class="left">
             <ul id="an" class="p-b-54">
                 <li class="p-t-4 p-b-8 bo7">

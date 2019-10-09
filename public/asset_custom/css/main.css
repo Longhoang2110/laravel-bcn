@@ -125,7 +125,7 @@ a:focus {
 
 a:hover {
     text-decoration: none;
-    color: #e65540;
+    color: #271b19;
 }
 
 
@@ -154,7 +154,7 @@ li {
 .left ul li{
     margin: 0px;
     list-style-type: none;
-    background-color: #2a8dd2;
+    background-color: #e65540;
 }
 
 
@@ -258,7 +258,7 @@ iframe {
     -o-animation: ball-scale infinite linear .75s;
     animation: ball-scale infinite linear .75s;
     border-radius: 100%;
-    background-color: #2a8dd2;
+    background-color: #e65540;
 }
 
 @-webkit-keyframes ball-scale {
@@ -677,7 +677,7 @@ iframe {
     flex-wrap: wrap;
     width: 100%;
     height: 80px;
-    background-color: #2a8dd2;
+    background-color: #e65540;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -752,7 +752,7 @@ li.sale-noti>a {
 
 .main_menu>li:hover>a {
     text-decoration: none;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
 }
 
 .main_menu li {
@@ -771,7 +771,6 @@ li.sale-noti>a {
     top: 0;
     left: 100%;
     width: 225px;
-    background-color: white;
     opacity: 0;
     visibility: hidden;
     padding-top: 10px;
@@ -800,19 +799,19 @@ li.sale-noti>a {
     -o-transition: all 0.3s;
     -moz-transition: all 0.3s;
     text-align: center;
-    background-color: #2a8dd2;
+    background-color: #e65540;
 }
 
 .sub_menu li,
 .sub_menu a {
-    padding: 10px;
+    /* padding: 10px; */
     font-family: Montserrat-Regular;
     font-size: 13px;
     color: #fff;
 }
 
 .sub_menu>li:hover>a {
-    color: #e65540;
+    color: #271b19;
     text-decoration: none;
 }
 
@@ -1206,7 +1205,7 @@ li.sale-noti>a {
 .side-menu .sub-menu a:hover {
     text-decoration: none;
     padding-left: 20px;
-    color: #e65540 !important;
+    color: #271b19 !important;
 }
 
 .side-menu .sub-menu {
@@ -2531,3 +2530,12 @@ input.num-product::-webkit-inner-spin-button {
     margin: 0;
 }
 
+.parent {
+    display: flex;
+  }
+  .col-left {
+    flex: 1;
+  }
+  .col-right {
+    flex: 1;
+  }

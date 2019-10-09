@@ -10347,7 +10347,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 */
 
 .color0-hov:hover {
-    color: #2a8dd2;
+    color: #e65540;
 }
 
 
@@ -10669,7 +10669,7 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 */
 
 .bg0-hov:hover {
-    background-color: #2a8dd2;
+    background-color: #e65540;
 }
 
 
@@ -10871,7 +10871,7 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 */
 
 .eff2:active {
-    background-color: #2a8dd2;
+    background-color: #e65540;
     color: white;
 }
 
@@ -10950,7 +10950,7 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 */
 
 .hov1:hover {
-    background-color: #2a8dd2;
+    background-color: #e65540;
     color: white;
 }
 
