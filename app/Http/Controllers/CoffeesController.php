@@ -5,6 +5,9 @@ use App\blog;
 use App\coffee;
 use App\category;
 use App\address;
+use App\group;
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -48,9 +51,12 @@ class CoffeesController extends Controller
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
+        $group = group::all();
 
         return view('admin.createCoffee',[
             "category" =>$category,
+            "group" =>$group,
+
 
         ]);
     }
@@ -75,7 +81,7 @@ class CoffeesController extends Controller
         ]
     );
 
-
+        $time = Carbon::now('Asia/Ho_Chi_Minh');
         $coffee = new coffee;
         $coffee->name = $req->name;
         $coffee->description = $req->description;
@@ -84,6 +90,8 @@ class CoffeesController extends Controller
         $coffee->is_active = $req->rdoState;
         $coffee->alt = $req->alt;
         $coffee->type = $req->type;
+        $coffee->code = $req->code;
+        $coffee->created_at = $time;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -102,9 +110,14 @@ class CoffeesController extends Controller
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
+        $group = group::all();
+
         return view('admin.editCoffee',[
             "category" =>$category,
             "coffee" =>$coffee,
+            "group" =>$group,
+
+            
         ]);
 
         }
@@ -128,7 +141,7 @@ class CoffeesController extends Controller
             'alt.required' => 'Vui lòng nhập tên  ảnh',
         ]
     );
-
+        $time = Carbon::now('Asia/Ho_Chi_Minh');
         $coffee = coffee::find($req->id);
         $coffee->name = $req->name;
         $coffee->description = $req->description;
@@ -136,6 +149,10 @@ class CoffeesController extends Controller
         $coffee->is_active = $req->rdoState;
         $coffee->alt = $req->alt;
         $coffee->type = $req->type;
+        $coffee->updated_at = $time;
+        $coffee->code = $req->code;
+
+
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();

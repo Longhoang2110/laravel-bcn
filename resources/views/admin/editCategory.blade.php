@@ -42,8 +42,6 @@
                             <select name="type">
                                 <option value="0" {{$category->type == 0? 'selected':''}}>Bài viết</option>
                                 <option value="1" {{$category->type == 1? 'selected':''}}>Sản phẩm</option>
-                                <option value="2" {{$category->type == 2? 'selected':''}}>Bài Post</option>
-
                             </select>
                         </div>
                     </div>

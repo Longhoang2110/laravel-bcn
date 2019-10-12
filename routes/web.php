@@ -149,3 +149,18 @@ Route::get('delete/{id}','AddressController@delete')->name('address-delete');
 });
 
 
+///////// group_product\\\\\\\\\\\\\\\
+Route::group(['prefix' => 'GroupProduct'],function(){
+    Route::get('/','GroupProductController@index')->name('group_product-list');
+    // Route::get('categorydetail/{id}','PageController@categoryDetail')->name('category-detail');
+
+    Route::get('update/{id}','GroupProductController@getUpdate')->name('group_product-update');
+    Route::post('update/{id}','GroupProductController@postUpdate')->name('group_product-update');
+
+    Route::get('add','GroupProductController@getAdd')->name('group_product-add');
+    Route::post('add','GroupProductController@postAdd')->name('group_product-add');
+});
+Route::group(['prefix' => 'ajax'],function(){
+    Route::get ('group/{idcategory}','ajaxController@getindex');
+
+});

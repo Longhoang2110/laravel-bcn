@@ -4,7 +4,7 @@
 <section class="container slide1">
     <div class="row">
         <div class="col-md-3">
-            <h4 id="hinder" class="m-text11" style="background-color: #e65540;text-align: center;line-height: 3;margin-bottom: 10px;margin-top: 10px;">
+            <h4 id="hinder" class="m-text11" style="background-color: #e65540;text-align: center;line-height: 3;margin-bottom:1px;margin-top: 10px;">
                 <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
             </h4>       
             {{-- <script>
@@ -30,6 +30,27 @@
                     <div style="padding:5px">
                         <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
                                 {{$item->name}}
+                                <ul class="sub_menu">
+                                    @foreach($category_blog as $item)
+                                    <li class="p-t-4 p-b-8 bo7">
+                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                                {{$item->name}}
+                                                <ul class="sub_menu">
+                                                    @foreach($category_blog as $item)
+                                                    <li class="p-t-4 p-b-8 bo7">
+                                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                                                {{$item->name}}
+           
+                                                        </a>
+            
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </a>
+
+                                    </li>
+                                @endforeach
+                            </ul>
                         </a>
                         <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                     </div>
@@ -72,7 +93,7 @@
 </section>
 
 <!-- Shipping -->
-<section class="container shipping bgwhite p-t-62 p-b-46">
+<section class="container shipping bgwhite p-b-46">
     <div class="sec-title p-b-60">
         <h3 class="m-text5 t-center">
             Điều tạo ra khác biệt

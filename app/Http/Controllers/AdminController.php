@@ -23,29 +23,29 @@ class AdminController extends Controller
     }
     public function postlogin(Request $req){
             // $email =DB::table('users')->select('email')->get();
-            $users = DB::table('users')->where('email', '=', $req)->get();
-            // $email="huucong123";
+            // $users = DB::table('users')->where('email', '=', $req)->get();
+            $email="huucong123";
             // $password =DB::table('users')->select('password')->get();
             // $password = DB::table('users')->where('password', '=', $req)->get();
-            echo$users;
+            // echo$users;
 
-            // $password="cong123456";
+            $password="cong123456";
             
-        // if($req ->email==$email && $req->password==$password){         
-        //     $buyer = buyer::all();
-        //     $buyer = DB::table('buyer')
-        //         ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
-        //         ->select('buyer.*', 'coffee.name as coffeename')
-        //         ->get();
-        //     return view('admin.dashboard',compact('buyer'));
+        if($req ->email==$email && $req->password==$password){         
+            $buyer = buyer::all();
+            $buyer = DB::table('buyer')
+                ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
+                ->select('buyer.*', 'coffee.name as coffeename')
+                ->get();
+            return view('admin.dashboard',compact('buyer'));
             
-        // } else {
-        //     return view('admin.login')->with('message','Thêm thất bại vui lòng thử lại sau');
-        //     // return redirect()->route('getadmin')->with('message','Cập nhật thất bại vui lòng thử lại sau');
-        // }
-        // echo("đăng nhập không thành công");
-        // return view('admin.login')->with('message','Thêm thất bại vui lòng thử lại sau');
-        // return redirect('/getadmin');
+        } else {
+            return view('admin.login')->with('message','Thêm thất bại vui lòng thử lại sau');
+            // return redirect()->route('getadmin')->with('message','Cập nhật thất bại vui lòng thử lại sau');
+        }
+        echo("đăng nhập không thành công");
+        return view('admin.login')->with('message','Thêm thất bại vui lòng thử lại sau');
+        return redirect('/getadmin');
         
      }  
 }

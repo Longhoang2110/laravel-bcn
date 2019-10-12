@@ -40,8 +40,6 @@
                             <select name="type">
                                 <option value="0">Bài viết</option>
                                 <option value="1">Sản phẩm</option>
-                                <option value="2">Bài post</option>
-
                             </select>
                             {{-- <input type="text" name="pype" class="form-control" placeholder="Type "> --}}
                         </div>

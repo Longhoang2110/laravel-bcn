@@ -264,6 +264,16 @@
                 <li><a href="{{route('category-add')}}">Thêm danh mục</a></li>
               </ul>
             </li>
+            <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa fa-list"></i>
+                <span>Quản lí kiểu sản phẩm</span>
+                </a>
+              <ul class="sub">
+                <li><a href="{{route('group_product-list')}}">Kiểu sản phẩm</a></li>
+                <li><a href="{{route('group_product-add')}}">Thêm kiểu sản phẩm</a></li>
+              </ul>
+            </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-product-hunt"></i>
@@ -374,6 +384,8 @@
   <!--script for this page-->
   <script src="asset_custom/admin_custom/lib/sparkline-chart.js"></script>
   <script src="asset_custom/admin_custom/lib/zabuto_calendar.js"></script>
+  @yield('script')
+
   {{-- <script type="text/javascript">
     $(document).ready(function() {
       var unique_id = $.gritter.add({

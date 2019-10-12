@@ -39,15 +39,30 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
                         <div class="col-sm-10">
-                            <input type="text" name="alt" class="form-control" placeholder="Tên">
+                            <input type="text" name="alt" class="form-control" placeholder="Tên ảnh">
                         </div>
                     </div>
                     <div class="form-group">
 
                             <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
                             <div class="col-sm-10">
-                                <select name="type">
+                                <select name="type" id="type">
                             @foreach($category as $item)
+
+                                    <option value="{{$item->id}}">
+                                    {{$item->name}}
+                                    </option>
+                            @endforeach
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label class="col-sm-2 col-sm-2 control-label">Kiểu sản phẩm</label>
+                            <div class="col-sm-10">
+                                <select name="code" id="code">
+                            @foreach($group as $item)
 
                                     <option value="{{$item->id}}">
                                     {{$item->name}}
@@ -63,12 +78,6 @@
                             <textarea class="form-control ckeditor" style="height:150px" id="summary-ckeditor" name="description" placeholder="Nội dung"></textarea>
                         </div>
                     </div>
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea>
-                        </div>
-                    </div> --}}
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Giá</label>
                         <div class="col-sm-10">
@@ -101,4 +110,20 @@
           <script>
               CKEDITOR.replace( 'summary-ckeditor' );
           </script> --}}
+         
+@endsection
+
+@section('script')
+    <script>
+
+       $( document ).ready(function() {
+           $("#type").change(function(){
+               var idcategory = $("#type").val();
+               $.get("ajax/group/"+idcategory,function(data){
+                    $("#code").html(data);
+               });
+           });
+        });
+        
+    </script>
 @endsection

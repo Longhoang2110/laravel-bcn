@@ -28,7 +28,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/slick/slick.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
@@ -83,6 +83,19 @@
 										<li class="p-t-4 p-b-8 bo7">
 												<a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
 														{{$item->name}}
+														@if($item->id == 13)
+															<ul class="sub_menu">
+																@foreach($category_blog as $item)
+																<li class="p-t-4 p-b-8 bo7">
+																	<a href="{{route('category-blog',$item->id)}}" class="m-text11">
+																			{{$item->name}}
+																	</a>
+						
+																</li>
+															@endforeach
+														</ul>  
+														
+														@endif
 												</a>
 												{{-- <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> --}}
 										</li>
@@ -97,6 +110,7 @@
 										<li class="p-t-4 p-b-8 bo7">
 											<a href="{{route('category-blog',$item->id)}}" class="m-text11">
 													{{$item->name}}
+													
 											</a>
 
 										</li>

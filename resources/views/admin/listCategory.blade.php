@@ -4,7 +4,7 @@
     <div class="col-md-12">
       <div class="content-panel">
         <table class="table table-striped table-advance table-hover">
-          <h4><i class="fa fa-angle-right"></i> Danh sách  </h4>
+          <h4><i class="fa fa-angle-right"></i> Danh sách danh mục  </h4>
           <hr>
           @if(Session::has('message'))
                 <h5 class="alert alert-success">{{Session::get('message')}}</h5>

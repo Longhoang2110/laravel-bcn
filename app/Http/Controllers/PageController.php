@@ -89,7 +89,7 @@ class PageController extends Controller
         $address = address::all();
         $category_product =category::where([
             ['type', '=','1' ]
-        ])->get();
+        ])->take(6)->get();
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();

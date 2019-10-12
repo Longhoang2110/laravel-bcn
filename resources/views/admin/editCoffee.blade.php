@@ -45,8 +45,23 @@
                     <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
                             <div class="col-sm-10">
-                                <select name="type">
+                                <select name="type" id='type'>
                             @foreach($category as $item)
+
+                                    <option value="{{$item->id}}">
+                                    {{$item->name}}
+                                    </option>
+                            @endforeach
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label class="col-sm-2 col-sm-2 control-label">Kiểu sản phẩm</label>
+                            <div class="col-sm-10">
+                                <select name="code" id="code">
+                            @foreach($group as $item)
 
                                     <option value="{{$item->id}}">
                                     {{$item->name}}
@@ -104,4 +119,18 @@
           {{-- <div>
                 {!!$coffee->description!!}
           </div> --}}
+@endsection
+@section('script')
+    <script>
+
+       $( document ).ready(function() {
+           $("#type").change(function(){
+               var idcategory = $("#type").val();
+               $.get("ajax/group/"+idcategory,function(data){
+                    $("#code").html(data);
+               });
+           });
+        });
+        
+    </script>
 @endsection
