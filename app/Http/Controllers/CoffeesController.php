@@ -223,6 +223,7 @@ class CoffeesController extends Controller
     }
     public function categorycoffee(Request $req){
         $nameCate = $req->name;
+        
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -231,6 +232,7 @@ class CoffeesController extends Controller
         ])->get();
         $address = address::all();
         $blog = blog::all();
+        $group = group::all();
         $coffees =coffee::where([
             ['type', '=',$req->id ]
         ])->get();
@@ -241,6 +243,8 @@ class CoffeesController extends Controller
             "blog" =>$blog,
             "nameCate" => $nameCate,
             "category_blog" =>$category_blog,
+            "group"=>$group,
+
 
 
 

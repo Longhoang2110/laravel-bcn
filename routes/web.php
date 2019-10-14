@@ -159,6 +159,8 @@ Route::group(['prefix' => 'GroupProduct'],function(){
 
     Route::get('add','GroupProductController@getAdd')->name('group_product-add');
     Route::post('add','GroupProductController@postAdd')->name('group_product-add');
+    Route::get('categorygroup_product/group_productname/{name}/id/{id}','GroupProductController@group_productcoffee')->name('group_product-coffee');
+
 });
 Route::group(['prefix' => 'ajax'],function(){
     Route::get ('group/{idcategory}','ajaxController@getindex');

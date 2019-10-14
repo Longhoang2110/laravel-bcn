@@ -9,6 +9,8 @@ use App\display;
 use App\category;
 use App\content;
 use App\address;
+use App\group;
+
 class PageController extends Controller
 {
     //
@@ -23,11 +25,22 @@ class PageController extends Controller
         $coffee = coffee::find($req->id);
         $coffees = coffee::all();
         $address = address::all();
+        $group = group::all();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
+        $category_product =category::where([
+            ['type', '=','1' ]
+        ])->get();
+
 
         return view('coffee_detail',[
             "coffee" => $coffee,
             "coffees" => $coffees,
             "address" =>$address,
+            "group"=>$group,
+            "category_blog" =>$category_blog,
+            "category_product" =>$category_product,
 
             //"discount_tour" => $discountTours
             ]);
@@ -37,6 +50,8 @@ class PageController extends Controller
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
         $address = address::all();
+        $group = group::all();
+
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -51,6 +66,8 @@ class PageController extends Controller
             "address" =>$address,
             "category_blog" =>$category_blog,
             "category_product" =>$category_product,
+            "group"=>$group,
+
 
 
             //"discount_tour" => $discountTours
@@ -61,6 +78,10 @@ class PageController extends Controller
         $blog = blog::find($req->id);
         $coffees = coffee::all();
         $address = address::all();
+        $group = group::all();
+        $category_blog =category::where([
+            ['type', '=','0' ]
+        ])->get();
         $category =category::where([
             ['type', '=','0' ]
         ])->get();
@@ -74,6 +95,10 @@ class PageController extends Controller
             "address" =>$address,
             "category" =>$category,
             "category_product" =>$category_product,
+            "group"=>$group,
+            "category_blog" =>$category_blog,
+
+
 
 
 
@@ -87,6 +112,8 @@ class PageController extends Controller
         $blogs = blog::all();
         $displays = display::all();
         $address = address::all();
+        $group = group::all();
+
         $category_product =category::where([
             ['type', '=','1' ]
         ])->take(6)->get();
@@ -100,6 +127,7 @@ class PageController extends Controller
             "address" =>$address,
             "category_product" =>$category_product,
             "category_blog" =>$category_blog,
+            "group"=>$group,
 
 
 
@@ -110,6 +138,8 @@ class PageController extends Controller
         $coffees = coffee::all();
         $blog = blog::all();
         $address = address::all();
+        $group = group::all();
+
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -122,6 +152,8 @@ class PageController extends Controller
             "address" =>$address,
             "blog" =>$blog,
             "category_blog" =>$category_blog,
+            "group"=>$group,
+
 
             "nameCate" => "Tất cả sản phẩm" 
         ]);
@@ -131,6 +163,8 @@ class PageController extends Controller
 
     public function introduce(){
         $address = address::all();
+        $group = group::all();
+
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -141,12 +175,16 @@ class PageController extends Controller
             "address" => $address,
             "category_product" =>$category_product,
             "category_blog" =>$category_blog,
+            "group"=>$group,
+
 
         ]);
     }
 
     public function contact(){
         $address = address::all();
+        $group = group::all();
+
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -157,6 +195,8 @@ class PageController extends Controller
             "address" => $address,
             "category_product" =>$category_product,
             "category_blog" =>$category_blog,
+            "group"=>$group,
+
 
 
 
@@ -171,6 +211,8 @@ class PageController extends Controller
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
+        $group = group::all();
+
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
@@ -180,13 +222,17 @@ class PageController extends Controller
 
         $blog =blog::where([
             ['type', '=',$req->id ]
-        ])->get();        
+        ])->get(); 
+        $group = group::all();
+
         return view('blog',[
             "category_blog" =>$category_blog,
             "blogs" =>$blog,
             "coffees" => $coffees,
             "address" => $address,
             "category_product" =>$category_product,
+            "group"=>$group,
+
 
 
 
@@ -207,6 +253,8 @@ class PageController extends Controller
             ['type', '=','0' ]
         ])->get();
         $address = address::all();
+        $group = group::all();
+
 
         // echo $content;
         return view('introduce',[
@@ -214,6 +262,8 @@ class PageController extends Controller
             "address" =>$address,
             "category_product" =>$category_product,
             "category_blog" =>$category_blog,
+            "group"=>$group,
+
 
 
         ]);
