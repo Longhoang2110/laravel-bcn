@@ -41,7 +41,7 @@
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header1">
+	<header class="header1"> 
 		<!-- Header desktop -->
 		<div class="container-menu-header">
 			<div class="topbar">
