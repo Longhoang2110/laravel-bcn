@@ -32,8 +32,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/util.css">
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/main.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/util.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/main.css">
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
@@ -82,22 +82,19 @@
 										@foreach($category_product as $item)
 										<li class="p-t-4 p-b-8 bo7">
 												<a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
-														{{$item->name}}
-														@if($item->id == 13)
+														{{$item->name}}														
 															<ul class="sub_menu">
-																@foreach($category_blog as $item)
+																@foreach($group as $itemChild)
+																	@if($itemChild->group == $item->id)
 																<li class="p-t-4 p-b-8 bo7">
-																	<a href="{{route('category-blog',$item->id)}}" class="m-text11">
-																			{{$item->name}}
+																	<a href="{{route('group_product-coffee',['group_productname'=>$itemChild->name,'id'=>$itemChild->id])}}" class="m-text11">
+																			{{$itemChild->name}}
 																	</a>
-						
 																</li>
-															@endforeach
-														</ul>  
-														
-														@endif
+																	@endif
+																@endforeach
+															</ul>														
 												</a>
-												{{-- <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> --}}
 										</li>
 										@endforeach
 								</ul>
@@ -283,7 +280,7 @@
 
 
 	<!-- Footer -->
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45"style="border-top: solid; border-color: #f1b26b;background-color: #e4e4e4;">
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">

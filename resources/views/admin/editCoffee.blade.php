@@ -115,10 +115,17 @@
               <!-- /form-panel -->
             </div>
             <!-- /col-lg-12 -->
+            
           </div>
           {{-- <div>
                 {!!$coffee->description!!}
           </div> --}}
+          <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+          <script>
+            //CKEDITOR.replace( 'Des-ckeditor' );
+              CKEDITOR.replace( 'Content-ckeditor');
+              document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
+          </script>
 @endsection
 @section('script')
     <script>

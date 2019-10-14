@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <!-- breadcrumb -->
-<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
+{{-- <div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
     <a href="index.html" class="s-text16">
         Home
         <i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
@@ -12,10 +12,8 @@
         <i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
     </a>
 
-    <span class="s-text17">
-        Black Friday Guide: Best Sales & Discount Codes
-    </span>
-</div>
+    
+</div> --}}
 
 <!-- content page -->
 <section class="bgwhite p-t-60 p-b-25">
@@ -32,6 +30,11 @@
                             <h4 class="p-b-11 m-text24">
                                 {{$blog->name}}
                             </h4>
+                            <div class="s-text8 flex-w flex-m p-b-21">
+                                {{$blog->description}}
+                            </h4>
+                            </div>
+
 
                             <div class="s-text8 flex-w flex-m p-b-21">
                                 <span>
@@ -40,12 +43,12 @@
                                 </span>
 
                                 <span>
-                                    28 Dec, 2018
+                                    28 Dec, 2019
                                     <span class="m-l-3 m-r-6">|</span>
                                 </span>
 
                                 <span>
-                                    Cooking, Food
+                                    Build,Installation
                                     <span class="m-l-3 m-r-6">|</span>
                                 </span>
 
@@ -55,7 +58,7 @@
                             </div>
 
                             <div>
-                                {!!$blog->content!!}
+                                {{$blog->content}}
                             </div>
                         </div>
 
@@ -110,173 +113,66 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-lg-3 p-b-80">
+            <div class="col-md-4 col-lg-3 p-b-75">
                 <div class="rightbar">
-                    <!-- Search -->
-                    <div class="pos-relative bo11 of-hidden">
-                        <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Tìm kiếm">
-
-                        <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
-                            <i class="fs-13 fa fa-search" aria-hidden="true"></i>
-                        </button>
+                    <div>
+                        <h4 id="hinder" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                            <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
+                        </h4>
+                        <script>
+                            $(document).ready(function(){
+                                $("#hinder").click(function(){
+                                    $("#an").toggle(500);
+                                })
+                            })
+                        </script>
+                        <div class="left">
+                            <ul id= "an">
+                                @foreach($category_blog as $item)
+                                    <li class="p-t-4 p-b-8 bo7">
+                                    <div style="padding:5px">
+                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                                {{$item->name}}
+                                        </a>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
-
-                    <!-- Categories -->
-                    <h4 class="m-text23 p-t-56 p-b-34">
-                            Danh mục bài viết
-                    </h4>
-
-                    <ul>
-                            @foreach($category as $item)
-                        <li class="p-t-6 p-b-8 bo6">
-                            <a href="{{route('category-blog',$item->id)}}" class="s-text13 p-t-5 p-b-5">
-                                    {{$item->name}}                                
-                            </a>
-                        </li>
-                            @endforeach
-
-                    </ul>
-
-                    <!-- Featured Products -->
-                    <h4 class="m-text23 p-t-65 p-b-34">
-                            Sản phẩm
-                    </h4>
-
-                    <ul class="bgwhite">
-                        @foreach($coffees as $item)
-                            <li class="flex-w p-b-20">
-                                <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-                                    <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:120px" alt="IMG-PRODUCT">
-                                </a>
-
-                                <div class="w-size23 p-t-5">
-                                    <a href="{{route('coffee-detail',$item->id)}}" class="s-text20">
-                                        {{$item->name}}
+                        <div>
+                        <h4 id="hinder2" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height:3;margin-bottom: 5px;">
+                            <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
+                        </h4>
+                        <script>
+                            $(document).ready(function(){
+                                $("#hinder2").click(function(){
+                                    $("#an2").toggle(500);
+                                })
+                            })
+                        </script>
+                            <ul id="an2" class="bgwhite">
+                            @foreach($coffees as $item)
+                                <li class="flex-w p-b-20">
+                                    <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
+                                        <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:90px" alt="IMG-PRODUCT">
                                     </a>
-
-                                    <span class="dis-block s-text17 p-t-6">
-                                        {{$item->price}} vnd
-                                    </span>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-
-                    <!-- Archive -->
-                    {{-- <h4 class="m-text23 p-t-50 p-b-16">
-                        Archive
-                    </h4>
-
-                    <ul>
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                July 2018
-                            </a>
-
-                            <span class="s-text13">
-                                (9)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                June 2018
-                            </a>
-
-                            <span class="s-text13">
-                                (39)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                May 2018
-                            </a>
-
-                            <span class="s-text13">
-                                (29)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                April  2018
-                            </a>
-
-                            <span class="s-text13">
-                                (35)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                March 2018
-                            </a>
-
-                            <span class="s-text13">
-                                (22)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                February 2018
-                            </a>
-
-                            <span class="s-text13">
-                                (32)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                January 2018
-                            </a>
-
-                            <span class="s-text13">
-                                (21)
-                            </span>
-                        </li>
-
-                        <li class="flex-sb-m">
-                            <a href="#" class="s-text13 p-t-5 p-b-5">
-                                December 2017
-                            </a>
-
-                            <span class="s-text13">
-                                (26)
-                            </span>
-                        </li>
-                    </ul> --}}
-
-                    <!-- Tags -->
-                    {{-- <h4 class="m-text23 p-t-50 p-b-25">
-                        Tags
-                    </h4>
-
-                    <div class="wrap-tags flex-w">
-                        <a href="#" class="tag-item">
-                            Fashion
-                        </a>
-
-                        <a href="#" class="tag-item">
-                            Lifestyle
-                        </a>
-
-                        <a href="#" class="tag-item">
-                            Denim
-                        </a>
-
-                        <a href="#" class="tag-item">
-                            Streetstyle
-                        </a>
-
-                        <a href="#" class="tag-item">
-                            Crafts
-                        </a>
-                    </div> --}}
+    
+                                    <div class="w-size23 p-t-5">
+                                        <a href="{{route('coffee-detail',$item->id)}}" class="s-text20">
+                                            {{$item->name}}
+                                        </a>
+    
+                                        <span class="dis-block s-text17 p-t-6">
+                                            {{$item->price}} vnd
+                                        </span>
+                                    </div>
+                                </li>
+                            @endforeach
+                            </ul>
+                        </div>
                 </div>
-            </div>
+                </div>
         </div>
     </div>
 </section>

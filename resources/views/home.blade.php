@@ -4,7 +4,7 @@
 <section class="container slide1">
     <div class="row">
         <div class="col-md-3">
-            <h4 id="hinder" class="m-text11" style="background-color: #e65540;text-align: center;line-height: 3;margin-bottom:1px;margin-top: 10px;">
+            <h4 id="hinder" class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom:1px;margin-top: 10px;">
                 <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
             </h4>       
             {{-- <script>
@@ -108,10 +108,9 @@
             </h4>
 
             <span class="s-text11 t-center">
-                Ngay từ những ngày đầu, chúng tôi đã tập trung vào sự phong phú trong mùi vị.
-                Hương thơm của 5 loại cafe khác nhau cùng hoà quyện làm cho mùi vị cafe espresso của chúng tôi thật đặc
-                biệt.
-                Khác hẳn so với những dòng cafe thông thường bạn mua ngoài thị trường.
+                    luôn hướng đến việc nâng tầm chất lượng sản phẩm; 
+                    đồng thời luôn đưa ra những mẫu thiết kế bắt kịp xu hướng hiện đại
+                    nhằm tư vấn cho khách hàng những lựa chọn tối ưu nhất.
             </span>
         </div>
 
@@ -123,10 +122,9 @@
             </h4>
 
             <span class="s-text11 t-center">
-                Dựa trên kích cỡ – độ ẩm – màu sắc – tỷ lệ sâu vỡ mốc – tạp chất mà người ta chia cafe thành cafe xuất
-                khẩu loại 1, 2, 3, 4, 5.
-                Trong đó loại 1 là loại tốt nhất. Và chúng tôi chỉ dùng cafe nhân chất lượng loại 1.
-                Không những vậy, chúng tôi còn nhặt tay một lần nữa để loại bỏ tạp chất – sâu vỡ mốc tới mức tối đa.
+                    đều được lắp đặt từ nguyên liệu nhập khẩu
+                    cao cấp có khả năng chịu được điều kiện thời tiết khắc nghiệt
+                    với độ bền sử dụng lên đến 15-20 năm.
             </span>
         </div>
 
@@ -138,10 +136,9 @@
             </h4>
 
             <span class="s-text11 t-center">
-                Chúng tôi rang cafe dựa trên kiến thức quốc tế – đặc biệt là của Ý – và những nghiên cứu không ngừng về
-                các loại hạt cafe chúng tôi đang sử dụng. Chúng tôi học hỏi và nghiên cứu mỗi ngày.
-                Đó không chỉ đơn thuần là công việc. Mà là đam mê. Là cuộc sống. Không chỉ cafe nhân ngon nhất mà còn
-                phải có trình độ rang tốt nhất.
+                    chuyên thiết kế, thi công, lắp đặt hệ thống mái che bạt kéo căng cho Quý Khách Hàng
+                    là : Trung Tâm Thương Mại, Khu Du Lịch, Khu Vui Chơi – Giải Trí, Khách Sạn, Hồ Bơi,
+                    Nhà Hàng, Sky Bar, Quán Cà Phê, Bãi Đỗ Xe, Công Trình Dân Dụng…
             </span>
         </div>
     </div>

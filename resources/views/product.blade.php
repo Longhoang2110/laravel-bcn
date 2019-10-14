@@ -1,12 +1,12 @@
 @extends('layout')
 @section('content')
-    <section class="bgwhite p-t-55 p-b-65">
+    <section class="bgwhite p-t-25 p-b-65">
         <div class="container">
             <div class="row">
             
                 <div id="nav"class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
-                        <h4 id="hinder" type="button"class="m-text11" style="background-color: #e65540;text-align: center;line-height: 3;margin-bottom: 15px;">
+                        <h4 id="hinder" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
                             <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>       
                         <script>
@@ -17,7 +17,7 @@
                             })
                         </script>
                     <div class="left">
-                        <ul id="an" class="p-b-54">
+                        <ul id="an" class="p-b-1">
                             <li class="p-t-4 p-b-8 bo7">
                                 <div style="padding:5px">
                                     <a href="{{route('product')}}" class="m-text11">
@@ -39,7 +39,7 @@
                             @endforeach
                         </ul>
                     </div>
-                        <h4 id="hinder2" type="button"class="m-text11" style="background-color: #e65540;text-align: center;line-height: 3;margin-bottom: 15px;">
+                        <h4 id="hinder2" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
                             <i  class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <script>
