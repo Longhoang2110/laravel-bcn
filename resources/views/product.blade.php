@@ -6,50 +6,68 @@
             
                 <div id="nav"class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
-                        <h4 id="hinder" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
-                            <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
+                        <h4 id="hinder"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                            <i  aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>       
                         <script>
                             $(document).ready(function(){
                                 $("#hinder").click(function(){
-                                    $("#an").toggle(500);
+                                    $("#an").toggle(200);
                                 })
                             })
                         </script>
                     <div class="left">
                         <ul id="an" class="p-b-1">
-                            <li class="p-t-4 p-b-8 bo7">
+                            <li class="p-t-4 p-b-8 ">
                                 <div style="padding:5px">
-                                    <a href="{{route('product')}}" class="m-text11">
+                                    <a href="{{route('product')}}" class="m-text11"">
                                             Tất cả sản phẩm
                                     </a>
                                     
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    <span class="pull-right"><i class="fa fa-th-list"style="color:#fff;" aria-hidden="true"></i></span>
                                 </div>
                             </li>
                             @foreach($category_product as $item)
-                            <li class="p-t-4 p-b-8 bo7">
+                            <li class="p-t-4 "style="border-top:1px solid #fff;">
                                 <div style="padding:5px">
                                     <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
                                             {{$item->name}}
                                     </a>
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    <span  onclick="test({{$item->id}})" class="pull-right "><i class="fa fa-th-list"style="color:#fff;"aria-hidden="true"></i></span>
+                                   
                                 </div>
+                                <ul id="{{$item->id}}" style="display:none;">
+                                @foreach($group as $itemChild)
+                                    @if($itemChild->group == $item->id)                                       
+                                        <li class="p-t-4  "style="border-top:1px solid #fff;padding:5px; background-color:#f4be84;margin-right:-10px;margin-left:-10px;" >
+                                            <a href="{{route('group_product-coffee',['group_productname'=>$itemChild->name,'id'=>$itemChild->id])}}" class="m-text11">
+                                                    {{$itemChild->name}}
+                                            </a>
+                                        </li>                                    
+                                    @endif
+                                @endforeach
+                            </ul>   
                             </li>
                             @endforeach
+                            <script>
+                                function test(id){
+                                    $("#"+id).toggle(200);
+                                }
+                            </script>
+                          
                         </ul>
                     </div>
-                        <h4 id="hinder2" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                        {{-- <h4 id="hinder2" data-target="#an2"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
                             <i  class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <script>
                             $(document).ready(function(){
                                 $("#hinder2").click(function(){
-                                    $("#an2").toggle(500);
+                                    $("#an2").toggle(200);
                                 })
                             })
-                        </script>
-                        <ul id="an2"class="p-b-54" style="background-color: #fff ; !important">
+                        </script> --}}
+                        {{-- <ul id="an2"class="p-b-54" style="background-color: #fff ; !important">
                         @foreach($blog as $item)
                             <li class="flex-w p-b-20">
                                 <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
@@ -63,7 +81,7 @@
                                 </div>
                             </li>
                         @endforeach
-                    </ul>
+                    </ul> --}}
                     </div>
                 </div>
 

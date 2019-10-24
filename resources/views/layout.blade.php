@@ -32,8 +32,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/util.css">
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/main.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/util.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/css/main.css">
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
@@ -253,7 +253,7 @@
                     </li>
 
                     <li class="item-menu-mobile">
-                        <a href="{!!route('product')!!}">Sản phẩm</a>
+						<a href="{!!route('product')!!}">Sản phẩm</a>
                     </li>
 
                     <li class="item-menu-mobile">

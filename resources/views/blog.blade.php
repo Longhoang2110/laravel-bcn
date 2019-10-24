@@ -60,13 +60,13 @@
             <div class="col-md-4 col-lg-3 p-b-75">
             <div class="rightbar">
                 <div>
-                    <h4 id="hinder" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                    <h4 id="hinder"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
                         <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
                     </h4>
                     <script>
                         $(document).ready(function(){
                             $("#hinder").click(function(){
-                                $("#an").toggle(500);
+                                $("#an").toggle(200);
                             })
                         })
                     </script>
@@ -74,7 +74,7 @@
                         <ul id= "an">
                             @foreach($category_blog as $item)
                                 <li class="p-t-4 p-b-8 bo7">
-                                <div style="padding:5px">
+                                <div style="padding:5px;">
                                     <a href="{{route('category-blog',$item->id)}}" class="m-text11">
                                             {{$item->name}}
                                     </a>
@@ -85,13 +85,13 @@
                     </div>
                 </div>
                     <div>
-                    <h4 id="hinder2" type="button"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height:3;margin-bottom: 5px;">
+                    <h4 id="hinder2"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height:3;margin-bottom: 5px;">
                         <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                     </h4>
                     <script>
                         $(document).ready(function(){
                             $("#hinder2").click(function(){
-                                $("#an2").toggle(500);
+                                $("#an2").toggle(200);
                             })
                         })
                     </script>

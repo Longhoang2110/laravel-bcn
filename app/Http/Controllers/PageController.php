@@ -13,7 +13,15 @@ use App\group;
 
 class PageController extends Controller
 {
-    //
+    
+  function __construct()
+  {
+    $address = address::all();
+    view()->share(
+        'address',$address
+
+    );   
+  }
     public function coffee() {
         // $coffee = coffee::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         // return view('home',compact('coffee'));
@@ -24,7 +32,7 @@ class PageController extends Controller
     public function coffeeDetail(Request $req){
         $coffee = coffee::find($req->id);
         $coffees = coffee::all();
-        $address = address::all();
+        // $address = address::all();
         $group = group::all();
         $category_blog =category::where([
             ['type', '=','0' ]
@@ -37,7 +45,7 @@ class PageController extends Controller
         return view('coffee_detail',[
             "coffee" => $coffee,
             "coffees" => $coffees,
-            "address" =>$address,
+            // "address" =>$address,
             "group"=>$group,
             "category_blog" =>$category_blog,
             "category_product" =>$category_product,
@@ -49,7 +57,7 @@ class PageController extends Controller
     public function blog() {
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         $coffees = coffee::all();
-        $address = address::all();
+        // $address = address::all();
         $group = group::all();
 
         $category_product =category::where([
@@ -63,7 +71,7 @@ class PageController extends Controller
             "blogs" => $blogs,
             "coffees" => $coffees,
             // "category" =>$category,
-            "address" =>$address,
+            // "address" =>$address,
             "category_blog" =>$category_blog,
             "category_product" =>$category_product,
             "group"=>$group,

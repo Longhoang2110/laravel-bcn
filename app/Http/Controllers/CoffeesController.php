@@ -82,7 +82,7 @@ class CoffeesController extends Controller
     );
 
         $time = Carbon::now('Asia/Ho_Chi_Minh');
-        $coffee = new coffee;
+        $coffee = new coffee();
         $coffee->name = $req->name;
         $coffee->description = $req->description;
         $coffee->type = $req->type;

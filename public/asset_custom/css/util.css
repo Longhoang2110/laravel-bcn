@@ -10168,7 +10168,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
     font-family: Montserrat-Black;
     font-size: 18px;
     color: #333333;
-    margin-bottom: 15 px;
+    margin-bottom: 15px;
     line-height: 1.5;
 }
 
@@ -10724,9 +10724,9 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
 }
-
+ 
 .bo7 {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6; 
 }
 
 .bo8 {
