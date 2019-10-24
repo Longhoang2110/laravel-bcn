@@ -7,50 +7,57 @@
             <h4 id="hinder" class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom:1px;margin-top: 10px;">
                 <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
             </h4>       
-                <div class="left">
-                <ul id="an" class="p-b-54">
-                    <li class="p-t-4 p-b-8 bo7">
-                        <div style="padding:5px">
-                            <a href="{{route('product')}}" class="m-text11">
-                                    Tất cả sản phẩm
-                            </a>
-                            
-                            <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        </div>
-                    </li>
-                    @foreach($category_product as $item)
-                    <li class="p-t-4 p-b-8 bo7">
-                        <div style="padding:5px">
-                            <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
-                                    {{$item->name}}
-                                    <ul class="sub_menu p-b-54">
-                                        @foreach($category_blog as $item)
-                                        <li class="p-t-4 p-b-8 bo7">
-                                            <a href="{{route('category-blog',$item->id)}}" class="m-text11">
-                                                    {{$item->name}}
-                                                    <ul class="sub_menu">
-                                                        @foreach($category_blog as $item)
-                                                        <li class="p-t-4 p-b-8 bo7"style="padding-top:5px;">
-                                                            <a href="{{route('category-blog',$item->id)}}" class="m-text11">
-                                                                    {{$item->name}}
+            {{-- <script>
+                $(document).ready(function(){
+                    $("#hinder").click(function(){
+                        $("#an").toggle(500);
+                    })
+                })
+            </script> --}}
+            <div class="left">
+            <ul id="an" class="p-b-54">
+                <li class="p-t-4 p-b-8 bo7">
+                    <div style="padding:5px">
+                        <a href="{{route('product')}}" class="m-text11">
+                                Tất cả sản phẩm
+                        </a>
+                        
+                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </div>
+                </li>
+                @foreach($category_product as $item)
+                <li class="p-t-4 p-b-8 bo7">
+                    <div style="padding:5px">
+                        <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
+                                {{$item->name}}
+                                <ul class="sub_menu">
+                                    @foreach($category_blog as $item)
+                                    <li class="p-t-4 p-b-8 bo7">
+                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                                {{$item->name}}
+                                                <ul class="sub_menu"style="padding-top:5px;">
+                                                    @foreach($category_blog as $item)
+                                                    <li class="p-t-4 p-b-8 bo7">
+                                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
+                                                                {{$item->name}}
+           
+                                                        </a>
             
-                                                            </a>
-                
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </a>
 
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </a>
-                            <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        </div>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </a>
+                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
+        </div>
         </div>
         <div class="col-md-9">
             <div class="wrap-slick1">
@@ -140,18 +147,18 @@
 <!-- New Product -->
 <section class="newproduct bgwhite p-t-45 p-b-105" style="padding-bottom: 50px;">
     <div class="container">
-            @foreach($coffees as $item)
-            {{-- @if($item->type == 13)                                        --}}
-              
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                    {{$item->name}}
-
+                Sản phẩm bán chạy nhất
             </h3>
         </div>
+
+        <!-- Slide2 -->
         <div class="wrap-slick2">
             <div class="slick2">
+                @foreach($coffees as $item)
                 <div class="item-slick2 p-l-15 p-r-15">
+                    <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                             <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px"
@@ -187,7 +194,7 @@
                 @endforeach
             </div>
         </div>
-                {{-- @endif --}}
+
     </div>
     <div class="container">
         <div class="sec-title p-b-60">
