@@ -15,6 +15,7 @@
               <th style="width: 200px;"><i class="fa fa-bullhorn"></i> Tên bài viết</th>
               <th class="hidden-phone"><i class="fa fa-question-circle"></i> Mô tả</th>
               <th style="width: 100px;"><i class="fa fa-bookmark"></i> Lượt xem</th>
+              <th style="width: 150px;"><i class="fa fa-sort"></i>  Thứ tự đăng</th>
               <th style="width: 100px;"><i class=" fa fa-edit"></i> Trạng thái</th>
               <th style="width: 150px;"><i class="fa fa-tasks"></i>Chức năng</th>
             </tr>
@@ -27,6 +28,7 @@
                 </td>
                 <td class="hidden-phone">{{$item->description}}</td>
                 <td>{{$item->views}}</td>
+                <td>{{$item->order}}</td>
                 <td>{{$item->is_active == 1 ?'Hoạt động':'Đang khóa'}}</td>
                 <td>
                     {{-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button> --}}

@@ -145,7 +145,6 @@ class GroupProductController extends Controller
     // }
     public function group_productcoffee(Request $req){
         $nameCate = $req->name;
-        
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();

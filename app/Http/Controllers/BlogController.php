@@ -72,8 +72,8 @@ class BlogController extends Controller
         $blog->content = $req->content;
         $blog->is_active = $req->rdoState;
         $blog->type = $req->type;
-
-
+        $blog->order = $req->order;
+        $blog->views = 0;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename = time() . '.' . $image->getClientOriginalExtension();
@@ -127,8 +127,8 @@ class BlogController extends Controller
         $blog->content = $req->content;
         $blog->is_active = $req->rdoState;
         $blog->type = $req->type;
-
-
+        $blog->order = $req->order;
+        $blog->views = 0;
         if($req->hasFile('fImage')):
             $file = $req->fImage;
             $filename = $file->getClientOriginalName();

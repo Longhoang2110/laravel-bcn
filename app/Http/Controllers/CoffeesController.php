@@ -7,6 +7,7 @@ use App\category;
 use App\address;
 use App\group;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;  
 
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -22,7 +23,14 @@ class CoffeesController extends Controller
     {
         //
         //return view('admin.listCoffee');
-        $coffees = coffee::all();
+        // $coffees = coffee::all();
+        $coffees = DB::table('coffee')
+            ->select('coffee.*','group.name AS nameg','category.name AS namecate')
+            ->leftJoin('category', 'coffee.type', '=', 'category.id')
+            ->leftJoin('group', 'group.id', '=', 'coffee.code')
+            ->get();
+       
+
         return view('admin.listCoffee',compact('coffees'));
     }
 
@@ -92,6 +100,8 @@ class CoffeesController extends Controller
         $coffee->type = $req->type;
         $coffee->code = $req->code;
         $coffee->created_at = $time;
+        $coffee->cout_view = 0;
+        $coffee->order = $req->order;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -151,8 +161,8 @@ class CoffeesController extends Controller
         $coffee->type = $req->type;
         $coffee->updated_at = $time;
         $coffee->code = $req->code;
-
-
+        $coffee->cout_view = 0;
+        $coffee->order = $req->order;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -235,7 +245,7 @@ class CoffeesController extends Controller
         $group = group::all();
         $coffees =coffee::where([
             ['type', '=',$req->id ]
-        ])->get();
+        ])->orderByRaw('order DESC')->get();
         return view('product',[
             "category_product" =>$category_product,
             "coffees" =>$coffees,

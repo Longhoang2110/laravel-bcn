@@ -88,6 +88,8 @@ class PageController extends Controller
         $coffees = coffee::all();
         $address = address::all();
         $group = group::all();
+        $cout_view = blog::find($req->id);
+        $cout_view ->increment('views');
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
@@ -141,15 +143,15 @@ class PageController extends Controller
 
         $coffee1 =coffee::where([
             ['type', '=','13']
-        ])->orderByRaw('id DESC')
+        ])->orderByRaw('order DESC')
         ->get();
         $coffee2 =coffee::where([
             ['type', '=','14' ]
-        ])->orderByRaw('id DESC')
+        ])->orderByRaw('order DESC')
         ->get();
         $coffee3 =coffee::where([
             ['type', '=','15' ]
-        ])->orderByRaw('id DESC')
+        ])->orderByRaw('order DESC')
         ->get();
         return view('home',[
             "blogs" => $blogs,

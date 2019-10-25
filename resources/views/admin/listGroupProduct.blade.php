@@ -15,8 +15,8 @@
               <th><i class="fa fa-bullhorn"></i> Tên </th>
               {{-- <th class="hidden-phone"><i class="fa fa-question-circle"></i> code</th> --}}
               {{-- <th><i class="fa fa-bookmark"></i> Lượt xem</th> --}}
-              <th><i class=" fa fa-edit"></i> type </th>
-              <th><i class=" fa fa-edit"></i> trạng thái </th>
+              {{-- <th><i class=" fa fa-edit"></i> type </th> --}}
+              {{-- <th><i class=" fa fa-edit"></i> trạng thái </th> --}}
               <th></th>
             </tr>
           </thead>
@@ -28,7 +28,7 @@
                 </td>
                 {{-- <td class="hidden-phone">{{$item->code}}</td> --}}
                 {{-- <td>{{$item->type == 1 ?'Sản phẩm':'Bài viết'}}</td> --}}
-                <td>{{$item->is_active == 1 ?'Hoạt động':'Đang khóa'}}</td>
+                {{-- <td>{{$item->is_active == 1 ?'Hoạt động':'Đang khóa'}}</td> --}}
 
                 <td>
 
