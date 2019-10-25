@@ -149,14 +149,15 @@
     <div class="container">
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                Sản phẩm bán chạy nhất
+                {{$category1->name}}
+                
             </h3>
         </div>
 
         <!-- Slide2 -->
         <div class="wrap-slick2">
             <div class="slick2">
-                @foreach($coffees as $item)
+                @foreach($coffee1 as $item)
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
@@ -199,14 +200,14 @@
     <div class="container">
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                Sản phẩm mới nhất
+                {{$category2->name}}                
             </h3>
         </div>
 
         <!-- Slide2 -->
         <div class="wrap-slick2">
             <div class="slick2">
-                @foreach($coffees as $item)
+                @foreach($coffee2 as $item)
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
@@ -248,14 +249,15 @@
     <div class="container">
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                Sản phẩm nhiều người quan tâm
+                {{$category3->name}}
+                
             </h3>
         </div>
 
         <!-- Slide2 -->
         <div class="wrap-slick2">
             <div class="slick2">
-                @foreach($coffees as $item)
+                @foreach($coffee3 as $item)
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
