@@ -45,7 +45,7 @@
       </div>
       <!--logo start-->
       <a href="{{route('dashboard')}}" class="logo"><b><span>MÁI CHE</span></b></a>
-      <!--logo end-->
+      {{-- <!--logo end-->
       {{-- <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
         <ul class="nav top-menu">
@@ -230,7 +230,7 @@
           <!-- notification dropdown end -->
         </ul>
         <!--  notification end -->
-      </div> --}}
+      {{-- </div> --}} 
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
           <li><a class="logout"  href="{{route('getadmin')}}">Logout</a></li>
@@ -256,7 +256,7 @@
           </li>
           <li class="sub-menu">
               <a href="javascript:;">
-                <i class="fa fa-bookmark"></i>
+                <i class="fa fa-shopping-basket"></i>
                 <span>Quản lý nhóm sản phẩm</span>
                 </a>
               <ul class="sub">
@@ -270,7 +270,7 @@
                 <span>Quản lí loại sản phẩm</span>
                 </a>
               <ul class="sub">
-                <li><a href="{{route('group_product-list')}}">Loại sản phẩm</a></li>
+                <li><a href="{{route('group_product-list')}}">Danh sách loại sản phẩm</a></li>
                 <li><a href="{{route('group_product-add')}}">Thêm loại sản phẩm</a></li>
               </ul>
             </li>

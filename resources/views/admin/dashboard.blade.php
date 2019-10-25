@@ -9,11 +9,11 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-bullhorn"></i> Tên khách hàng</th>
+              <th><i class="fa fa-user-circle"></i> Tên khách hàng</th>
               <th><i class="fa fa-bookmark"></i> Sản phẩm</th>
-              <th class="hidden-phone"><i class="fa fa-question-circle"></i>Số điện thoại</th>
+              <th class="hidden-phone"><i class="fa fa-phone"></i> Số điện thoại</th>
               <th><i class="fa fa-bookmark"></i> Email</th>
-              <th><i class=" fa fa-edit"></i> Địa chỉ</th>
+              <th><i class="fa fa-map-marker"></i> Địa chỉ</th>
               <th></th>
             </tr>
           </thead>

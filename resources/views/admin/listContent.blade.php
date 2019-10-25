@@ -31,7 +31,7 @@
                 <td>
                     {{-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button> --}}
                     {{-- <i class="fa fa-trash-o  fa-fw"></i><a href="{{route('content-delete',$item->id)}}"> Xóa</a> --}}
-                    |<i class="fa fa-pencil fa-fw"></i> <a href="{{route('content-update',$item->id)}}">Chỉnh sửa</a>
+                    <i class="fa fa-pencil fa-fw"></i> <a href="{{route('content-update',$item->id)}}">Chỉnh sửa</a>
                 </td>
                 </tr>
             @endforeach

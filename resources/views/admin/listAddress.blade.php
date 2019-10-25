@@ -12,7 +12,7 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-bullhorn">  Địa chỉ</i></th>
+              <th><i class="fa fa-address-card-o"></i> Địa chỉ</th>
               <th style="width: 350px;"><i class="fa fa-tasks"></i>  Chức năng</th>
             </tr>
           </thead>
@@ -23,7 +23,7 @@
                     <a href="basic_table.html#">{{$item->address}}</a>
                 </td>
                 <td>
-                     <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                     {{-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button> --}}
                      <i class="fa fa-trash-o  fa-fw"></i><a href="{{route('address-delete',$item->id)}}"> Xóa</a>
                      <i class="fa fa-pencil fa-fw"></i> <a href="{{route('address-update',$item->id)}}">Chỉnh sửa</a>
                 </td>
