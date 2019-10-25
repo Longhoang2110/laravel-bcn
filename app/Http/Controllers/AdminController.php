@@ -32,11 +32,11 @@ class AdminController extends Controller
             $password="cong123456";
             
         if($req ->email==$email && $req->password==$password){         
-            $buyer = buyer::all();
+            // $buyer = buyer::all();
             $buyer = DB::table('buyer')
                 ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
                 ->select('buyer.*', 'coffee.name as coffeename')
-                ->get();
+                ->get()->orderByRaw('`id` DESC');
             return view('admin.dashboard',compact('buyer'));
             
         } else {

@@ -28,7 +28,7 @@ class CoffeesController extends Controller
             ->select('coffee.*','group.name AS nameg','category.name AS namecate')
             ->leftJoin('category', 'coffee.type', '=', 'category.id')
             ->leftJoin('group', 'group.id', '=', 'coffee.code')
-            ->get();
+            ->get()->sortBy('order');
        
 
         return view('admin.listCoffee',compact('coffees'));
@@ -241,11 +241,11 @@ class CoffeesController extends Controller
             ['type', '=','0' ]
         ])->get();
         $address = address::all();
-        $blog = blog::all();
+        $blog = blog::all()->sortBy('order');
         $group = group::all();
         $coffees =coffee::where([
             ['type', '=',$req->id ]
-        ])->orderByRaw('`order` DESC')->get();
+        ])->sortBy('order')->get();
         return view('product',[
             "category_product" =>$category_product,
             "coffees" =>$coffees,

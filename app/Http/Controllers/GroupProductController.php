@@ -151,8 +151,8 @@ class GroupProductController extends Controller
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
-        $address = address::all();
-        $blog = blog::all();
+        $address = address::all()->sortByDesc("id");
+        $blog = blog::all()->sortBy('order');
         $group = group::all();
         $coffees =coffee::where([
             ['code', '=',$req->id ]

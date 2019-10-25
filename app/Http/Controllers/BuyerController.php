@@ -18,7 +18,7 @@ class BuyerController extends Controller
     public function index()
     {
         //
-        $buyer = coffee::all();
+        $buyer = coffee::all()->sortBy('order');
         return view('notification',[
             "buyer" =>$buyer,
         ]);
