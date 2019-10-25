@@ -81,8 +81,7 @@
                         <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
                         <div class="col-sm-10">
                             <input type="hidden" id="hidInfo" name="hidInfo" value="{{$coffee->description}}">
-                            {{-- <textarea class="ckeditor form-control" rows="3" id="txtInfo" name="txtInfo"></textarea> --}}
-                            <textarea class="form-control" id="txtdescription" style="height:150px" name="description">
+                            <textarea class="ckeditor form-control" rows="3" id="txtInfo" name="txtInfo">
                                 {{$coffee->description}}
                             </textarea>
                         </div>
@@ -128,8 +127,10 @@
           </div> --}}
           <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
           <script>
-            //CKEDITOR.replace( 'Des-ckeditor' );
-              CKEDITOR.replace( 'Content-ckeditor');
+            // CKEDITOR.replace( 'Des-ckeditor' );
+            CKEDITOR.replace( 'summary-ckeditor' );
+
+            //   CKEDITOR.replace( 'Content-ckeditor');
               document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
           </script>
 @endsection

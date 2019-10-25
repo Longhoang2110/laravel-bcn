@@ -105,5 +105,6 @@
           <script>
             //CKEDITOR.replace( 'Des-ckeditor' );
               CKEDITOR.replace( 'Content-ckeditor');
+              document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
           </script>
 @endsection
