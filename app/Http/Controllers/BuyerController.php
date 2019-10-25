@@ -19,7 +19,9 @@ class BuyerController extends Controller
     {
         //
         $buyer = coffee::all();
-        return view('admin.dashboard',compact('buyer'));
+        return view('notification',[
+            "buyer" =>$buyer,
+        ]);
     }
 
     public function notification(){
