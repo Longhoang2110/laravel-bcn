@@ -17,7 +17,7 @@
               {{-- <th><i class="fa fa-bookmark"></i> Lượt xem</th> --}}
               <th><i class=" fa fa-edit"></i> type </th>
               <th><i class=" fa fa-edit"></i> trạng thái </th>
-              <th></th>
+              <th style="width: 150px;"><i class="fa fa-tasks"></i>  Chức năng</th>
             </tr>
           </thead>
           <tbody>

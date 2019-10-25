@@ -44,7 +44,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="{{route('admin')}}" class="logo"><b><span>MÁI CHE</span></b></a>
+      <a href="{{route('dashboard')}}" class="logo"><b><span>MÁI CHE</span></b></a>
       <!--logo end-->
       {{-- <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
@@ -246,10 +246,10 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="{{route('admin')}}"><img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.0-9/60073922_908710306138016_8554993409549402112_n.jpg?_nc_cat=103&_nc_oc=AQnf_ESBJZReNxEZjy9OP5bCdaf5YhveAvUcqiqa0QC6RxjtaCt6n2zY_LP4som5z0g&_nc_ht=scontent.fsgn5-7.fna&oh=acb2bc287939263898e2c755f4d01c49&oe=5E07BBF6" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="{{route('dashboard')}}"><img src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t1.0-9/60073922_908710306138016_8554993409549402112_n.jpg?_nc_cat=103&_nc_oc=AQnf_ESBJZReNxEZjy9OP5bCdaf5YhveAvUcqiqa0QC6RxjtaCt6n2zY_LP4som5z0g&_nc_ht=scontent.fsgn5-7.fna&oh=acb2bc287939263898e2c755f4d01c49&oe=5E07BBF6" class="img-circle" width="80"></a></p>
           <h5 class="centered">Hữu Công</h5>
           <li class="mt">
-            <a href="{{route('admin')}}">
+            <a href="{{route('dashboard')}}">
               <i class="fa fa-dashboard"></i>
               <span>Thông tin đặt hàng</span>
               </a>

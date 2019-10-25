@@ -48,4 +48,14 @@ class AdminController extends Controller
         return redirect('/getadmin');
         
      }  
+
+     public function dashboard(){
+
+       $buyer = buyer::all();
+       $buyer = DB::table('buyer')
+           ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
+           ->select('buyer.*', 'coffee.name as coffeename')
+           ->get();
+       return view('admin.dashboard',compact('buyer'));
+   }
 }

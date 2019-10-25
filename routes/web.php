@@ -12,6 +12,7 @@
 */
 Route::get('/admin/login', 'AdminController@getlogin')->name('getadmin');
 Route::post('/admin/login', 'AdminController@postlogin')->name('postadmin');
+Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 
 
 

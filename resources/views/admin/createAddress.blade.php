@@ -25,7 +25,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Địa chỉ</label>
                         <div class="col-sm-10">
-                            <input type="text" name="address" class="form-control" placeholder="Tên ">
+                            <input type="text" name="address" class="form-control" placeholder="Địa chỉ (yêu cầu đúng chính tả , chữ hoa chữ thường) ">
                         </div>
                     </div>
                     <div class="form-group">

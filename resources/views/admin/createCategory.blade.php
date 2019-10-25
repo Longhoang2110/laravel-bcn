@@ -23,9 +23,9 @@
                 <form action="{{route('category-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên </label>
+                        <label class="col-sm-2 col-sm-2 control-label">Nhóm sản phẩm </label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" placeholder="Tên ">
+                            <input type="text" name="name" class="form-control" placeholder="Nhóm sản phẩm">
                         </div>
                     </div>
                     <div class="form-group">
