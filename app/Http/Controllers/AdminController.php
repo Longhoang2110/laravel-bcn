@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     //
     public function getlogin(){
-         return view('admin.login',compact('buyer'));
+         return view('admin.login');
 
         // $buyer = buyer::all();
         // $buyer = DB::table('buyer')
