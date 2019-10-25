@@ -245,7 +245,7 @@ class CoffeesController extends Controller
         $group = group::all();
         $coffees =coffee::where([
             ['type', '=',$req->id ]
-        ])->orderByRaw('order DESC')->get();
+        ])->orderByRaw('`order` DESC')->get();
         return view('product',[
             "category_product" =>$category_product,
             "coffees" =>$coffees,

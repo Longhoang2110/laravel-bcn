@@ -143,15 +143,15 @@ class PageController extends Controller
 
         $coffee1 =coffee::where([
             ['type', '=','13']
-        ])->orderByRaw('order DESC')
+        ])->orderByRaw('`order` DESC')
         ->get();
         $coffee2 =coffee::where([
             ['type', '=','14' ]
-        ])->orderByRaw('order DESC')
+        ])->orderByRaw('`order` DESC')
         ->get();
         $coffee3 =coffee::where([
             ['type', '=','15' ]
-        ])->orderByRaw('order DESC')
+        ])->orderByRaw('`order` DESC')
         ->get();
         return view('home',[
             "blogs" => $blogs,
