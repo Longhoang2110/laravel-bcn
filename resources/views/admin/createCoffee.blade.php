@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Nhóm sản phẩm</label>
                             <div class="col-sm-10">
                                 <select name="type" id="type">
                             @foreach($category as $item)
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Kiểu sản phẩm</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
                             <div class="col-sm-10">
                                 <select name="code" id="code">
                             @foreach($group as $item)

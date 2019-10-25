@@ -12,8 +12,8 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th style="width: 200px;"><i class="fa fa-list-alt"></i>  Loại sản phẩm</th>
-              <th style="width: 200px;"><i class="fa fa-address-book"></i>  Kiểu sản phẩm</th>
+              <th style="width: 200px;"><i class="fa fa-list-alt"></i>  Nhóm sản phẩm</th>
+              <th style="width: 200px;"><i class="fa fa-address-book"></i>  Loại sản phẩm</th>
               <th style="width: 200px;"><i class="fa fa-bullhorn"></i>  Tên sản phẩm</th>
               <th style="width: 100px;"><i class="fa fa-id-card-o"></i>  Lượt xem</th>
               <th style="width: 100px;"><i class="fa fa-sort"></i>  Thứ tự đăng</th>

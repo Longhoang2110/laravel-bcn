@@ -13,9 +13,11 @@
           <thead>
             <tr>
               <th><i class="fa fa-bullhorn"></i> Tên content</th>
-              <th class="hidden-phone"><i class="fa fa-question-circle"></i>type</th>
+              <th class="hidden-phone"><i class="fa fa-question-circle"></i> type</th>
               <th><i class=" fa fa-edit"></i> Trạng thái</th>
-              <th></th>
+              <th style="width: 350px;"><i class="fa fa-tasks"></i>  Chức năng</th>
+
+
             </tr>
           </thead>
           <tbody>

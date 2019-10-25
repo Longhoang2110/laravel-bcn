@@ -9,7 +9,7 @@
     </div>
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>ĐIT CỤ CÔNG PHI</strong>nhập cho đủ chứ !!!!<br><br>
+            <strong>thêm thất bại</strong>vui lòng nhập đầy đủ <br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>

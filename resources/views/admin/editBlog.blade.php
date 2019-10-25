@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Sửa {{$blog->name}}</h2>
+                <h2>Chỉnh sửa {{$blog->name}}</h2>
             </div>
         </div>
     </div>

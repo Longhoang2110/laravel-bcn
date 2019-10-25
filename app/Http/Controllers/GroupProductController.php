@@ -21,7 +21,7 @@ class GroupProductController extends Controller
     public function index()
     {
         //
-        $group = group::all();
+        $group = group::all()->sortByDesc("id");
         return view('admin.listGroupProduct ',compact('group'));
     }
 
@@ -46,7 +46,7 @@ class GroupProductController extends Controller
         $category =category::where([
             ['type', '=','1' ]
         ])->get();
-        $group = group::all();
+        $group = group::all()->sortByDesc("id");
         return view('admin.createGroupProduct',[
             "category" =>$category,
             "group" =>$group,
@@ -153,7 +153,7 @@ class GroupProductController extends Controller
         ])->get();
         $address = address::all()->sortByDesc("id");
         $blog = blog::all()->sortBy('order');
-        $group = group::all();
+        $group = group::all()->sortByDesc("id");
         $coffees =coffee::where([
             ['code', '=',$req->id ]
         ])->get();

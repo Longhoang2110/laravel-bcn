@@ -12,8 +12,8 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-bullhorn">Địa chỉ</i></th>
-              <th></th>
+              <th><i class="fa fa-bullhorn">  Địa chỉ</i></th>
+              <th style="width: 350px;"><i class="fa fa-tasks"></i>  Chức năng</th>
             </tr>
           </thead>
           <tbody>

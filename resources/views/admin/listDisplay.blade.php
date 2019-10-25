@@ -16,7 +16,7 @@
               <th class="hidden-phone"><i class="fa fa-question-circle"></i> Mô tả</th>
               {{-- <th><i class="fa fa-bookmark"></i> Lượt xem</th> --}}
               <th><i class=" fa fa-edit"></i> Trạng thái</th>
-              <th></th>
+              <th style="width: 150px;"><i class="fa fa-tasks"></i>  Chức năng</th>
             </tr>
           </thead>
           <tbody>

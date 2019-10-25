@@ -256,22 +256,22 @@
           </li>
           <li class="sub-menu">
               <a href="javascript:;">
-                <i class="fa fa-list"></i>
-                <span>Quản lý danh mục</span>
+                <i class="fa fa-bookmark"></i>
+                <span>Quản lý nhóm sản phẩm</span>
                 </a>
               <ul class="sub">
-                <li><a href="{{route('category-list')}}">Danh sách danh mục</a></li>
-                <li><a href="{{route('category-add')}}">Thêm danh mục</a></li>
+                <li><a href="{{route('category-list')}}">Danh sách nhóm sản phẩm</a></li>
+                <li><a href="{{route('category-add')}}">Thêm nhóm sản phẩm</a></li>
               </ul>
             </li>
             <li class="sub-menu">
               <a href="javascript:;">
                 <i class="fa fa-list"></i>
-                <span>Quản lí kiểu sản phẩm</span>
+                <span>Quản lí loại sản phẩm</span>
                 </a>
               <ul class="sub">
-                <li><a href="{{route('group_product-list')}}">Kiểu sản phẩm</a></li>
-                <li><a href="{{route('group_product-add')}}">Thêm kiểu sản phẩm</a></li>
+                <li><a href="{{route('group_product-list')}}">Loại sản phẩm</a></li>
+                <li><a href="{{route('group_product-add')}}">Thêm loại sản phẩm</a></li>
               </ul>
             </li>
           <li class="sub-menu">

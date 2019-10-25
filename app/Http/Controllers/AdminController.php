@@ -36,7 +36,7 @@ class AdminController extends Controller
             $buyer = DB::table('buyer')
                 ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
                 ->select('buyer.*', 'coffee.name as coffeename')
-                ->get()->orderByRaw('`id` DESC');
+                ->get()->sortBy('id');
             return view('admin.dashboard',compact('buyer'));
             
         } else {

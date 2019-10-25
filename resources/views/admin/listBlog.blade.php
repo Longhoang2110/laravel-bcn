@@ -17,7 +17,7 @@
               <th style="width: 100px;"><i class="fa fa-bookmark"></i> Lượt xem</th>
               <th style="width: 150px;"><i class="fa fa-sort"></i>  Thứ tự đăng</th>
               <th style="width: 100px;"><i class=" fa fa-edit"></i> Trạng thái</th>
-              <th style="width: 150px;"><i class="fa fa-tasks"></i>Chức năng</th>
+              <th style="width: 150px;"><i class="fa fa-tasks"></i> Chức năng</th>
             </tr>
           </thead>
           <tbody>

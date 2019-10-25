@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm danh mục</h2>
+                <h2>Thêm loại</h2>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-group">
 
-                        <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Nhóm sản phẩm</label>
                         <div class="col-sm-10">
                             <select name="group">
                         @foreach($category as $item)
