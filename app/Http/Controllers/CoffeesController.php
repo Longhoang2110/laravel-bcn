@@ -254,12 +254,6 @@ class CoffeesController extends Controller
             "nameCate" => $nameCate,
             "category_blog" =>$category_blog,
             "group"=>$group,
-
-
-
-
-            
-
         ]);
 
     }

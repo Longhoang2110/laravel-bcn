@@ -165,14 +165,35 @@ class GroupProductController extends Controller
             "nameCate" => $nameCate,
             "category_blog" =>$category_blog,
             "group"=>$group,
-
-
-
-
-            
-
         ]);
 
-    }   
+    }  
+    
+    // public function categorycoffee(Request $req){
+    //     $nameCate = $req->name;
+        
+    //     $category_product =category::where([
+    //         ['type', '=','1' ]
+    //     ])->get();
+    //     $category_blog =category::where([
+    //         ['type', '=','0' ]
+    //     ])->get();
+    //     $address = address::all();
+    //     $blog = blog::all()->sortBy('order');
+    //     $group = group::all();
+    //     $coffees =coffee::where([
+    //         ['type', '=',$req->id ]
+    //     ])->sortBy('order')->get();
+    //     return view('product',[
+    //         "category_product" =>$category_product,
+    //         "coffees" =>$coffees,
+    //         "address" =>$address,
+    //         "blog" =>$blog,
+    //         "nameCate" => $nameCate,
+    //         "category_blog" =>$category_blog,
+    //         "group"=>$group,
+    //     ]);
+
+    // }
 }
 
