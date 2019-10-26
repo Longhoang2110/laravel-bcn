@@ -2,70 +2,44 @@
 @section('content')
 <!-- Slide1 -->
 <section class="container slide1">
+    <div class="row d-block d-sm-none">
+        <div class="col-md-12">
+            <img src="asset_custom/images/bannerdidong.jpg" style="background-size: cover;width: 100%;">
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-3">
-            <h4 id="hinder" class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom:1px;margin-top: 10px;">
-                <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
-            </h4>       
-            {{-- <script>
-                $(document).ready(function(){
-                    $("#hinder").click(function(){
-                        $("#an").toggle(500);
-                    })
-                })
-            </script> --}}
-            <div class="left">
-            <ul id="an" class="p-b-54">
-                <li class="p-t-4 p-b-8 bo7">
-                    <div style="padding:5px">
-                        <a href="{{route('product')}}" class="m-text11">
-                                Tất cả sản phẩm
-                        </a>
-                        
-                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </div>
+        <div class="col-md-3" style="padding-top:10px;">
+            <h4 class="m-text14"
+                style="background-color: #ed9f48;text-align: center;margin-bottom: 0px;line-height: 2;;color: white;border-bottom: 1px solid white;">
+                Danh mục
+            </h4>
+
+            <ul class="p-b-54">
+                <li class="p-t-4"
+                    style="padding: 5px;background-color: #ed9f48;color: white;border-bottom: 1px solid white;">
+                    <a href="{{route('product')}}" class="s-text13 active1" style="color: white">
+                        Tất cả các sản phẩm
+                    </a>
+                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                 </li>
                 @foreach($category_product as $item)
-                <li class="p-t-4 p-b-8 bo7">
-                    <div style="padding:5px">
-                        <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="m-text11">
-                                {{$item->name}}
-                                <ul class="sub_menu">
-                                    @foreach($category_blog as $item)
-                                    <li class="p-t-4 p-b-8 bo7">
-                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
-                                                {{$item->name}}
-                                                <ul class="sub_menu"style="padding-top:5px;">
-                                                    @foreach($category_blog as $item)
-                                                    <li class="p-t-4 p-b-8 bo7">
-                                                        <a href="{{route('category-blog',$item->id)}}" class="m-text11">
-                                                                {{$item->name}}
-           
-                                                        </a>
-            
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </a>
-
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </a>
-                        <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                    </div>
+                <li class="p-t-4"
+                    style="padding: 5px;background-color: #ed9f48;color: white;border-bottom: 1px solid white;">
+                    <a href="{{route('group_product-coffee',['group_productname'=>$item->name,'id'=>$item->id])}}" class="s-text13 active1" style="color: white">
+                        {{$item->name}}
+                    </a>
+                    <span class="pull-right" style="cursor: pointer;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                 </li>
                 @endforeach
             </ul>
         </div>
-        </div>
-        <div class="col-md-9">
+        <div class="col-md-9 d-none d-sm-block">
             <div class="wrap-slick1">
                 <div class="slick1">
                     @foreach($displays as $item)
                     <div class="item-slick1 item3-slick1"
-                        style="background-image: url(images/img/{{$item->thumbnail}})">
-                        <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15" style="height:400px">
+                        style="background-image: url(images/img/{{$item->thumbnail}});height: 300px;">
+                        <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15" style="height:300px">
                             <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15"
                                 data-appear="rotateInDownLeft">
                                 {{$item->name}}
@@ -108,9 +82,9 @@
             </h4>
 
             <span class="s-text11 t-center">
-                    luôn hướng đến việc nâng tầm chất lượng sản phẩm; 
-                    đồng thời luôn đưa ra những mẫu thiết kế bắt kịp xu hướng hiện đại
-                    nhằm tư vấn cho khách hàng những lựa chọn tối ưu nhất.
+                luôn hướng đến việc nâng tầm chất lượng sản phẩm;
+                đồng thời luôn đưa ra những mẫu thiết kế bắt kịp xu hướng hiện đại
+                nhằm tư vấn cho khách hàng những lựa chọn tối ưu nhất.
             </span>
         </div>
 
@@ -122,9 +96,9 @@
             </h4>
 
             <span class="s-text11 t-center">
-                    đều được lắp đặt từ nguyên liệu nhập khẩu
-                    cao cấp có khả năng chịu được điều kiện thời tiết khắc nghiệt
-                    với độ bền sử dụng lên đến 15-20 năm.
+                đều được lắp đặt từ nguyên liệu nhập khẩu
+                cao cấp có khả năng chịu được điều kiện thời tiết khắc nghiệt
+                với độ bền sử dụng lên đến 15-20 năm.
             </span>
         </div>
 
@@ -136,13 +110,15 @@
             </h4>
 
             <span class="s-text11 t-center">
-                    chuyên thiết kế, thi công, lắp đặt hệ thống mái che bạt kéo căng cho Quý Khách Hàng
-                    là : Trung Tâm Thương Mại, Khu Du Lịch, Khu Vui Chơi – Giải Trí, Khách Sạn, Hồ Bơi,
-                    Nhà Hàng, Sky Bar, Quán Cà Phê, Bãi Đỗ Xe, Công Trình Dân Dụng…
+                chuyên thiết kế, thi công, lắp đặt hệ thống mái che bạt kéo căng cho Quý Khách Hàng
+                là : Trung Tâm Thương Mại, Khu Du Lịch, Khu Vui Chơi – Giải Trí, Khách Sạn, Hồ Bơi,
+                Nhà Hàng, Sky Bar, Quán Cà Phê, Bãi Đỗ Xe, Công Trình Dân Dụng…
             </span>
         </div>
     </div>
 </section>
+
+
 
 <!-- New Product -->
 <section class="newproduct bgwhite p-t-45 p-b-105" style="padding-bottom: 50px;">
@@ -150,7 +126,7 @@
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
                 {{$category1->name}}
-                
+
             </h3>
         </div>
 
@@ -162,7 +138,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                            <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px"
+                            <img src="images/img/{{$item->thumbnail}}" style="height:270px"
                                 alt="{{$item->alt}}">
 
                             <div class="block2-overlay trans-0-4">
@@ -200,7 +176,7 @@
     <div class="container">
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                {{$category2->name}}                
+                {{$category2->name}}
             </h3>
         </div>
 
@@ -212,7 +188,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                            <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px"
+                            <img src="images/img/{{$item->thumbnail}}" style="height:270px"
                                 alt="{{$item->alt}}">
 
                             <div class="block2-overlay trans-0-4">
@@ -250,7 +226,7 @@
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
                 {{$category3->name}}
-                
+
             </h3>
         </div>
 
@@ -262,7 +238,7 @@
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                            <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px"
+                            <img src="images/img/{{$item->thumbnail}}" style="height:270px"
                                 alt="{{$item->alt}}">
 
                             <div class="block2-overlay trans-0-4">
@@ -313,7 +289,7 @@
                 <!-- Block3 -->
                 <div class="block3">
                     <a href="{{route('blog-detail',$item->id)}}" class="block3-img dis-block hov-img-zoom">
-                        <img src="images/img/{{$item->thumbnail}}" style="width:720px;height:300px" alt="IMG-BLOG">
+                        <img src="images/img/{{$item->thumbnail}}" style="width:720px;height:276px" alt="IMG-BLOG">
                     </a>
 
                     <div class="block3-txt p-t-14">
@@ -347,7 +323,7 @@
     <div class="flex-w">
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="asset_custom/images/gallery-07.jpg" alt="IMG-INSTAGRAM">
+            <img src="asset_custom/images/hinh1.jpg" style="height: 371px;width: 371px;">
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
                     <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
@@ -356,13 +332,11 @@
 
                 <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
                     <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in
-                        tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus
-                        elit.
+                        Mái che trường học
                     </p>
 
                     <span class="s-text9">
-                        Photo by @nancyward
+                        Liên hệ : 0943515789
                     </span>
                 </div>
             </a>
@@ -370,7 +344,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="asset_custom/images/gallery-07.jpg" alt="IMG-INSTAGRAM">
+            <img src="asset_custom/images/hinh2.jpg" style="height: 371px;width: 371px;">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -380,13 +354,11 @@
 
                 <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
                     <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in
-                        tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus
-                        elit.
+                        Mái che di động
                     </p>
 
                     <span class="s-text9">
-                        Photo by @nancyward
+                        Liên hệ : 0943515789
                     </span>
                 </div>
             </a>
@@ -394,7 +366,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="asset_custom/images/gallery-09.jpg" alt="IMG-INSTAGRAM">
+            <img src="asset_custom/images/hinh3.jpg" style="height: 371px;width: 371px;">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -404,13 +376,11 @@
 
                 <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
                     <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in
-                        tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus
-                        elit.
+                        Mái che gia đình
                     </p>
 
                     <span class="s-text9">
-                        Photo by @nancyward
+                        Liên hệ : 0943515789
                     </span>
                 </div>
             </a>
@@ -418,7 +388,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="asset_custom/images/gallery-13.jpg" alt="IMG-INSTAGRAM">
+            <img src="asset_custom/images/hinh4.jpg" style="height: 371px;width: 371px;">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -428,13 +398,11 @@
 
                 <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
                     <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in
-                        tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus
-                        elit.
+                        Mái che công sở
                     </p>
 
                     <span class="s-text9">
-                        Photo by @nancyward
+                        Liên hệ : 0943515789
                     </span>
                 </div>
             </a>
@@ -442,7 +410,7 @@
 
         <!-- Block4 -->
         <div class="block4 wrap-pic-w">
-            <img src="asset_custom/images/gallery-15.jpg" alt="IMG-INSTAGRAM">
+            <img src="asset_custom/images/hinh5.jpg" style="height: 371px;width: 371px;">
 
             <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
                 <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -452,13 +420,11 @@
 
                 <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
                     <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in
-                        tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus
-                        elit.
+                        Mái che hiện đại
                     </p>
 
                     <span class="s-text9">
-                        Photo by @nancyward
+                        Liên hệ : 0943515789
                     </span>
                 </div>
             </a>
