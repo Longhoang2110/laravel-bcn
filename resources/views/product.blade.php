@@ -21,11 +21,11 @@
                         <ul id="an" class="p-b-1">
                             <li class="p-t-4 p-b-8 ">
                                 <div style="padding:5px">
-                                    <a href="{{route('product')}}" class="m-text11">
+                                    <a href="{{route('product')}}" class="m-text11" style="color:white">
                                                 Tất cả sản phẩm
                                         </a>
                                         
-                                        <span class=" pull-right"><i class="fa fa-th-list" style="color:#fff;"
+                                        <span class=" pull-right"><i class="fa fa-angle-right" style="color:#fff;"
                                             aria-hidden="true"></i></span>
                                 </div>
                             </li>
@@ -33,10 +33,10 @@
                             <li class="p-t-4 " style="border-top:1px solid #fff;">
                                 <div style="padding:5px">
                                     <a href="{{route('group_product-coffee',['group_productname'=>$item->name,'id'=>$item->id])}}"
-                                        class="m-text11">
+                                        class="m-text11" style="color:white">
                                         {{$item->name}}
                                     </a>
-                                    <span onclick="test({{$item->id}})" class="pull-right "><i class="fa fa-th-list"
+                                    <span onclick="test({{$item->id}})" class="pull-right "><i class="fa fa-angle-right"
                                             style="color:#fff;" aria-hidden="true"></i></span>
 
                                 </div>
@@ -44,9 +44,9 @@
                                     @foreach($group as $itemChild)
                                     @if($itemChild->group == $item->id)
                                     <li class="p-t-4  "
-                                        style="border-top:1px solid #fff;padding:5px; background-color:#f4be84;margin-right:-10px;margin-left:-10px;">
+                                        style="border-top:1px solid #fff;padding:5px;padding-left: 15px; background-color:#f4be84;">
                                         <a href="{{route('group_product-coffee',['group_productname'=>$itemChild->name,'id'=>$itemChild->id])}}"
-                                            class="m-text11">
+                                            class="m-text11" style="color:white;font-size: 14px;">
                                             {{$itemChild->name}}
                                         </a>
                                     </li>
