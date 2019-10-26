@@ -85,7 +85,7 @@
                     <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Thứ tự xuất hiện</label>
                             <div class="col-sm-10">
-                                <input type="number" name="order" class="form-control" placeholder="thứ tự xuất hiện">
+                                <input type="number" name="order" class="form-control" placeholder="thứ tự xuất hiện" value="{{$blog->order}}">
                             </div>
                     </div>
                     <div class="form-group">
@@ -105,7 +105,14 @@
           <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
           <script>
             //CKEDITOR.replace( 'Des-ckeditor' );
-              CKEDITOR.replace( 'Content-ckeditor');
+              CKEDITOR.replace( 'Content-ckeditor', {
+                filebrowserBrowseUrl: "{{ asset('vendor/unisharp/ckfinder/ckfinder.html') }}",
+                filebrowserImageBrowseUrl: "{{ asset('vendor/unisharp/ckfinder/ckfinder.html?type=Images') }}",
+                filebrowserFlashBrowseUrl: "{{ asset('vendor/unisharp/ckfinder/ckfinder.html?type=Flash') }}",
+                filebrowserUploadUrl: "{{ asset('vendor/unisharp/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('vendor/unisharp/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+                filebrowserFlashUploadUrl: "{{ asset('vendor/unisharp/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}"
+            } );
               document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
           </script>
           
