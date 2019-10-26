@@ -107,7 +107,7 @@
                     <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Thứ tự xuất hiện</label>
                             <div class="col-sm-10">
-                                <input type="number" name="order" class="form-control" placeholder="thứ tự xuất hiện">
+                                <input type="number" name="order" class="form-control" placeholder="thứ tự xuất hiện" value="{{$coffee->order}}">
                             </div>
                     </div>
                     <div class="form-group">

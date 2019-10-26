@@ -58,7 +58,7 @@
                             </div>
 
                             <div>
-                                {{$blog->content}}
+                                {!!$blog->content!!}
                             </div>
                         </div>
 
