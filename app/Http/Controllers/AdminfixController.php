@@ -45,24 +45,24 @@ class AdminfixController extends Controller
     public function postAdd(Request $req)
     {
         
-        $this->validate($req,
-            [
-                'name' => 'required',
-                'description' => 'required',
-                'fImage' => 'required',
-                'fImage' => 'required',
-                'content' => 'required',
+        // $this->validate($req,
+        //     [
+        //         'name' => 'required',
+        //         'description' => 'required',
+        //         'fImage' => 'required',
+        //         'fImage' => 'required',
+        //         'content' => 'required',
 
                 
-            ],
-            [
-                'name.required' => 'Vui lòng nhập tên',
-                'description.required' => 'Vui lòng nhập nội dung',
-                'fImage.required' => 'Vui lòng chọn hình ảnh',
-                'content.required' => 'Vui lòng thêm mô tả'
+        //     ],
+        //     [
+        //         'name.required' => 'Vui lòng nhập tên',
+        //         'description.required' => 'Vui lòng nhập nội dung',
+        //         'fImage.required' => 'Vui lòng chọn hình ảnh',
+        //         'content.required' => 'Vui lòng thêm mô tả'
                 
-            ]
-        );
+        //     ]
+        // );
 
         $display = new display;
         $display->name = $req->name;
@@ -89,24 +89,24 @@ class AdminfixController extends Controller
     }
 
     public function postUpdate(Request $req){
-        $this->validate($req,
-        [
-            'name' => 'required',
-            'description' => 'required',
-            'fImage' => 'required',
-            'fImage' => 'required',
-            'content' => 'required',
+    //     $this->validate($req,
+    //     [
+    //         'name' => 'required',
+    //         'description' => 'required',
+    //         'fImage' => 'required',
+    //         'fImage' => 'required',
+    //         'content' => 'required',
 
             
-        ],
-        [
-            'name.required' => 'Vui lòng nhập tên',
-            'description.required' => 'Vui lòng nhập nội dung',
-            'fImage.required' => 'Vui lòng chọn hình ảnh',
-            'content.required' => 'Vui lòng thêm mô tả'
+    //     ],
+    //     [
+    //         'name.required' => 'Vui lòng nhập tên',
+    //         'description.required' => 'Vui lòng nhập nội dung',
+    //         'fImage.required' => 'Vui lòng chọn hình ảnh',
+    //         'content.required' => 'Vui lòng thêm mô tả'
             
-        ]
-    );
+    //     ]
+    // );
 
         $display = display::find($req->id);
         $display->name = $req->name;
