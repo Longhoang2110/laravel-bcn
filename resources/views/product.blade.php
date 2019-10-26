@@ -7,7 +7,7 @@
             <div id="nav" class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                 <div class="leftbar p-r-20 p-r-0-sm">
                     <h4 id="hinder" class="m-text11"
-                        style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                        style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;color:white">
                         <i aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                     </h4>
                     <script>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="d-none d-sm-block">
                         <h4 id="hinder2" data-target="#an2" class="m-text11"
-                            style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                            style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;color:white">
                             <i class="fa fa-book" aria-hidden="true"></i>&nbsp Bài viết quan tâm
                         </h4>
                         <script>
