@@ -85,6 +85,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Giảm giá thành</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="discount" class="form-control" placeholder="Giảm giá thành">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
                             <label class="radio-inline">

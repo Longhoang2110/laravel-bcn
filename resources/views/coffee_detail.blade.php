@@ -33,10 +33,16 @@
             <h4 class="product-detail-name m-text16 p-b-13">
                 {{$coffee->name}}
             </h4>
-
-            <span class="m-text17">
-                {{$coffee->price}} vnd
+            <span class="m-text6"style="text-transform: unset;">
+               Giá NY: {{$coffee->price}} VND
             </span>
+            <br>
+            @if($coffee->discount < $coffee->price && $coffee->discount != 0)
+            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                Giá Sale: {{$coffee->discount}} VND
+            </span>
+            @endif
+            <p>
                 {{$coffee->description}}
             </p> -->
 
@@ -166,7 +172,12 @@
 						<div class="item-slick2 p-l-15 p-r-15">
 							<!-- Block2 -->
 							<div class="block2">
-								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+								{{-- <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew"> --}}
+                                @if($item->discount < $item->price && $item->discount != 0)
+                                    <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+                                     @else
+                                    <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                                @endif
 									<img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px" alt="IMG-PRODUCT">
 
 									<div class="block2-overlay trans-0-4">
@@ -190,8 +201,14 @@
 									</a>
 
 									<span class="block2-price m-text6 p-r-5">
-										{{$item->price}} vnd
-									</span>
+										Giá NY:{{$item->price}} VND
+                                    </span>
+                                    <br>
+                                    @if($coffee->discount < $coffee->price && $coffee->discount != 0)
+                                     <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                    Giá Sale: {{$coffee->discount}} VND
+                                     </span>
+                                    @endif
 								</div>
 							</div>
 						</div>

@@ -79,6 +79,9 @@ class CoffeesController extends Controller
             'price' => 'required',
             'fImage' => 'required',
             'alt' => 'required',
+            'order' => 'required',
+
+
         ],
         [
             'name.required' => 'Vui lòng nhập tên',
@@ -86,6 +89,8 @@ class CoffeesController extends Controller
             'price.required' => 'Vui lòng nhập giá',
             'fImage.required' => 'Vui lòng nhập ảnh',
             'alt.required' => 'Vui lòng nhập tên  ảnh',
+            'order.required' => 'Vui lòng nhập thứ tự xuất hiện sản phẩm',
+
         ]
     );
 
@@ -102,6 +107,7 @@ class CoffeesController extends Controller
         $coffee->created_at = $time;
         $coffee->cout_view = 0;
         $coffee->order = $req->order;
+        $coffee->discount = $req->discount;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -135,22 +141,24 @@ class CoffeesController extends Controller
 
 
     public function postUpdate(Request $req){
-        $this->validate($req,
-        [
-            'name' => 'required',
-            'description' => 'required',
-            'price' => 'required',
-            'fImage' => 'required',
-            'alt' => 'required',
-        ],
-        [
-            'name.required' => 'Vui lòng nhập tên',
-            'description.required' => 'Vui lòng nhập nội dung',
-            'price.required' => 'Vui lòng nhập giá',
-            'fImage.required' => 'Vui lòng nhập ảnh',
-            'alt.required' => 'Vui lòng nhập tên  ảnh',
-        ]
-    );
+    //     $this->validate($req,
+    //     [
+    //         'name' => 'required',
+    //         'description' => 'required',
+    //         'price' => 'required',
+    //         'fImage' => 'required',
+    //         'alt' => 'required',
+    //         'order' => 'required',
+    //     ],
+    //     [
+    //         'name.required' => 'Vui lòng nhập tên',
+    //         'description.required' => 'Vui lòng nhập nội dung',
+    //         'price.required' => 'Vui lòng nhập giá',
+    //         'fImage.required' => 'Vui lòng nhập ảnh',
+    //         'alt.required' => 'Vui lòng nhập tên  ảnh',
+    //         'order.required' => 'Vui lòng nhập thứ tự xuất hiện sản phẩm',
+    //     ]
+    // );
         $time = Carbon::now('Asia/Ho_Chi_Minh');
         $coffee = coffee::find($req->id);
         $coffee->name = $req->name;
@@ -163,6 +171,7 @@ class CoffeesController extends Controller
         $coffee->code = $req->code;
         $coffee->cout_view = 0;
         $coffee->order = $req->order;
+        $coffee->discount = $req->discount;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();

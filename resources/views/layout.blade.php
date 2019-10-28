@@ -284,7 +284,7 @@
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
-					CÔNG TY MÁI HIÊN DI ĐỘNG HỮU CÔNG
+					CÔNG TY MÁI HÒA PHÁT CMA
 				</h4>
 
 				<div>

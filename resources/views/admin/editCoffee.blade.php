@@ -88,9 +88,15 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Giá</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Giá niêm yết</label>
                         <div class="col-sm-10">
                             <input type="number" name="price" class="form-control" value="{{$coffee->price}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Giá Sale</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="discount" class="form-control" value="{{$coffee->discount}}">
                         </div>
                     </div>
                     <div class="form-group">

@@ -137,7 +137,11 @@
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
-                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                        @if($item->discount < $item->price && $item->discount != 0)
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+                             @else
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                        @endif
                             <img src="images/img/{{$item->thumbnail}}" style="height:270px"
                                 alt="{{$item->alt}}">
 
@@ -162,9 +166,23 @@
                                 {{$item->name}}
                             </a>
 
-                            <span class="block2-price m-text6 p-r-5">
-                                {{$item->price}} vnd
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                               Giá NY: {{$item->price}} VND
                             </span>
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                Giá Sale: {{$item->discount}} VND
+                            </span>
+                            @endif
+                            <br>
+                            
+                                 {{-- $from = $item->price;
+                                 $to = $item->discount;
+                                 if($from==$to || !$to) return '';
+                                 $percent=round(($from-$to)/$from*100);
+                                 $text=$from>$to? 'Giảm':'Tăng'; --}}
+                            
                         </div>
                     </div>
                 </div>
@@ -187,7 +205,12 @@
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
+                    @if($item->discount < $item->price && $item->discount != 0)
+                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+                     @else
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                    @endif
+
                             <img src="images/img/{{$item->thumbnail}}" style="height:270px"
                                 alt="{{$item->alt}}">
 
@@ -212,9 +235,15 @@
                                 {{$item->name}}
                             </a>
 
-                            <span class="block2-price m-text6 p-r-5">
-                                {{$item->price}} vnd
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                Giá NY:{{$item->price}} VND
                             </span>
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                Giá Sale: {{$item->discount}} VND
+                            </span>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -237,7 +266,11 @@
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
+                    @if($item->discount < $item->price && $item->discount != 0)
+                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+                         @else
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                    @endif   
                             <img src="images/img/{{$item->thumbnail}}" style="height:270px"
                                 alt="{{$item->alt}}">
 
@@ -262,9 +295,15 @@
                                 {{$item->name}}
                             </a>
 
-                            <span class="block2-price m-text6 p-r-5">
-                                {{$item->price}} vnd
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                Giá NY:{{$item->price}} VND
                             </span>
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                Giá Sale: {{$item->discount}} VND
+                            </span>
+                            @endif
                         </div>
                     </div>
                 </div>

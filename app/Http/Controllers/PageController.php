@@ -41,8 +41,6 @@ class PageController extends Controller
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
-
-
         return view('coffee_detail',[
             "coffee" => $coffee,
             "coffees" => $coffees,
@@ -182,13 +180,19 @@ class PageController extends Controller
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
+        // $from = $coffees->price;
+        // $to = $coffees->discount;
+        // if($from==$to || !$to) return '';
+        // $percent=round(($from-$to)/$from*100);
+        // $text=$from>$to? 'Giảm':'Tăng';
         return view('product',[
             "category_product" =>$category_product,
             "coffees" =>$coffees,
-            // "address" =>$address,
             "blog" =>$blog,
             "category_blog" =>$category_blog,
+            // "percent"=>$percent,
             "group"=>$group,
+            // "text"=>$text,
 
 
             "nameCate" => "Tất cả sản phẩm" 

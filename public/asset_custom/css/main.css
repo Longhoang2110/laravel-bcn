@@ -1771,7 +1771,7 @@ li.sale-noti>a {
 }
 
 .block2-labelsale::before {
-    background-color: #ed9f48;
+    background-color: red;
     content: 'Sale';
 }
 
