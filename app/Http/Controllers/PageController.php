@@ -121,13 +121,17 @@ class PageController extends Controller
         $blogs = blog::all()->sortBy('order');
         $displays = display::all();
         // $address = address::all();
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]  
+        ])->get();
 
         $category_product =category::where([
-            ['type', '=','1' ]
+            ['type', '=','1' ],
+            ['is_active', '=', 1]
         ])->take(6)->get();
         $category_blog =category::where([
-            ['type', '=','0' ]
+            ['type', '=','0' ],
+            ['is_active', '=', 1]
         ])->get();
         $category1 =category::where([
             ['id', '=','13' ]

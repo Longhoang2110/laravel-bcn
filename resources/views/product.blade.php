@@ -32,7 +32,7 @@
                             @foreach($category_product as $item)
                             <li class="p-t-4 " style="border-top:1px solid #fff;">
                                 <div style="padding:5px">
-                                    <a href="{{route('group_product-coffee',['group_productname'=>$item->name,'id'=>$item->id])}}"
+                                    <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}"
                                         class="m-text11" style="color:white">
                                         {{$item->name}}
                                     </a>

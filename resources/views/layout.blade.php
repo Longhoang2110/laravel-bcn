@@ -61,7 +61,7 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<a href="{!! route('home') !!}" class="logo">
-					<img src="asset_custom/images/web2.png" style="max-height: 55px" alt="IMG-LOGO">
+					<img src="asset_custom/images/web2.PNG" style="max-height: 64px" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu -->
@@ -128,7 +128,7 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="{!! route('home') !!}" class="logo-mobile">
-				<img src="asset_custom/images/web1.png" style="max-height: 55px" alt="IMG-LOGO">
+				<img src="asset_custom/images/web1.PNG" style="max-height: 55px" alt="IMG-LOGO">
 			</a>
 
 			<!-- Button show menu -->

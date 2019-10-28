@@ -43,7 +43,7 @@ Route::get('/content/{type}', 'PageController@content')->name('content');
 
 ////////////coffee admin\\\\\\\\\\\\\\\
 Route::group(['prefix' => 'Admincoffee'],function(){
-    Route::get('/','CoffeesController@index')->name('coffee-list');
+    Route::get('/','CoffeesController@listCoffeAdmin')->name('coffee-list');
 
     Route::get('update/{id}','CoffeesController@getUpdate')->name('coffee-update');
     Route::post('update/{id}','CoffeesController@postUpdate')->name('coffee-update');

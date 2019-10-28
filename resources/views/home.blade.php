@@ -25,7 +25,7 @@
                 @foreach($category_product as $item)
                 <li class="p-t-4"
                     style="padding: 5px;background-color: #ed9f48;color: white;border-bottom: 1px solid white;">
-                    <a href="{{route('group_product-coffee',['group_productname'=>$item->name,'id'=>$item->id])}}" class="s-text13 active1" style="color: white">
+                    <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="s-text13 active1" style="color: white">
                         {{$item->name}}
                     </a>
                     <span class="pull-right" style="cursor: pointer;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>

@@ -12,11 +12,11 @@
           {{-- <a class="btn btn-success" href="{{route('coffee-add')}}"> Thêm loại cafe</a> --}}
           <thead>
             <tr>
-              <th><i class="fa fa-address-book-o"></i> Tên nhóm sản phẩm </th>
-              <th class="hidden-phone"><i class="fa fa-question-circle"></i> code</th>
+              <th><i class="fa fa-address-book-o"></i> Tên danh mục </th>
+              <th class="hidden-phone"><i class="fa fa-question-circle"></i> Mã</th>
               {{-- <th><i class="fa fa-bookmark"></i> Lượt xem</th> --}}
-              <th><i class=" fa fa-edit"></i> type </th>
-              <th><i class=" fa fa-edit"></i> trạng thái </th>
+              <th><i class=" fa fa-edit"></i> Loại </th>
+              <th><i class=" fa fa-edit"></i> Trạng thái </th>
               <th style="width: 150px;"><i class="fa fa-tasks"></i>  Chức năng</th>
             </tr>
           </thead>

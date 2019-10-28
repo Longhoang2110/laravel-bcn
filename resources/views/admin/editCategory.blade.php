@@ -47,10 +47,10 @@
                     </div>
                     <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="1" checked type="radio">Hiện
+                                    <input name="rdoState" value="1"  type="radio" {{$category->is_active == 1? 'checked':''}}>Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="2" type="radio">Ẩn
+                                <input name="rdoState" value="2" type="radio" {{$category->is_active == 2? 'checked':''}}>Ẩn
                             </label>
                         </div>
                     {{-- <div class="form-group">

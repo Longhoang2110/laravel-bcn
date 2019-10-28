@@ -28,6 +28,22 @@ class CoffeesController extends Controller
             ->select('coffee.*','group.name AS nameg','category.name AS namecate')
             ->leftJoin('category', 'coffee.type', '=', 'category.id')
             ->leftJoin('group', 'group.id', '=', 'coffee.code')
+            ->where('coffee.is_active','=',1)
+            ->get()->sortBy('order');
+       
+
+        return view('admin.listCoffee',compact('coffees'));
+    }
+
+    public function listCoffeAdmin()
+    {
+        //
+        //return view('admin.listCoffee');
+        // $coffees = coffee::all();
+        $coffees = DB::table('coffee')
+            ->select('coffee.*','group.name AS nameg','category.name AS namecate')
+            ->leftJoin('category', 'coffee.type', '=', 'category.id')
+            ->leftJoin('group', 'group.id', '=', 'coffee.code')
             ->get()->sortBy('order');
        
 
@@ -242,17 +258,20 @@ class CoffeesController extends Controller
         $nameCate = $req->name;
         
         $category_product =category::where([
-            ['type', '=','1' ]
+            ['type', '=','1' ],
+            ['is_active', '=', 1]
         ])->get();
         $category_blog =category::where([
-            ['type', '=','0' ]
+            ['type', '=','0' ],
+            ['is_active', '=', 1]
         ])->get();
         $address = address::all();
-        $blog = blog::all()->sortBy('order');
+        $blog = blog::all();
         $group = group::all();
         $coffees =coffee::where([
-            ['type', '=',$req->id ]
-        ])->sortBy('order')->get();
+            ['type', '=',$req->id ],
+            ['is_active', '=', 1]
+        ])->orderBy('order', 'desc')->get();
         return view('product',[
             "category_product" =>$category_product,
             "coffees" =>$coffees,

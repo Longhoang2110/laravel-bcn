@@ -257,21 +257,21 @@
           <li class="sub-menu">
               <a href="javascript:;">
                 <i class="fa fa-shopping-basket"></i>
-                <span>Quản lý nhóm sản phẩm</span>
+                <span>Quản lý danh mục</span>
                 </a>
               <ul class="sub">
-                <li><a href="{{route('category-list')}}">Danh sách nhóm sản phẩm</a></li>
-                <li><a href="{{route('category-add')}}">Thêm nhóm sản phẩm</a></li>
+                <li><a href="{{route('category-list')}}">Danh sách danh mục</a></li>
+                <li><a href="{{route('category-add')}}">Thêm danh mục</a></li>
               </ul>
             </li>
             <li class="sub-menu">
               <a href="javascript:;">
                 <i class="fa fa-list"></i>
-                <span>Quản lí loại sản phẩm</span>
+                <span>Quản lý danh mục con</span>
                 </a>
               <ul class="sub">
-                <li><a href="{{route('group_product-list')}}">Danh sách loại sản phẩm</a></li>
-                <li><a href="{{route('group_product-add')}}">Thêm loại sản phẩm</a></li>
+                <li><a href="{{route('group_product-list')}}">Danh sách danh mục con</a></li>
+                <li><a href="{{route('group_product-add')}}">Thêm danh mục con</a></li>
               </ul>
             </li>
           <li class="sub-menu">

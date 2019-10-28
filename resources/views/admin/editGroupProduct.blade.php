@@ -25,19 +25,19 @@
                 <form action="{{route('group_product-update',$group->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên danh mục</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" value="{{$group->name}}">
                         </div>
                     </div>
                     <div class="form-group">
 
-                        <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Danh mục cha</label>
                         <div class="col-sm-10">
                             <select name="group">
                         @foreach($category as $item)
 
-                                <option value="{{$item->id}}">
+                                <option value="{{$item->id}}" {{$item->id == $group->group? 'selected':''}}>
                                 {{$item->name}}
                                 </option>
                         @endforeach

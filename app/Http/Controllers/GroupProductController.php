@@ -69,7 +69,6 @@ class GroupProductController extends Controller
         $group->name = $req->name;
         $group->group = $req->group;
         $group->is_active = $req->rdoState;
-        $group->is_active = $req->rdoState;
         if($group->save())
             return redirect()->route('group_product-list')->with('message','Thêm thành công');
         return redirect()->route('group_product-list')->with('message','Thêm thất bại vui lòng thử lại sau');
@@ -147,14 +146,18 @@ class GroupProductController extends Controller
     public function group_productcoffee(Request $req){
         $nameCate = $req->name;
         $category_product =category::where([
-            ['type', '=','1' ]
+            ['type', '=','1' ],
+            ['is_active', '=', 1]
         ])->get();
         $category_blog =category::where([
-            ['type', '=','0' ]
+            ['type', '=','0' ],
+            ['is_active', '=', 1]
         ])->get();
-        $address = address::all()->sortByDesc("id");
+        $address = address::all();
         $blog = blog::all()->sortBy('order');
-        $group = group::all()->sortByDesc("id");
+        $group = group::where([
+            ['is_active', '=', 1]  
+        ])->get();
         $coffees =coffee::where([
             ['code', '=',$req->id ]
         ])->get();
