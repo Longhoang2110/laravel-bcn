@@ -70,16 +70,16 @@ class CategoryController extends Controller
     }
 
     public function postUpdate(Request $req){
-        $this->validate($req,
-        [
-            'name' => 'required',
-            'code' => 'required',
-        ],
-        [
-            'name.required' => 'Vui lòng nhập tên',
-            'code.required' => 'Vui lòng nhập code',
-        ]
-    );
+    //     $this->validate($req,
+    //     [
+    //         'name' => 'required',
+    //         'code' => 'required',
+    //     ],
+    //     [
+    //         'name.required' => 'Vui lòng nhập tên',
+    //         'code.required' => 'Vui lòng nhập code',
+    //     ]
+    // );
         $category = category::find($req->id);
         $category->name = $req->name;
         $category->code = $req->code;

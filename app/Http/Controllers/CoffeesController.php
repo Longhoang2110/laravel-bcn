@@ -80,8 +80,6 @@ class CoffeesController extends Controller
             'fImage' => 'required',
             'alt' => 'required',
             'order' => 'required',
-
-
         ],
         [
             'name.required' => 'Vui lòng nhập tên',

@@ -68,7 +68,8 @@ class GroupProductController extends Controller
         $group = new group;
         $group->name = $req->name;
         $group->group = $req->group;
-        // $group->is_active = $req->rdoState;
+        $group->is_active = $req->rdoState;
+        $group->is_active = $req->rdoState;
         if($group->save())
             return redirect()->route('group_product-list')->with('message','Thêm thành công');
         return redirect()->route('group_product-list')->with('message','Thêm thất bại vui lòng thử lại sau');
@@ -83,18 +84,18 @@ class GroupProductController extends Controller
     }
 
     public function postUpdate(Request $req){
-        $this->validate($req,
-        [
-            'name' => 'required',
-        ],
-        [
-            'name.required' => 'Vui lòng nhập tên',
-        ]
-    );
+    //     $this->validate($req,
+    //     [
+    //         'name' => 'required',
+    //     ],
+    //     [
+    //         'name.required' => 'Vui lòng nhập tên',
+    //     ]
+    // );
         $group = group::find($req->id);
         $group->name = $req->name;
         $group->group = $req->group;
-
+        $group->is_active = $req->rdoState;
         if($group->save())
             return redirect()->route('group_product-list')->with('message','Cập nhật thành công');
         return redirect()->route('group_product-list')->with('message','Cập nhật thất bại vui lòng thử lại sau');
