@@ -60,10 +60,10 @@
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="1" checked type="radio">Hiện
+                                    <input name="rdoState" value="{{$displays->is_active}}" checked type="radio">Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="2" type="radio">Ẩn
+                                <input name="rdoState" value="{{$displays->is_active}}" type="radio">Ẩn
                             </label>
                         </div>
                     </div>

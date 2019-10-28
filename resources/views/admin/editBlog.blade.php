@@ -24,7 +24,7 @@
                 <form action="{{route('blog-update',$blog->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên bài viết</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" value="{{$blog->name}}">
                         </div>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Type</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Loại bài viết</label>
                             <div class="col-sm-10">
                                 <select name="type">
                             @foreach($category as $item)
@@ -55,7 +55,7 @@
 
                                 </select>
                             </div>
-                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
                         <div class="col-sm-10">
@@ -75,10 +75,10 @@
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="1" checked type="radio">Hiện
+                                    <input name="rdoState" value="{{$blog->is_active}}" checked type="radio">Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="2" type="radio">Ẩn
+                                <input name="rdoState" value="{{$blog->is_active}}" type="radio">Ẩn
                             </label>
                         </div>
                     </div>

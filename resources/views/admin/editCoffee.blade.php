@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Danh mục</label>
                             <div class="col-sm-10">
                                 <select name="type" id='type'>
                             @foreach($category as $item)
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Kiểu sản phẩm</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Danh mục con</label>
                             <div class="col-sm-10">
                                 <select name="code" id="code">
                             @foreach($group as $item)
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Giá niêm yết</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Giá NY</label>
                         <div class="col-sm-10">
                             <input type="number" name="price" class="form-control" value="{{$coffee->price}}">
                         </div>
@@ -103,10 +103,10 @@
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="1" checked type="radio">Hiện
+                                    <input name="rdoState" value="{{$coffee->is_active}}" checked type="radio">Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="2" type="radio">Ẩn
+                                <input name="rdoState" value="{{$coffee->is_active}}" type="radio">Ẩn
                             </label>
                         </div>
                     </div>

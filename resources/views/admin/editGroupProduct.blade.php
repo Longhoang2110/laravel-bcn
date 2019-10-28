@@ -25,14 +25,14 @@
                 <form action="{{route('group_product-update',$group->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên danh mục</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên danh mục con</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" value="{{$group->name}}">
                         </div>
                     </div>
                     <div class="form-group">
 
-                        <label class="col-sm-2 col-sm-2 control-label">Danh mục cha</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Danh mục</label>
                         <div class="col-sm-10">
                             <select name="group">
                         @foreach($category as $item)
@@ -46,10 +46,10 @@
                         </div>
                     <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="1" checked type="radio">Hiện
+                                    <input name="rdoState" value="{{$group->is_active}}" checked type="radio">Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="2" type="radio">Ẩn
+                                <input name="rdoState" value="{{$group->is_active}}" type="radio">Ẩn
                             </label>
                         </div>
                     {{-- <div class="form-group">

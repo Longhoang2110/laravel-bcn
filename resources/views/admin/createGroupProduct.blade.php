@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thêm loại</h2>
+                <h2>Thêm danh mục con</h2>
             </div>
         </div>
     </div>
@@ -23,14 +23,14 @@
                 <form action="{{route('group_product-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label"> Tên danh mục </label>
+                        <label class="col-sm-2 col-sm-2 control-label"> Tên danh mục con </label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" placeholder="Loại sản phẩm ">
                         </div>
                     </div>
                     <div class="form-group">
 
-                        <label class="col-sm-2 col-sm-2 control-label">Danh mục cha</label>
+                        <label class="col-sm-2 col-sm-2 control-label"> Tên danh mục</label>
                         <div class="col-sm-10">
                             <select name="group">
                         @foreach($category as $item)

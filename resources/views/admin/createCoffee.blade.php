@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Nhóm sản phẩm</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Danh mục</label>
                             <div class="col-sm-10">
                                 <select name="type" id="type">
                             @foreach($category as $item)
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
 
-                            <label class="col-sm-2 col-sm-2 control-label">Loại sản phẩm</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Danh mục con</label>
                             <div class="col-sm-10">
                                 <select name="code" id="code">
                             @foreach($group as $item)
@@ -79,13 +79,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Giá</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Giá NY</label>
                         <div class="col-sm-10">
                             <input type="number" name="price" class="form-control" placeholder="Giá">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Giảm giá thành</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Giá Sale</label>
                         <div class="col-sm-10">
                             <input type="number" name="discount" class="form-control" placeholder="Giảm giá thành">
                         </div>

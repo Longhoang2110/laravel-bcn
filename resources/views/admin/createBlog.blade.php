@@ -23,9 +23,9 @@
                 <form action="{{route('blog-add')}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Tên Blog</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên Bài viết</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" placeholder="Tên blog ">
+                            <input type="text" name="name" class="form-control" placeholder="Tên bài viết ">
                         </div>
                     </div>
                     <div class="form-group">

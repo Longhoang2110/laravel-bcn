@@ -25,7 +25,7 @@
                 <form action="{{route('category-update',$category->id)}}" class="form-horizontal style-form" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Nhóm sản phẩm</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Tên danh mục</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" value="{{$category->name}}">
                         </div>
@@ -40,17 +40,17 @@
                         <label class="col-sm-2 col-sm-2 control-label">Type</label>
                         <div class="col-sm-10">
                             <select name="type">
-                                <option value="0" {{$category->type == 0? 'selected':''}}>Bài viết</option>
-                                <option value="1" {{$category->type == 1? 'selected':''}}>Sản phẩm</option>
+                                <option value="{{$category->type}}" {{$category->type == 0? 'selected':''}}>Bài viết</option>
+                                <option value="{{$category->type}}" {{$category->type == 1? 'selected':''}}>Sản phẩm</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="1"  type="radio" {{$category->is_active == 1? 'checked':''}}>Hiện
+                                    <input name="rdoState" value="{{$category->is_active}}"  type="radio" {{$category->is_active == 1? 'checked':''}}>Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="2" type="radio" {{$category->is_active == 2? 'checked':''}}>Ẩn
+                                <input name="rdoState" value="{{$category->is_active}}" type="radio" {{$category->is_active == 2? 'checked':''}}>Ẩn
                             </label>
                         </div>
                     {{-- <div class="form-group">

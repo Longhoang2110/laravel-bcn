@@ -32,7 +32,7 @@
                             <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
                             <label class="radio-inline">
@@ -42,7 +42,7 @@
                                 <input name="rdoState" value="2" type="radio">Ẩn
                             </label>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Lưu</button>
