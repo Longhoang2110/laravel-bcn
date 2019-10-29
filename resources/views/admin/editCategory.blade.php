@@ -46,6 +46,32 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Hiện trang chủ</label>
+                    <div class="col-sm-10">
+                            <label class="radio-inline">
+                                    <input name="category_home" value="1"  type="radio" {{$category->category_home == 1? 'checked':''}}>Hiện
+                            </label>
+                            <label class="radio-inline">
+                                <input name="category_home" value="2" type="radio" {{$category->category_home == 2? 'checked':''}}>Ẩn
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label"> Thứ tự hiện trang chủ</label>
+                    <div class="col-sm-10">
+                            <label class="radio-inline">
+                                    <input name="category_home" value="1"  type="radio" {{$category->category_home_order == 1? 'checked':''}}>Hiện 1
+                            </label>
+                            <label class="radio-inline">
+                                <input name="category_home" value="2" type="radio" {{$category->category_home_order == 2? 'checked':''}}>Hiện 2
+                            </label>
+                            <label class="radio-inline">
+                                <input name="category_home" value="3" type="radio" {{$category->category_home_order == 3? 'checked':''}}>Hiện 3
+                            </label>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                     <div class="col-sm-10">
                             <label class="radio-inline">

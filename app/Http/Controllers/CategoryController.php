@@ -59,6 +59,7 @@ class CategoryController extends Controller
         $category->code = $req->code;
         $category->type = $req->type;
         $category->is_active = $req->rdoState;
+        $category->category_home= $req->category_home;
         if($category->save())
             return redirect()->route('category-list')->with('message','Thêm thành công');
         return redirect()->route('category-list')->with('message','Thêm thất bại vui lòng thử lại sau');
@@ -85,7 +86,7 @@ class CategoryController extends Controller
         $category->code = $req->code;
         $category->type = $req->type;
         $category->is_active = $req->rdoState;
-
+        $category->category_home= $req->category_home;
         if($category->save())
             return redirect()->route('category-list')->with('message','Cập nhật thành công');
         return redirect()->route('category-list')->with('message','Cập nhật thất bại vui lòng thử lại sau');

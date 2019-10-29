@@ -80,6 +80,31 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Hiện trang chủ</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                    <input name="category_home" value="1" checked type="radio">Hiện
+                            </label>
+                            <label class="radio-inline">
+                                <input name="category_home" value="2" type="radio">Ẩn
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label"> Thứ tự hiện trang chủ</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                    <input name="category_home_order" value="1" checked type="radio">Hiện thứ 1
+                            </label>
+                            <label class="radio-inline">
+                                <input name="category_home_order" value="2" type="radio">Hiện thứ 2
+                            </label>
+                            <label class="radio-inline">
+                                <input name="category_home_order" value="3" type="radio">Hiện thứ 3
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Thêm</button>
                         </div>

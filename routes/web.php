@@ -164,6 +164,6 @@ Route::group(['prefix' => 'GroupProduct'],function(){
 
 });
 Route::group(['prefix' => 'ajax'],function(){
-    Route::get ('group/{idcategory}','ajaxController@getindex');
+    Route::get ('group/{idcategory}','AjaxController@getindex');
 
 });
