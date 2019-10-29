@@ -933,7 +933,7 @@
 }
 .fa-angle-right:before {
   content: "\f105";
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 .fa-angle-up:before {
   content: "\f106";
