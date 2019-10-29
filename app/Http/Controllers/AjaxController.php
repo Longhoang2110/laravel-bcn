@@ -12,7 +12,7 @@ use App\users;
 class AjaxController extends Controller
 {
         public function getindex($idcategory){
-            $code = group::where('group',$idcategory)->get();
+            $code = group::where('group',$idcategory,['is_active', '=', 1])->get();
             foreach ($code as $item){
             echo " <option value='".$item->id."'> "
                     ."$item->name".

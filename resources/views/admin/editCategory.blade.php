@@ -45,14 +45,17 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                     <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="{{$category->is_active}}"  type="radio" {{$category->is_active == 1? 'checked':''}}>Hiện
+                                    <input name="rdoState" value="1"  type="radio" {{$category->is_active == 1? 'checked':''}}>Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="{{$category->is_active}}" type="radio" {{$category->is_active == 2? 'checked':''}}>Ẩn
+                                <input name="rdoState" value="2" type="radio" {{$category->is_active == 2? 'checked':''}}>Ẩn
                             </label>
                         </div>
+                    </div>
                     {{-- <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Hình hiện tại</label>
                             <div class="col-sm-10">

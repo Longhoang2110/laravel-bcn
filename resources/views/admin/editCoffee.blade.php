@@ -101,12 +101,12 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
-                        <div class="col-sm-10">
+                    <div class="col-sm-10">
                             <label class="radio-inline">
-                                    <input name="rdoState" value="{{$coffee->is_active}}" checked type="radio">Hiện
+                                    <input name="rdoState" value="1"  type="radio" {{$coffee->is_active == 1? 'checked':''}}>Hiện
                             </label>
                             <label class="radio-inline">
-                                <input name="rdoState" value="{{$coffee->is_active}}" type="radio">Ẩn
+                                <input name="rdoState" value="2" type="radio" {{$coffee->is_active == 2? 'checked':''}}>Ẩn
                             </label>
                         </div>
                     </div>

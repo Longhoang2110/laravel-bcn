@@ -41,6 +41,7 @@ class BlogController extends Controller
      */
     public function getAdd(){
         $category =category::where([
+            ['is_active', '=',1 ],
             ['type', '=','0' ]
         ])->get();
         return view('admin.createBlog',[
@@ -90,6 +91,7 @@ class BlogController extends Controller
     public function getUpdate(Request $req){
         $blog = blog::find($req->id);
         $category =category::where([
+            ['type', '=','1' ],
             ['type', '=','0' ]
         ])->get();
         return view('admin.editBlog',[

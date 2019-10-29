@@ -25,20 +25,30 @@ class PageController extends Controller
     public function coffee() {
         // $coffee = coffee::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
         // return view('home',compact('coffee'));
-        $coffees = coffee::all()->sortBy('order');
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         return view('home',compact('coffees'));
     }
 
     public function coffeeDetail(Request $req){
         $coffee = coffee::find($req->id);
-        $coffees = coffee::all()->sortBy('order');
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         $cout_view = coffee::find($req->id);
         $cout_view ->increment('cout_view');
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
         return view('coffee_detail',[
@@ -55,17 +65,24 @@ class PageController extends Controller
 
     public function blog() {
         //$blog = blog::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate(6);
-        $coffees = coffee::all()->sortBy('order');
-        // $address = address::all();
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         $group = group::all();
 
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
-        $blogs = blog::all()->sortBy('order');
+        $blogs = blog::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         return view('blog',[
             "blogs" => $blogs,
             "coffees" => $coffees,
@@ -83,18 +100,27 @@ class PageController extends Controller
 
     public function blogDetail(Request $req) {
         $blog = blog::find($req->id);
-        $coffees = coffee::all()->sortBy('order');
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         // $address = address::all();
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         $cout_view = blog::find($req->id);
         $cout_view ->increment('views');
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         $category =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
 
@@ -117,8 +143,14 @@ class PageController extends Controller
 
 
     public function home() {
-        $coffees = coffee::all()->sortBy('order');
-        $blogs = blog::all()->sortBy('order');
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
+        $blogs = blog::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         $displays = display::all();
         // $address = address::all();
         $group = group::where([
@@ -134,24 +166,30 @@ class PageController extends Controller
             ['is_active', '=', 1]
         ])->get();
         $category1 =category::where([
+            ['is_active', '=', 1],
             ['id', '=','13' ]
         ])->first();
         $category2 =category::where([
+            ['is_active', '=', 1],
             ['id', '=','14' ]
         ])->first();
         $category3 =category::where([
+            ['is_active', '=', 1],
             ['id', '=','15' ]
         ])->first();
 
         $coffee1 =coffee::where([
-            ['type', '=','13']
+            ['type', '=','13'],
+            ['is_active', '=', 1],     
         ])->orderByRaw('`order` ASC')
         ->get();
         $coffee2 =coffee::where([
+            ['is_active', '=', 1],
             ['type', '=','14' ]
         ])->orderByRaw('`order` ASC')
         ->get();
         $coffee3 =coffee::where([
+            ['is_active', '=', 1],
             ['type', '=','15' ]
         ])->orderByRaw('`order` ASC')
         ->get();
@@ -173,15 +211,26 @@ class PageController extends Controller
     }
 
     public function product(){
-        $coffees = coffee::all()->sortBy('order');
-        $blog = blog::all()->sortBy('order');
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
+        $blog = blog::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         // $address = address::all();
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
 
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         // $from = $coffees->price;
@@ -207,12 +256,16 @@ class PageController extends Controller
 
     public function introduce(){
         // $address = address::all();
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get();
 
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         return view('introduce',[
@@ -227,12 +280,16 @@ class PageController extends Controller
 
     public function contact(){
         // $address = address::all();
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get();
 
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         return view('contact',[
@@ -253,21 +310,31 @@ class PageController extends Controller
 
     public function categoryblog(Request $req){
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get();
 
         $category_product =category::where([
+            ['is_active', '=', 1],
             ['type', '=','1' ]
         ])->get();
-        $coffees = coffee::all()->sortBy('order');
+        $coffees = coffee::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         // $address = address::all();
 
 
         $blog =blog::where([
+            ['is_active', '=', 1],
             ['type', '=',$req->id ]
         ])->get()->sortBy('order'); 
-        $group = group::all();
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get();
 
         return view('blog',[
             "category_blog" =>$category_blog,
