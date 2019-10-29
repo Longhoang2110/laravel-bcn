@@ -25,10 +25,12 @@
                 @foreach($category_product as $item)
                 <li class="p-t-4"
                     style="padding: 5px;background-color: #ed9f48;color: white;border-bottom: 1px solid white;">
-                    <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}" class="s-text13 active1" style="color: white">
+                    <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}"
+                        class="s-text13 active1" style="color: white">
                         {{$item->name}}
                     </a>
-                    <span class="pull-right" style="cursor: pointer;"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <span class="pull-right" style="cursor: pointer;"><i class="fa fa-angle-right"
+                            aria-hidden="true"></i></span>
                 </li>
                 @endforeach
             </ul>
@@ -120,99 +122,22 @@
 
 
 
-<!-- New Product -->
-<section class="newproduct bgwhite p-t-45 p-b-105" style="padding-bottom: 50px;">
+<section class="newproduct bgwhite p-t-45 p-b-105">
     <div class="container">
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                {{$category1->name}}
-
+                Featured Products
             </h3>
         </div>
 
         <!-- Slide2 -->
         <div class="wrap-slick2">
             <div class="slick2">
-                @foreach($coffee1 as $item)
                 <div class="item-slick2 p-l-15 p-r-15">
                     <!-- Block2 -->
                     <div class="block2">
-                        @if($item->discount < $item->price && $item->discount != 0)
-                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                             @else
-                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                        @endif
-                            <img src="images/img/{{$item->thumbnail}}" style="height:270px"
-                                alt="{{$item->alt}}">
-
-                            <div class="block2-overlay trans-0-4">
-                                <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                </a>
-
-                                <div class="block2-btn-addcart w-size1 trans-0-4">
-                                    <!-- Button -->
-                                    <a href="{{route('buyer-getadd',$item->id)}}"
-                                        class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1">
-                                        Mua ngay!
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="block2-txt p-t-20">
-                            <a href="{{route('coffee-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
-                                {{$item->name}}
-                            </a>
-
-                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
-                               Giá NY: {{$item->price}} VND
-                            </span>
-                            <br>
-                            @if($item->discount < $item->price && $item->discount != 0)
-                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                Giá Sale: {{$item->discount}} VND
-                            </span>
-                            @endif
-                            <br>
-                            
-                                 {{-- $from = $item->price;
-                                 $to = $item->discount;
-                                 if($from==$to || !$to) return '';
-                                 $percent=round(($from-$to)/$from*100);
-                                 $text=$from>$to? 'Giảm':'Tăng'; --}}
-                            
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-
-    </div>
-    <div class="container">
-        <div class="sec-title p-b-60">
-            <h3 class="m-text5 t-center">
-                {{$category2->name}}
-            </h3>
-        </div>
-
-        <!-- Slide2 -->
-        <div class="wrap-slick2">
-            <div class="slick2">
-                @foreach($coffee2 as $item)
-                <div class="item-slick2 p-l-15 p-r-15">
-                    <!-- Block2 -->
-                    <div class="block2">
-                    @if($item->discount < $item->price && $item->discount != 0)
-                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                     @else
                         <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                    @endif
-
-                            <img src="images/img/{{$item->thumbnail}}" style="height:270px"
-                                alt="{{$item->alt}}">
+                            <img src="images/item-02.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
                                 <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -222,94 +147,27 @@
 
                                 <div class="block2-btn-addcart w-size1 trans-0-4">
                                     <!-- Button -->
-                                    <a href="{{route('buyer-getadd',$item->id)}}"
-                                        class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1">
-                                        Mua ngay!
-                                    </a>
+                                    <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                        Add to Cart
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="block2-txt p-t-20">
-                            <a href="{{route('coffee-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
-                                {{$item->name}}
+                            <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                Herschel supply co 25l
                             </a>
 
-                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
-                                Giá NY:{{$item->price}} VND
+                            <span class="block2-price m-text6 p-r-5">
+                                $75.00
                             </span>
-                            <br>
-                            @if($item->discount < $item->price && $item->discount != 0)
-                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                Giá Sale: {{$item->discount}} VND
-                            </span>
-                            @endif
                         </div>
                     </div>
                 </div>
-                @endforeach
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="sec-title p-b-60">
-            <h3 class="m-text5 t-center">
-                {{$category3->name}}
 
-            </h3>
-        </div>
-
-        <!-- Slide2 -->
-        <div class="wrap-slick2">
-            <div class="slick2">
-                @foreach($coffee3 as $item)
-                <div class="item-slick2 p-l-15 p-r-15">
-                    <!-- Block2 -->
-                    <div class="block2">
-                    @if($item->discount < $item->price && $item->discount != 0)
-                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-                         @else
-                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                    @endif   
-                            <img src="images/img/{{$item->thumbnail}}" style="height:270px"
-                                alt="{{$item->alt}}">
-
-                            <div class="block2-overlay trans-0-4">
-                                <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                </a>
-
-                                <div class="block2-btn-addcart w-size1 trans-0-4">
-                                    <!-- Button -->
-                                    <a href="{{route('buyer-getadd',$item->id)}}"
-                                        class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1">
-                                        Mua ngay!
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="block2-txt p-t-20">
-                            <a href="{{route('coffee-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
-                                {{$item->name}}
-                            </a>
-
-                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
-                                Giá NY:{{$item->price}} VND
-                            </span>
-                            <br>
-                            @if($item->discount < $item->price && $item->discount != 0)
-                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                Giá Sale: {{$item->discount}} VND
-                            </span>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
     </div>
 </section>
 
