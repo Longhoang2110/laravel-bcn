@@ -72,8 +72,8 @@ class PageController extends Controller
             ['is_active', '=', 1]
         ])->get()
           ->sortBy('order');
-        $group = group::all();
-
+        $group = group::all()
+        ->sortBy('order');
         $category_product =category::where([
             ['is_active', '=', 1],
             ['type', '=','1' ]
@@ -148,17 +148,21 @@ class PageController extends Controller
     public function home() {
         $coffees = coffee::where([
             ['is_active', '=', 1]
-        ])->get();
+        ])->get()
+        ->sortBy('order');          
         //   ->orderBy('order','Desc');
         $blogs = blog::where([
             ['is_active', '=', 1]
-        ])->get();
+        ])->get()
+        ->sortBy('order');          
+
         //   ->orderBy('order','Desc');
         $displays = display::all();
         // $address = address::all();
         $group = group::where([
             ['is_active', '=', 1]  
-        ])->get();
+        ])->get()
+        ->sortBy('order');          
 
         $category_product =category::where([
             ['type', '=','1' ],
@@ -188,22 +192,27 @@ class PageController extends Controller
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',1)
-            ->get();
+        ->get()
+        ->sortBy('order');          
+
             // ->orderBy('order','Desc');
         $coffee2 = DB::table('coffee')
         ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',2)
-            ->get();
+        ->get()
+        ->sortBy('order');          
+        
             // ->orderBy('order','Desc')
         $coffee3 = DB::table('coffee')
         ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',3)
-            ->get();
-            // ->orderBy('order','Desc')
+        ->get()
+        ->sortBy('order');          
+        
         return view('home',[
             "blogs" => $blogs,
             "coffees" => $coffees,
@@ -335,8 +344,8 @@ class PageController extends Controller
         $coffees = coffee::where([
             ['is_active', '=', 1]
         ])->get()
-          ->sortBy('order');
-        // $address = address::all();
+        ->sortByDesc('order');          
+          
 
 
         $blog =blog::where([
