@@ -37,8 +37,9 @@ class PageController extends Controller
         $coffee = coffee::find($req->id);
         $coffees = coffee::where([
             ['type', '=', $coffee->type],
+            ['is_active', '=', 1],
+            ['id', '!=', $coffee->id]
 
-            ['is_active', '=', 1]
         ])->get()
           ->sortBy('order');
         $cout_view = coffee::find($req->id);
