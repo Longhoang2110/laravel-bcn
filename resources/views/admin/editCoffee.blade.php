@@ -103,6 +103,35 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Hãng sản xuất</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="producer" class="form-control" value="{{$coffee->producer}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Mã sản phẩm</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product_code" class="form-control" value="{{$coffee->product_code}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Chế độ bảo hành</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product_guarantee" class="form-control" value="{{$coffee->product_guarantee}}"  >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Tình trạng hàng</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input name="product_status" value="1"  type="radio" {{$coffee->product_status == 1? 'checked':''}}>Còn hàng                                    
+                            </label>
+                            <label class="radio-inline">
+                                <input name="product_status" value="2" type="radio" {{$coffee->product_status == 2? 'checked':''}}>Hết hàng                                
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                     <div class="col-sm-10">
                             <label class="radio-inline">

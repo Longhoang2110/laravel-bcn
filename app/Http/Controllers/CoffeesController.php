@@ -123,6 +123,10 @@ class CoffeesController extends Controller
         $coffee->order = $req->order;
         $coffee->discount = $req->discount;
         $coffee->content = $req->content;
+        $coffee->producer = $req->producer;
+        $coffee->product_code = $req->product_code;
+        $coffee->product_status = $req->product_status;
+        $coffee->product_guarantee = $req->product_guarantee;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -188,6 +192,10 @@ class CoffeesController extends Controller
         $coffee->order = $req->order;
         $coffee->discount = $req->discount;
         $coffee->content = $req->content;
+        $coffee->producer = $req->producer;
+        $coffee->product_code = $req->product_code;
+        $coffee->product_status = $req->product_status;
+        $coffee->product_guarantee = $req->product_guarantee;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();

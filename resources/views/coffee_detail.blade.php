@@ -30,33 +30,68 @@
                             <h4 class="p-b-11 m-text24">
                                 {{$coffee->name}}
                             </h4>
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                        Giá NY:&nbsp{{$coffee->price}} vnd
+                                    </span>
+                                </div>
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                        Giá Sale:&nbsp{{$coffee->discount}} vnd
+                                    </span>
+                                </div>
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"style="font-size: x-large;color:#e60808;">&nbsp</i>
+                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                        Hãng sản xuất:&nbsp{{$coffee->producer}} 
+                                    </span>
+                                </div>
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"style="font-size: x-large;color:#e60808;">&nbsp</i>
+                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                        Mã sản phẩm:&nbsp{{$coffee->product_code}} 
+                                    </span>
+                                </div>
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"style="font-size: x-large;color:#e60808;">&nbsp</i>
+                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                        Chế độ bảo hành:&nbsp{{$coffee->product_guarantee}} 
+                                    </span>
+                                </div>
+                                @if($coffee->product_status == 1)
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"style="font-size: x-large;color:#e60808;">&nbsp</i>
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                            Tình trạng sản phẩm:&nbsp Còn hàng
+                                        </span>
+                                </div>
+                                    @else
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"style="font-size: x-large;color:#e60808;">&nbsp</i>
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                            Tình trạng sảm phẩm:&nbsp Hết hàng
+                                        </span>
+                                </div>
+                                @endif
                             <div class="s-text8 flex-w flex-m p-b-21">
                                 {{$coffee->description}}
                             </h4>
                             </div>
-
-
                             <div class="s-text8 flex-w flex-m p-b-21">
-                                <span>
-                                    By Admin
-                                    <span class="m-l-3 m-r-6">|</span>
-                                </span>
-
-                                <span>
-                                    28 Dec, 2019
-                                    <span class="m-l-3 m-r-6">|</span>
-                                </span>
-
-                                <span>
-                                    Build,Installation
-                                    <span class="m-l-3 m-r-6">|</span>
-                                </span>
-
-                                <span>
-                                    8 Comments
-                                </span>
+                                    <i class="fa fa-calendar" aria-hidden="true">&nbsp</i>
+                                    <span>
+                                        By Admin
+                                        <span class="m-l-3 m-r-6">|</span>
+                                    </span>
+                                    <span>
+                                        Build,Installation
+                                        <span class="m-l-3 m-r-6">|</span>
+                                    </span>
+    
+                                    <span>
+                                        {{$coffee->cout_view}}  lượt xem
+                                    </span>
                             </div>
-
                             <div>
                                 {!!$coffee->content!!}
                             </div>

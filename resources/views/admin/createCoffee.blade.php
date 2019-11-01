@@ -87,13 +87,42 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Giá NY</label>
                         <div class="col-sm-10">
-                            <input type="number" name="price" class="form-control" placeholder="Giá">
+                            <input type="number" name="price" class="form-control" placeholder="Giá NY">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Giá Sale</label>
                         <div class="col-sm-10">
-                            <input type="number" name="discount" class="form-control" placeholder="Giảm giá thành">
+                            <input type="number" name="discount" class="form-control" placeholder="Giảm Sale">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Hãng sản xuất</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="producer" class="form-control" placeholder="Tên hãng ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Mã sản phẩm</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product_code" class="form-control" placeholder="Mã sản phẩm ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Chế độ bảo hành</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product_guarantee" class="form-control" placeholder="Chế độ bảo hành ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Tình trạng hàng</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                    <input name="product_status" value="1" checked type="radio">Còn hàng
+                            </label>
+                            <label class="radio-inline">
+                                <input name="product_status" value="2" type="radio">Hết hàng
+                            </label>
                         </div>
                     </div>
                     <div class="form-group">

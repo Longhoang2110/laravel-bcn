@@ -37,6 +37,8 @@
 
 
                             <div class="s-text8 flex-w flex-m p-b-21">
+                                <i class="fa fa-calendar" aria-hidden="true">&nbsp</i>
+
                                 <span>
                                     By Admin
                                     <span class="m-l-3 m-r-6">|</span>
@@ -53,7 +55,7 @@
                                 </span>
 
                                 <span>
-                                    8 Comments
+                                        {{$blog->views}} Lượt xem
                                 </span>
                             </div>
 
