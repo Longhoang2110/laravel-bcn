@@ -20,7 +20,7 @@
             @foreach($address as $item)
                 <tr>
                 <td>
-                    <a href="basic_table.html#">{{$item->address}}</a>
+                    <a>{{$item->address}}</a>
                 </td>
                 <td>
                      {{-- <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button> --}}

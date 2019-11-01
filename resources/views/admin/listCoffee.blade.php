@@ -28,13 +28,13 @@
             @foreach($coffees as $item)
                 <tr>
                   <td>
-                        <a href="basic_table.html#">{{$item->namecate}}</a>
+                        <a>{{$item->namecate}}</a>
                   </td>
                   <td>
-                      <a href="basic_table.html#">{{$item->nameg}}</a>
+                      <a>{{$item->nameg}}</a>
                 </td>
                   <td>
-                      <a href="basic_table.html#">{{$item->name}}</a>
+                      <a>{{$item->name}}</a>
                   </td>
                   <td>{{$item->cout_view}}</td>
                   <td>{{$item->order}}</td>

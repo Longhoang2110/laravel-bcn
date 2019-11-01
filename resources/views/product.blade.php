@@ -78,10 +78,10 @@
                         <ul id="an2" class="p-b-54" style="background-color: #fff ; !important">
                             @foreach($blog as $item)
                             <li class="flex-w p-b-20">
-                                <a href="product-detail.html"
+                                <a href="{{route('blog-detail',$item->id)}}"
                                     class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
                                     <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:90px"
-                                        alt="IMG-PRODUCT">
+                                        alt="{{$item->alt}}">
                                 </a>
 
                                 <div class="w-size23 p-t-5">
@@ -114,8 +114,7 @@
                                 <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                             @endif
                                 <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px"
-                                    alt="IMG-PRODUCT">
-
+                                alt="{{$item->alt}}">
                                 <div class="block2-overlay trans-0-4">
                                     <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                         <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
@@ -133,7 +132,7 @@
                             </div>
 
                             <div class="block2-txt p-t-20">
-                                <a href="{{route('coffee-detail',$item->id)}}"
+                                <a href="{{route('coffee-detail',['id'=>$item->id])}}"
                                     class="block2-name dis-block s-text3 p-b-5">
                                     {{$item->name}}
                                 </a>

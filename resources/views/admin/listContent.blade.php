@@ -24,7 +24,7 @@
             @foreach($content as $item)
                 <tr>
                 <td>
-                    <a href="basic_table.html#">{{$item->name}}</a>
+                    <a>{{$item->name}}</a>
                 </td>
                 <td class="hidden-phone">{{$item->type}}</td>
                 <td>{{$item->is_active == 1 ?'Hoạt động':'Đang khóa'}}</td>

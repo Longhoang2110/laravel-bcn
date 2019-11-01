@@ -36,6 +36,8 @@ class PageController extends Controller
     public function coffeeDetail(Request $req){
         $coffee = coffee::find($req->id);
         $coffees = coffee::where([
+            ['type', '=', $coffee->type],
+
             ['is_active', '=', 1]
         ])->get()
           ->sortBy('order');
@@ -182,21 +184,21 @@ class PageController extends Controller
             ['category_home','=',1 ]
         ])->first();
         $coffee1  = DB::table('coffee')
-        ->select('coffee.*',)
+        ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',1)
             ->get();
             // ->orderBy('order','Desc');
         $coffee2 = DB::table('coffee')
-        ->select('coffee.*',)
+        ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',2)
             ->get();
             // ->orderBy('order','Desc')
         $coffee3 = DB::table('coffee')
-        ->select('coffee.*',)
+        ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',3)
