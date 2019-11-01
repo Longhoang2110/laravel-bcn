@@ -49,6 +49,7 @@ class PageController extends Controller
         ])->get()
           ->sortBy('order');
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         $category_product =category::where([
