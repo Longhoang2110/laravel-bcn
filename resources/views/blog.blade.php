@@ -106,15 +106,21 @@
                                     <a href="{{route('coffee-detail',$item->id)}}" class="s-text20">
                                         {{$item->name}}
                                     </a>
-                                    <span class=" block2-price m-text6 p-r-5" style="text-transform: unset;">
+                                    @if($item->discount < $item->price && $item->discount != 0)
+                                    <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
                                             Giá NY: {{$item->price}} VND
                                     </span>
+                                            @else
+                                    <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                            Giá NY: {{$item->price}} VND
+                                    </span>
+                                        @endif
                                     <br>
                                     @if($item->discount < $item->price && $item->discount != 0)
                                     <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                             Giá Sale: {{$item->discount}} VND
+                                        Giá Sale: {{$item->discount}} VND
                                     </span>
-                                    @endif  
+                                    @endif
                             </div>
                             </li>
                         @endforeach

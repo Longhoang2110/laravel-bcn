@@ -136,16 +136,29 @@
                                     class="block2-name dis-block s-text3 p-b-5">
                                     {{$item->name}}
                                 </a>
-
-                                <span class=" block2-price m-text6 p-r-5" style="text-transform: unset;">
-                                    Giá NY:{{$item->price}} VND
-                                </span>
-                                <br>
                                 @if($item->discount < $item->price && $item->discount != 0)
-                                <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                    Giá Sale: {{$item->discount}} VND
-                                </span>
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
+                                    Giá NY: {{$item->price}} VND
+                            </span>
+                                    @else
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                    Giá NY: {{$item->price}} VND
+                            </span>
                                 @endif
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                Giá Sale: {{$item->discount}} VND
+                            </span>
+                            @endif
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                         Sale Up:&nbsp{{$item->discount_up}} %
+                                        </span>
+                                </div>
+                            @endif    
                             </div>
                         </div>
                     </div>

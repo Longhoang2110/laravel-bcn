@@ -30,16 +30,30 @@
                             <h4 class="p-b-11 m-text24">
                                 {{$coffee->name}}
                             </h4>
+                                @if($coffee->discount < $coffee->price && $coffee->discount != 0)
+                                <span class="block2-price m-text6 p-r-5"style="text-decoration: line-through;font-family: Montserrat-bold;">
+                                        Giá NY: {{$coffee->price}} VND
+                                </span>
+                                        @else
                                 <div class="s-text8 flex-w flex-m p-b-21">
-                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
-                                        Giá NY:&nbsp{{$coffee->price}} vnd
-                                    </span>
+                                <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
+                                        Giá NY: {{$coffee->price}} VND
+                                </span>
                                 </div>
+                                    @endif
+                                <br>
+                                @if($coffee->discount < $coffee->price && $coffee->discount != 0)
+                                <span class="block2-price m-text8 p-r-5"style="font-family: Montserrat-bold;;color:#e60808">
+                                    Giá Sale: {{$coffee->discount}} VND
+                                </span>
+                                @endif
+                                @if($coffee->discount < $coffee->price && $coffee->discount != 0)
                                 <div class="s-text8 flex-w flex-m p-b-21">
-                                    <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
-                                        Giá Sale:&nbsp{{$coffee->discount}} vnd
-                                    </span>
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                         Sale Up:&nbsp{{$coffee->discount_up}} %
+                                        </span>
                                 </div>
+                                @endif
                                 <div class="s-text8 flex-w flex-m p-b-21">
                                         <i class="fa fa-check-square-o" aria-hidden="true"style="font-size: x-large;color:#e60808;">&nbsp</i>
                                     <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;">
@@ -181,15 +195,21 @@
                                         <a href="{{route('coffee-detail',$item->id)}}" class="s-text20">
                                             {{$item->name}}
                                         </a>
-                                        <span class=" block2-price m-text6 p-r-5" style="text-transform: unset;">
-                                               Giá NY: {{$item->price}} VND
-                                            </span>
-                                            <br>
-                                            @if($item->discount < $item->price && $item->discount != 0)
-                                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                                Giá Sale: {{$item->discount}} VND
-                                            </span>
-                                            @endif                                        
+                                        @if($item->discount < $item->price && $item->discount != 0)
+                                        <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
+                                                Giá NY: {{$item->price}} VND
+                                        </span>
+                                                @else
+                                        <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                                Giá NY: {{$item->price}} VND
+                                        </span>
+                                            @endif
+                                        <br>
+                                        @if($item->discount < $item->price && $item->discount != 0)
+                                        <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                            Giá Sale: {{$item->discount}} VND
+                                        </span>
+                                        @endif                                    
                                     </div>
                                 </li>
                             @endforeach
