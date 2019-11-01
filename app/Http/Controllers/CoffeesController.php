@@ -122,6 +122,7 @@ class CoffeesController extends Controller
         $coffee->cout_view = 0;
         $coffee->order = $req->order;
         $coffee->discount = $req->discount;
+        $coffee->content = $req->content;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -186,6 +187,7 @@ class CoffeesController extends Controller
         $coffee->cout_view = 0;
         $coffee->order = $req->order;
         $coffee->discount = $req->discount;
+        $coffee->content = $req->content;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();

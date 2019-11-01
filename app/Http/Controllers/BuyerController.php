@@ -7,6 +7,7 @@ use App\blog;
 use App\coffees;
 use App\category;
 use Illuminate\Http\Request;
+use App\group;
 
 class BuyerController extends Controller
 {
@@ -45,13 +46,17 @@ class BuyerController extends Controller
     public function getAdd(Request $req){
         $address = address::all();        
         $coffeeid = $req->id;
+        $group = group::where([
+            ['is_active', '=', 1]
+        ])->get()
+          ->sortBy('order');
         $category_blog =category::where([
             ['type', '=','0' ]
         ])->get();
         $category_product =category::where([
             ['type', '=','1' ]
         ])->get();
-        return view('buy_product',compact('coffeeid','address','category_blog','category_product'));
+        return view('buy_product',compact('coffeeid','address','category_blog','category_product','group'));
     }
 
     public function postAdd(Request $req)

@@ -23,7 +23,7 @@
                 <div class="p-r-50 p-r-0-lg">
                     <div class="p-b-40">
                         <div class="blog-detail-img wrap-pic-w">
-                            <img src="images/img/{{$blog->thumbnail}}" alt="IMG-BLOG">
+                            <img src="images/img/{{$blog->thumbnail}}" alt="{{$blog->alt}}">
                         </div>
 
                         <div class="blog-detail-txt p-t-33">
@@ -61,22 +61,6 @@
                                 {!!$blog->content!!}
                             </div>
                         </div>
-
-                        {{-- <div class="flex-m flex-w p-t-20">
-                            <span class="s-text20 p-r-20">
-                                Tags
-                            </span>
-
-                            <div class="wrap-tags flex-w">
-                                <a href="#" class="tag-item">
-                                    Streetstyle
-                                </a>
-
-                                <a href="#" class="tag-item">
-                                    Crafts
-                                </a>
-                            </div>
-                        </div> --}}
                     </div>
 
                     <!-- Leave a comment -->

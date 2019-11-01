@@ -71,11 +71,17 @@
 
                                 </select>
                             </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="description" placeholder="Mô tả"></textarea>
                         </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control ckeditor" style="height:150px" id="summary-ckeditor" name="description" placeholder="Nội dung"></textarea>
+                            <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
                         </div>
                     </div>
                     <div class="form-group">

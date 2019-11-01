@@ -80,10 +80,13 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Mô tả</label>
                         <div class="col-sm-10">
-                            <input type="hidden" id="hidInfo" name="hidInfo" value="{{$coffee->description}}">
-                            <textarea class="ckeditor form-control" rows="3" id="txtInfo" name="txtInfo">
-                                {{$coffee->description}}
-                            </textarea>
+                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="description">{{$coffee->description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content">{{$coffee->content}}</textarea>
                         </div>
                     </div>
 

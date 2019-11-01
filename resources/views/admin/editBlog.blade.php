@@ -36,10 +36,16 @@
                             </div>                            
                         </div>
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Hình ảnh</label>
+                        <label class="col-sm-2 col-sm-2 control-label">Hình ảnh</label>{{$blog->alt}}
                         <div class="col-sm-10">
                             <input type="file" name="fImage">
                         </div>                       
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="alt" class="form-control" value="{{$coffee->alt}}">
+                        </div>
                     </div>
                     <div class="form-group">
 
