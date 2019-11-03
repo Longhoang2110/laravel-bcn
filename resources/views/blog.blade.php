@@ -99,6 +99,7 @@
                         @foreach($coffees as $item)
                             <li class="flex-w p-b-20">
                                 <a href="{{route('product-detail',$item->id)}}" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
+                                <a href="{{route('coffee-detail',$item->id)}}" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
                                 <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:90px" alt="{{$item->alt}}">
                                 </a>
 

@@ -30,7 +30,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="asset_custom/vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/util.css">
 	<link rel="stylesheet" type="text/css" href="https://batchongnang.herokuapp.com/asset_custom/css/main.css">

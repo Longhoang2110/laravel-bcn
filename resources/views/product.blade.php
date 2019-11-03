@@ -144,6 +144,10 @@
                             <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
                                     Giá NY: @convert($item->price) VND
                             </span>
+                                    @else
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                    Giá NY: {{$item->price}} VND
+                            </span>
                                 @endif
                             <br>
                             @if($item->discount < $item->price && $item->discount != 0)
