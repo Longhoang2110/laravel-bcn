@@ -86,7 +86,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content">{{$coffee->content}}</textarea>
+                            <textarea class="form-control ckeditor" style="height:150px" id="ckeditor_edit" name="content">{{$coffee->content}}</textarea>
                         </div>
                     </div>
 
@@ -100,6 +100,35 @@
                         <label class="col-sm-2 col-sm-2 control-label">Giá Sale</label>
                         <div class="col-sm-10">
                             <input type="number" name="discount" class="form-control" value="{{$coffee->discount}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Hãng sản xuất</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="producer" class="form-control" value="{{$coffee->producer}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Mã sản phẩm</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product_code" class="form-control" value="{{$coffee->product_code}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Chế độ bảo hành</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product_guarantee" class="form-control" value="{{$coffee->product_guarantee}}"  >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Tình trạng hàng</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input name="product_status" value="1"  type="radio" {{$coffee->product_status == 1? 'checked':''}}>Còn hàng                                    
+                            </label>
+                            <label class="radio-inline">
+                                <input name="product_status" value="2" type="radio" {{$coffee->product_status == 2? 'checked':''}}>Hết hàng                                
+                            </label>
                         </div>
                     </div>
                     <div class="form-group">
@@ -136,11 +165,16 @@
           </div> --}}
           <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
           <script>
-            // CKEDITOR.replace( 'Des-ckeditor' );
-            CKEDITOR.replace( 'summary-ckeditor' );
-
-            //   CKEDITOR.replace( 'Content-ckeditor');
-              document.getElementById("Content-ckeditor").value = document.getElementById("hidInfo").value;
+            //CKEDITOR.replace( 'Des-ckeditor' );
+              CKEDITOR.replace( 'ckeditor_edit', {
+                filebrowserBrowseUrl: "{{ asset('vendor/unisharp/ckfinder/ckfinder.html') }}",
+                filebrowserImageBrowseUrl: "{{ asset('vendor/unisharp/ckfinder/ckfinder.html?type=Images') }}",
+                filebrowserFlashBrowseUrl: "{{ asset('vendor/unisharp/ckfinder/ckfinder.html?type=Flash') }}",
+                filebrowserUploadUrl: "{{ asset('vendor/unisharp/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}",
+                filebrowserImageUploadUrl: "{{ asset('vendor/unisharp/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}",
+                filebrowserFlashUploadUrl: "{{ asset('vendor/unisharp/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}"
+            } );
+              document.getElementById("ckeditor_edit").value = document.getElementById("hidInfo").value;
           </script>
 @endsection
 @section('script')

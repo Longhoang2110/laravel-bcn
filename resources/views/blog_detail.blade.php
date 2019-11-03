@@ -37,6 +37,8 @@
 
 
                             <div class="s-text8 flex-w flex-m p-b-21">
+                                <i class="fa fa-calendar" aria-hidden="true">&nbsp</i>
+
                                 <span>
                                     By Admin
                                     <span class="m-l-3 m-r-6">|</span>
@@ -53,7 +55,7 @@
                                 </span>
 
                                 <span>
-                                    8 Comments
+                                        {{$blog->views}} Lượt xem
                                 </span>
                             </div>
 
@@ -100,7 +102,7 @@
             <div class="col-md-4 col-lg-3 p-b-75">
                 <div class="rightbar">
                     <div>
-                        <h4 id="hinder"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;">
+                        <h4 id="hinder"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height: 3;margin-bottom: 5px;color:#fff;">
                             <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục bài viết
                         </h4>
                         <script>
@@ -125,8 +127,8 @@
                         </div>
                     </div>
                         <div>
-                        <h4 id="hinder2"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height:3;margin-bottom: 5px;">
-                            <i class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
+                        <h4 id="hinder2"class="m-text11" style="background-color: #ed9f48;text-align: center;line-height:3;margin-bottom: 5px;color:#fff;">
+                            <i  class="fa fa-list" aria-hidden="true"></i>&nbsp Danh mục sản phẩm
                         </h4>
                         <script>
                             $(document).ready(function(){
@@ -138,8 +140,8 @@
                             <ul id="an2" class="bgwhite">
                             @foreach($coffees as $item)
                                 <li class="flex-w p-b-20">
-                                    <a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-                                        <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:90px" alt="IMG-PRODUCT">
+                                    <a href="{{route('coffee-detail',$item->id)}}" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
+                                    <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:90px" alt="{{$item->alt}}">
                                     </a>
     
                                     <div class="w-size23 p-t-5">

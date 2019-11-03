@@ -12,6 +12,7 @@
 */
 Route::get('/admin/login', 'AdminController@getlogin')->name('getadmin');
 Route::post('/admin/login', 'AdminController@postlogin')->name('postadmin');
+Route::get('/admin/gallery', 'AdminController@galleryIndex')->name('gallery');
 Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 
 
@@ -19,11 +20,11 @@ Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 Route::resource('coffee','CoffeesController');
 Route::get('/', 'PageController@home')->name('home');
 Route::get('/listCoffee', 'CoffeesController@Index')->name('listCoffee');
-Route::get('/addCoffee', 'CoffeesController@getAdd')->name('addCoffee');
+Route::get('/addproduct', 'CoffeesController@getAdd')->name('add-product');
 Route::get('/blog', 'PageController@blog')->name('blog');
 Route::get('/blogDetail', 'PageController@blogDetail')->name('blogDetail');
 Route::get('/home', 'PageController@home')->name('home');
-Route::get('/product', 'PageController@product')->name('product');
+Route::get('/product-list', 'PageController@product')->name('product-list');
 Route::get('/admin', 'AdminController@getlogin')->name('admin');
 // Route::get('/introduce', 'PageController@introduce')->name('introduce');
 Route::get('/contact', 'PageController@contact')->name('contact');
@@ -42,7 +43,7 @@ Route::get('/content/{type}', 'PageController@content')->name('content');
 // });
 
 ////////////coffee admin\\\\\\\\\\\\\\\
-Route::group(['prefix' => 'Admincoffee'],function(){
+Route::group(['prefix' => 'adminproduct'],function(){
     Route::get('/','CoffeesController@listCoffeAdmin')->name('coffee-list');
 
     Route::get('update/{id}','CoffeesController@getUpdate')->name('coffee-update');
@@ -72,11 +73,11 @@ Route::group(['prefix' => 'Adminblog'],function(){
 
 
 //trang website
-Route::group(['prefix' => 'coffee'],function(){
+Route::group(['prefix' => 'product'],function(){
     Route::get('/','CoffeesController@index')->name('coffee-list');
 
-    Route::get('coffeedetail/{id}','PageController@coffeeDetail')->name('coffee-detail');
-    Route::get('categorycoffee/categoryname/{name}/id/{id}','CoffeesController@categorycoffee')->name('category-coffee');
+    Route::get('productdetail/{id}','PageController@coffeeDetail')->name('product-detail');
+    Route::get('categoryproduct/categoryname/{name}/id/{id}','CoffeesController@categorycoffee')->name('category-product');
 
     Route::get('update/{id}','CoffeesController@getUpdate')->name('coffee-update');
     Route::post('update/{id}','CoffeesController@postUpdate')->name('coffee-update');

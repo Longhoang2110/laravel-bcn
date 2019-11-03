@@ -122,7 +122,13 @@ class CoffeesController extends Controller
         $coffee->cout_view = 0;
         $coffee->order = $req->order;
         $coffee->discount = $req->discount;
+        $sale_up =($req->price /100);
+        $coffee->discount_up = (( $req->price)-($req->discount))/$sale_up;
         $coffee->content = $req->content;
+        $coffee->producer = $req->producer;
+        $coffee->product_code = $req->product_code;
+        $coffee->product_status = $req->product_status;
+        $coffee->product_guarantee = $req->product_guarantee;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();
@@ -188,6 +194,12 @@ class CoffeesController extends Controller
         $coffee->order = $req->order;
         $coffee->discount = $req->discount;
         $coffee->content = $req->content;
+        $coffee->producer = $req->producer;
+        $coffee->product_code = $req->product_code;
+        $coffee->product_status = $req->product_status;
+        $coffee->product_guarantee = $req->product_guarantee;
+        $sale_up =($req->price /100);
+        $coffee->discount_up = (( $req->price)-($req->discount))/$sale_up;
         if($req->hasFile('fImage')):
             $image = $req->file('fImage');
             $filename=$image->getClientOriginalName();

@@ -17,7 +17,7 @@
             <ul class="p-b-54">
                 <li class="p-t-4"
                     style="padding: 5px;background-color: #ed9f48;color: white;border-bottom: 1px solid white;">
-                    <a href="{{route('product')}}" class="s-text13 active1" style="color: white">
+                    <a href="{{route('product-list')}}" class="s-text13 active1" style="color: white">
                         Tất cả các sản phẩm
                     </a>
                     <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
@@ -25,7 +25,7 @@
                 @foreach($category_product as $item)
                 <li class="p-t-4"
                     style="padding: 5px;background-color: #ed9f48;color: white;border-bottom: 1px solid white;">
-                    <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}"
+                    <a href="{{route('category-product',['categoryname'=>$item->name,'id'=>$item->id])}}"
                         class="s-text13 active1" style="color: white">
                         {{$item->name}}
                     </a>
@@ -53,7 +53,7 @@
 
                             <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
                                 <!-- Button -->
-                                <a href="{!!route('product')!!}"
+                                <a href="{!!route('product-list')!!}"
                                     class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
                                     Mua ngay!
                                 </a>
@@ -163,20 +163,32 @@
                         </div>
 
                         <div class="block2-txt p-t-20">
-                            <a href="{{route('coffee-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
+                            <a href="{{route('product-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
                                 {{$item->name}}
                             </a>
-
-                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
-                               Giá NY: {{$item->price}} VND
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
+                                    Giá NY: @convert($item->price) VND
                             </span>
+                                    @else
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                    Giá NY: @convert($item->price) VND
+                            </span>
+                                @endif
                             <br>
                             @if($item->discount < $item->price && $item->discount != 0)
                             <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                Giá Sale: {{$item->discount}} VND
+                                Giá Sale: @convert($item->discount) VND
                             </span>
                             @endif
                             <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                         Sale Up:&nbsp{{$item->discount_up}} %
+                                        </span>
+                                </div>
+                            @endif 
                         </div>
                     </div>
                 </div>
@@ -225,19 +237,32 @@
                         </div>
 
                         <div class="block2-txt p-t-20">
-                            <a href="{{route('coffee-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
+                            <a href="{{route('product-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
                                 {{$item->name}}
                             </a>
-
-                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
-                                Giá NY:{{$item->price}} VND
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
+                                    Giá NY: @convert($item->price) VND
                             </span>
+                                    @else
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                    Giá NY: @convert($item->price) VND
+                            </span>
+                            @endif
                             <br>
                             @if($item->discount < $item->price && $item->discount != 0)
                             <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                Giá Sale: {{$item->discount}} VND
+                                Giá Sale: @convert($item->discount) VND
                             </span>
+                            <br>
                             @endif
+                            @if($item->discount < $item->price && $item->discount != 0)
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                         Sale Up:&nbsp{{$item->discount_up}} %
+                                        </span>
+                                </div>
+                            @endif 
                         </div>
                     </div>
                 </div>
@@ -285,19 +310,32 @@
                         </div>
 
                         <div class="block2-txt p-t-20">
-                            <a href="{{route('coffee-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
+                            <a href="{{route('product-detail',$item->id)}}" class="block2-name dis-block s-text3 p-b-5">
                                 {{$item->name}}
                             </a>
-
-                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
-                                Giá NY:{{$item->price}} VND
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
+                                    Giá NY: @convert($item->price) VND
                             </span>
+                                    @else
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                    Giá NY: @convert($item->price) VND
+                            </span>
+                            @endif
                             <br>
                             @if($item->discount < $item->price && $item->discount != 0)
                             <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                Giá Sale: {{$item->discount}} VND
+                                Giá Sale: @convert($item->discount) VND
                             </span>
+                            <br>
                             @endif
+                            @if($item->discount < $item->price && $item->discount != 0)
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                         Sale Up:&nbsp{{$item->discount_up}} %
+                                        </span>
+                                </div>
+                            @endif   
                         </div>
                     </div>
                 </div>

@@ -22,14 +22,14 @@ class AdminController extends Controller
         // return view('admin.dashboard',compact('buyer'));
     }
     public function postlogin(Request $req){
-            // $email =DB::table('users')->select('email')->get();
-            // $users = DB::table('users')->where('email', '=', $req)->get();
-            $email="huucong123";
-            // $password =DB::table('users')->select('password')->get();
-            // $password = DB::table('users')->where('password', '=', $req)->get();
-            // echo$users;
+        // $email =DB::table('users')->select('email')->get();
+        // $users = DB::table('users')->where('email', '=', $req)->get();
+        $email="huucong123";
+        // $password =DB::table('users')->select('password')->get();
+        // $password = DB::table('users')->where('password', '=', $req)->get();
+        // echo$users;
 
-            $password="cong123456";
+        $password="cong123456";
             
         if($req ->email==$email && $req->password==$password){         
             // $buyer = buyer::all();
@@ -47,15 +47,16 @@ class AdminController extends Controller
         return view('admin.login')->with('message','Thêm thất bại vui lòng thử lại sau');
         return redirect('/getadmin');
         
-     }  
-
-     public function dashboard(){
-
-       $buyer = buyer::all();
-       $buyer = DB::table('buyer')
-           ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
-           ->select('buyer.*', 'coffee.name as coffeename')
-           ->get();
-       return view('admin.dashboard',compact('buyer'));
-   }
+    }  
+    public function dashboard(){
+        $buyer = buyer::all();
+        $buyer = DB::table('buyer')
+            ->join('coffee', 'buyer.coffee_id', '=', 'coffee.id')
+            ->select('buyer.*', 'coffee.name as coffeename')
+            ->get();
+        return view('admin.dashboard',compact('buyer'));
+    }
+    public function galleryIndex(){        
+        return view('admin.gallery');
+    }
 }

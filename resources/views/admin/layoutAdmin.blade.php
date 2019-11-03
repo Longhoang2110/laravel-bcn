@@ -281,15 +281,7 @@
               </a>
             <ul class="sub">
               <li><a href="{{route('coffee-list')}}">Danh sách sản phẩm</a></li>
-              <li><a href="{{route('addCoffee')}}">Thêm sản phẩm</a></li>
-              {{-- <li><a href="login.html">Login</a></li>
-              <li><a href="lock_screen.html">Lock Screen</a></li>
-              <li><a href="profile.html">Profile</a></li>
-              <li><a href="invoice.html">Invoice</a></li>
-              <li><a href="pricing_table.html">Pricing Table</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="404.html">404 Error</a></li>
-              <li><a href="500.html">500 Error</a></li> --}}
+              <li><a href="{{route('add-product')}}">Thêm sản phẩm</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -301,6 +293,12 @@
               <li><a href="{{route('blog-list')}}">Danh sách bài viết</a></li>
               <li><a href="{{route('blog-add')}}">Thêm bài viết</a></li>
             </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="{{route('gallery')}}">
+              <i class="fa fa-file-image-o"></i>
+              <span>Quản lý thư viện</span>
+              </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">

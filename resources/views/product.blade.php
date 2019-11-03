@@ -21,7 +21,7 @@
                         <ul id="an" class="p-b-1">
                             <li class="p-t-4 p-b-8 ">
                                 <div style="padding:5px">
-                                    <a href="{{route('product')}}" class="m-text11" style="color:white">
+                                    <a href="{{route('product-list')}}" class="m-text11" style="color:white">
                                                 Tất cả sản phẩm
                                         </a>
                                         
@@ -32,7 +32,7 @@
                             @foreach($category_product as $item)
                             <li class="p-t-4 " style="border-top:1px solid #fff;">
                                 <div style="padding:5px">
-                                    <a href="{{route('category-coffee',['categoryname'=>$item->name,'id'=>$item->id])}}"
+                                    <a href="{{route('category-product',['categoryname'=>$item->name,'id'=>$item->id])}}"
                                         class="m-text11" style="color:white">
                                         {{$item->name}}
                                     </a>
@@ -78,10 +78,10 @@
                         <ul id="an2" class="p-b-54" style="background-color: #fff ; !important">
                             @foreach($blog as $item)
                             <li class="flex-w p-b-20">
-                                <a href="product-detail.html"
+                                <a href="{{route('blog-detail',$item->id)}}"
                                     class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
                                     <img src="images/img/{{$item->thumbnail}}" style="width:90px;height:90px"
-                                        alt="IMG-PRODUCT">
+                                        alt="{{$item->alt}}">
                                 </a>
 
                                 <div class="w-size23 p-t-5">
@@ -114,8 +114,7 @@
                                 <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                             @endif
                                 <img src="images/img/{{$item->thumbnail}}" style="width:270;height:270px"
-                                    alt="IMG-PRODUCT">
-
+                                alt="{{$item->alt}}">
                                 <div class="block2-overlay trans-0-4">
                                     <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                         <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
@@ -133,20 +132,33 @@
                             </div>
 
                             <div class="block2-txt p-t-20">
-                                <a href="{{route('coffee-detail',$item->id)}}"
+                                <a href="{{route('product-detail',['id'=>$item->id])}}"
                                     class="block2-name dis-block s-text3 p-b-5">
                                     {{$item->name}}
                                 </a>
-
-                                <span class=" block2-price m-text6 p-r-5" style="text-transform: unset;">
-                                    Giá NY:{{$item->price}} VND
-                                </span>
-                                <br>
                                 @if($item->discount < $item->price && $item->discount != 0)
-                                <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
-                                    Giá Sale: {{$item->discount}} VND
-                                </span>
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;text-decoration: line-through;">
+                                    Giá NY: @convert($item->price) VND
+                            </span>
+                                    @else
+                            <span class="block2-price m-text6 p-r-5"style="text-transform: unset;">
+                                    Giá NY: @convert($item->price) VND
+                            </span>
                                 @endif
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                            <span class="block2-price m-text8 p-r-5"style="text-transform: unset;">
+                                Giá Sale: @convert($item->discount) VND
+                            </span>
+                            @endif
+                            <br>
+                            @if($item->discount < $item->price && $item->discount != 0)
+                                <div class="s-text8 flex-w flex-m p-b-21">
+                                        <span class="block2-price m-text6 p-r-5"style="font-family: Montserrat-bold;color:#e60808">
+                                         Sale Up:&nbsp{{$item->discount_up}} %
+                                        </span>
+                                </div>
+                            @endif    
                             </div>
                         </div>
                     </div>

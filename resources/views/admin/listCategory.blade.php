@@ -24,7 +24,7 @@
             @foreach($category as $item)
                 <tr>
                 <td>
-                    <a href="basic_table.html#">{{$item->name}}</a>
+                    <a>{{$item->name}}</a>
                 </td>
                 <td class="hidden-phone">{{$item->code}}</td>
                 <td>{{$item->type == 1 ?'Sản phẩm':'Bài viết'}}</td>

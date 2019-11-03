@@ -23,7 +23,7 @@
             @foreach($displays as $item)
                 <tr>
                 <td>
-                    <a href="basic_table.html#">{{$item->name}}</a>
+                    <a>{{$item->name}}</a>
                 </td>
                 <td class="hidden-phone">{{$item->description}}</td>
                 {{-- <td>{{$item->views}}</td> --}}

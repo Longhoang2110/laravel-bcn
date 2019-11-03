@@ -36,7 +36,10 @@ class PageController extends Controller
     public function coffeeDetail(Request $req){
         $coffee = coffee::find($req->id);
         $coffees = coffee::where([
-            ['is_active', '=', 1]
+            ['type', '=', $coffee->type],
+            ['is_active', '=', 1],
+            ['id', '!=', $coffee->id]
+
         ])->get()
           ->sortBy('order');
         $cout_view = coffee::find($req->id);
@@ -46,6 +49,7 @@ class PageController extends Controller
         ])->get()
           ->sortBy('order');
         $category_blog =category::where([
+            ['is_active', '=', 1],
             ['type', '=','0' ]
         ])->get();
         $category_product =category::where([
@@ -70,8 +74,8 @@ class PageController extends Controller
             ['is_active', '=', 1]
         ])->get()
           ->sortBy('order');
-        $group = group::all();
-
+        $group = group::all()
+        ->sortBy('order');
         $category_product =category::where([
             ['is_active', '=', 1],
             ['type', '=','1' ]
@@ -146,17 +150,21 @@ class PageController extends Controller
     public function home() {
         $coffees = coffee::where([
             ['is_active', '=', 1]
-        ])->get();
+        ])->get()
+        ->sortBy('order');          
         //   ->orderBy('order','Desc');
         $blogs = blog::where([
             ['is_active', '=', 1]
-        ])->get();
+        ])->get()
+        ->sortBy('order');          
+
         //   ->orderBy('order','Desc');
         $displays = display::all();
         // $address = address::all();
         $group = group::where([
             ['is_active', '=', 1]  
-        ])->get();
+        ])->get()
+        ->sortBy('order');          
 
         $category_product =category::where([
             ['type', '=','1' ],
@@ -182,26 +190,31 @@ class PageController extends Controller
             ['category_home','=',1 ]
         ])->first();
         $coffee1  = DB::table('coffee')
-        ->select('coffee.*',)
+        ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',1)
-            ->get();
+        ->get()
+        ->sortBy('order');          
+
             // ->orderBy('order','Desc');
         $coffee2 = DB::table('coffee')
-        ->select('coffee.*',)
+        ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',2)
-            ->get();
+        ->get()
+        ->sortBy('order');          
+        
             // ->orderBy('order','Desc')
         $coffee3 = DB::table('coffee')
-        ->select('coffee.*',)
+        ->select('coffee.*')
         ->leftJoin('category', 'coffee.type', '=', 'category.id')
         ->where('coffee.is_active','=',1)
         ->where('category.category_home_order','=',3)
-            ->get();
-            // ->orderBy('order','Desc')
+        ->get()
+        ->sortBy('order');          
+        
         return view('home',[
             "blogs" => $blogs,
             "coffees" => $coffees,
@@ -333,8 +346,8 @@ class PageController extends Controller
         $coffees = coffee::where([
             ['is_active', '=', 1]
         ])->get()
-          ->sortBy('order');
-        // $address = address::all();
+        ->sortByDesc('order');          
+          
 
 
         $blog =blog::where([

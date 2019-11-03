@@ -44,7 +44,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Tên ảnh</label>
                         <div class="col-sm-10">
-                            <input type="text" name="alt" class="form-control" value="{{$coffee->alt}}">
+                            <input type="text" name="alt" class="form-control" value="{{$blog->alt}}">
                         </div>
                     </div>
                     <div class="form-group">

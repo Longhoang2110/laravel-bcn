@@ -44,30 +44,6 @@
                             {{-- <input type="text" name="pype" class="form-control" placeholder="Type "> --}}
                         </div>
                     </div>
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Hình ảnh</label>
-                        <div class="col-sm-10">
-                            <input type="file" name="BlogImage">
-                        </div>
-                    </div> --}}
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">CODE</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" id="Des-ckeditor" name="code" placeholder="Mô tả"></textarea>
-                        </div>
-                    </div> --}}
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label"></label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control ckeditor" style="height:150px" id="Content-ckeditor" name="content" placeholder="Nội dung"></textarea>
-                        </div>
-                    </div> --}}
-                    {{-- <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Nội dung</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" style="height:150px" name="description" placeholder="Nội dung"></textarea>
-                        </div>
-                    </div> --}}
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Trạng thái</label>
                         <div class="col-sm-10">
